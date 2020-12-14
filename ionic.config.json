@@ -1,0 +1,7 @@
+{
+  "name": "iching-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
