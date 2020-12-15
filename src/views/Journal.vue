@@ -9,7 +9,7 @@
       <ion-list>
         <ion-item v-for="tech in techs" :key="tech.title" button @click="$router.push(`/journal/${tech.title}`)">
           <ion-label>
-            <h3 v-text="tech.title" />
+            <h3 v-text="`${tech.title} - ${count}`" />
           </ion-label>
         </ion-item>
       </ion-list>
@@ -18,6 +18,7 @@
 </template>
 
 <script lang="ts">
+import { mapGetters } from 'vuex'
 import { IonList, IonItem, IonLabel, IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue'
 
 export default {
@@ -93,5 +94,9 @@ export default {
       },
     ],
   }),
+
+  computed: {
+    ...mapGetters(['count']),
+  },
 }
 </script>
