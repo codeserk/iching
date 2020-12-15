@@ -32,6 +32,17 @@ const app = createApp(App)
   .use(i18n)
   .use(store)
 
+app.mixin({
+  computed: {
+    /**
+     * Whether the dark mode is enabled.
+     */
+    isDarkMode(): boolean {
+      return !!window?.matchMedia('(prefers-color-scheme: dark)')
+    },
+  },
+})
+
 router.isReady().then(() => {
   app.mount('#app')
 })

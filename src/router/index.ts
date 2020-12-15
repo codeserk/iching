@@ -6,7 +6,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     component: Tabs,
-    redirect: '/oracle',
+    redirect: '/introduction',
     children: [
       {
         path: '/oracle',
@@ -27,6 +27,10 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/Settings.vue'),
       },
     ],
+  },
+  {
+    path: '/introduction',
+    component: () => import('@/views/Introduction.vue'),
   },
 ]
 
