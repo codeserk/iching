@@ -6,6 +6,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     component: Tabs,
+    redirect: '/oracle',
     children: [
       {
         path: '/oracle',

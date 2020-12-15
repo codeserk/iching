@@ -3,7 +3,7 @@
     <ion-content class="content" :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Tab 1</ion-title>
+          <ion-title size="large">Introduction</ion-title>
         </ion-toolbar>
       </ion-header>
     </ion-content>
