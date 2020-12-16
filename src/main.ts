@@ -40,6 +40,17 @@ app.mixin({
     isDarkMode(): boolean {
       return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
     },
+
+    isAndroidTheme(): boolean {
+      const app = document.body.firstChild
+      console.log(app)
+
+      return true
+    },
+
+    isIOS(): boolean {
+      return this.platform.is('ios')
+    },
   },
 })
 

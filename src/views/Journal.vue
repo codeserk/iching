@@ -1,24 +1,31 @@
 <template>
   <ion-page>
-    <ion-header>
+    <ion-header collapse>
       <ion-toolbar>
         <ion-title>Journal</ion-title>
       </ion-toolbar>
+      <ion-toolbar class="android-only">
+        <ion-searchbar animated></ion-searchbar>
+      </ion-toolbar>
     </ion-header>
     <ion-content class="content" :fullscreen="true">
+      <ion-header collapse="condense">
+        <ion-toolbar>
+          <ion-title size="large">Journal</ion-title>
+        </ion-toolbar>
+        <ion-toolbar>
+          <ion-searchbar animated @ion-change="search = $event.detail.value"></ion-searchbar>
+        </ion-toolbar>
+      </ion-header>
+
       <ion-list>
-        <ion-item v-for="tech in techs" :key="tech.title" button @click="$router.push(`/journal/${tech.title}`)">
-          <ion-label>
-            <h3 v-text="`${tech.title} - ${count}`" />
-          </ion-label>
-        </ion-item>
-        <ion-item-sliding>
-          <ion-item button @click="$router.push(`/journal/test`)">
-            <ion-label>New Message</ion-label>
+        <ion-item-sliding v-for="result in filteredResults" :key="result.id">
+          <ion-item button @click="$router.push(`/journal/${result.id}`)">
+            <ion-label v-text="result.question" />
           </ion-item>
 
           <ion-item-options side="end">
-            <ion-item-option color="danger">Delete</ion-item-option>
+            <ion-item-option color="danger" @click="showDeletePopup(result.id)">Delete</ion-item-option>
           </ion-item-options>
         </ion-item-sliding>
       </ion-list>
@@ -26,9 +33,11 @@
   </ion-page>
 </template>
 
-<script lang="ts">
-import { mapGetters } from 'vuex'
+<script>
+import { mapGetters, mapActions } from 'vuex'
+
 import {
+  IonSearchbar,
   IonItemSliding,
   IonItemOptions,
   IonItemOption,
@@ -40,10 +49,12 @@ import {
   IonToolbar,
   IonTitle,
   IonContent,
+  alertController,
 } from '@ionic/vue'
 
 export default {
   components: {
+    IonSearchbar,
     IonItemSliding,
     IonItemOptions,
     IonItemOption,
@@ -58,69 +69,50 @@ export default {
   },
 
   data: () => ({
-    techs: [
-      {
-        title: 'Esto cambia',
-        icon: 'angular',
-        description:
-          'A powerful Javascript framework for building single page apps. Angular is open source, and maintained by Google.',
-        color: '#E63135',
-      },
-      {
-        title: 'CSS3',
-        icon: 'css3',
-        description: 'The latest version of cascading stylesheets - the styling language of the web!',
-        color: '#0CA9EA',
-      },
-      {
-        title: 'HTML5',
-        icon: 'html5',
-        description: "The latest version of the web's markup language.",
-        color: '#F46529',
-      },
-      {
-        title: 'JavaScript',
-        icon: 'javascript',
-        description: 'One of the most popular programming languages on the Web!',
-        color: '#FFD439',
-      },
-      {
-        title: 'Sass',
-        icon: 'sass',
-        description:
-          'Syntactically Awesome Stylesheets - a mature, stable, and powerful professional grade CSS extension.',
-        color: '#CE6296',
-      },
-      {
-        title: 'NodeJS',
-        icon: 'nodejs',
-        description: 'An open-source, cross-platform runtime environment for developing server-side Web applications.',
-        color: '#78BD43',
-      },
-      {
-        title: 'Python',
-        icon: 'python',
-        description: 'A clear and powerful object-oriented programming language!',
-        color: '#3575AC',
-      },
-      {
-        title: 'Markdown',
-        icon: 'markdown',
-        description:
-          'A super simple way to add formatting like headers, bold, bulleted lists, and so on to plain text.',
-        color: '#412159',
-      },
-      {
-        title: 'Tux',
-        icon: 'tux',
-        description: 'The official mascot of the Linux kernel!',
-        color: '#000',
-      },
-    ],
+    search: '',
   }),
 
   computed: {
-    ...mapGetters(['count']),
+    ...mapGetters(['results']),
+
+    filteredResults() {
+      if (!this.search) {
+        return this.results
+      }
+
+      const search = this.search.toLowerCase()
+      return this.results.filter(result => result.question.toLowerCase().includes(search))
+    },
+  },
+
+  methods: {
+    ...mapActions(['removeResult']),
+
+    async showDeletePopup(id) {
+      const alert = await alertController.create({
+        header: 'Confirm deletion',
+        message: 'Are you sure you want to delete this answer from the Oracle?',
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+          },
+          {
+            text: 'Yes',
+            handler: async () => {
+              await this.removeResult(id)
+            },
+          },
+        ],
+      })
+      return alert.present()
+    },
   },
 }
 </script>
+
+<style>
+ion-app.ios .android-only {
+  display: none;
+}
+</style>

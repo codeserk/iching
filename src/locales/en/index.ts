@@ -1,7 +1,7 @@
 export default {
   sections: {
-    journey: {
-      tab: 'Journey',
+    journal: {
+      tab: 'Journal',
     },
 
     oracle: {

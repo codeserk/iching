@@ -2,6 +2,8 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
+        <ion-title v-text="title" />
+
         <ion-buttons slot="start" v-if="phase > 0">
           <ion-button @click="restart">
             <ion-icon slot="start" name="refresh"></ion-icon>
@@ -12,14 +14,6 @@
             <ion-icon slot="start" name="trash-outline"></ion-icon>
           </ion-button>
         </ion-buttons>
-        <ion-segment
-          :value="activeHexagram"
-          v-if="phase === 2 && hexagram && hexagram.hasSecondary"
-          @ion-change="activeHexagram = $event.detail.value"
-        >
-          <ion-segment-button value="primary">Primary</ion-segment-button>
-          <ion-segment-button value="secondary">Secondary</ion-segment-button>
-        </ion-segment>
       </ion-toolbar>
     </ion-header>
 
@@ -28,9 +22,9 @@
         <ion-slide>
           <ion-text color="medium">
             <h1>Think about your question...</h1>
-            <ion-input placeholder="Write it down to remember it..." v-model="question"></ion-input>
+            <ion-input :placeholder="questionPlaceholder" v-model="question"></ion-input>
 
-            <ion-button @click="phase = 1">Click</ion-button>
+            <ion-button @click="saveQuestion">Click</ion-button>
           </ion-text>
         </ion-slide>
         <ion-slide>
@@ -48,6 +42,17 @@
           </ion-text>
         </ion-slide>
         <ion-slide class="result-slide">
+          <ion-toolbar>
+            <ion-segment
+              :value="activeHexagram"
+              v-if="hexagram && hexagram.hasSecondary"
+              @ion-change="activeHexagram = $event.detail.value"
+            >
+              <ion-segment-button value="primary">Primary</ion-segment-button>
+              <ion-segment-button value="secondary">Secondary</ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+
           <template v-if="hexagram">
             <hexagram-details
               v-if="hexagram.hasSecondary && activeHexagram === 'secondary'"
@@ -63,6 +68,7 @@
 
 <script>
 import {
+  IonTitle,
   IonHeader,
   IonToolbar,
   IonButton,
@@ -83,6 +89,7 @@ import { Hexagram, HexagramLine } from '../models/hexagram'
 import { getRandomNumber } from '../util/random'
 import { wait } from '../util/time'
 import HexagramDetails from '../components/hexagram-details.vue'
+import { mapActions } from 'vuex'
 
 // enum Phase {
 //   ThinkQuestion,
@@ -92,6 +99,7 @@ import HexagramDetails from '../components/hexagram-details.vue'
 
 export default {
   components: {
+    IonTitle,
     IonHeader,
     IonButton,
     IonSlides,
@@ -126,6 +134,7 @@ export default {
 
     hasTossed: false,
 
+    createdAt: new Date(),
     coins: [],
     lines: [],
     hexagram: null,
@@ -133,6 +142,18 @@ export default {
   }),
 
   computed: {
+    title() {
+      if (this.phase !== 0) {
+        return this.question
+      }
+
+      return this.question || 'Ask the Oracle'
+    },
+
+    questionPlaceholder() {
+      return `Question from ${this.createdAt.toLocaleString()}`
+    },
+
     numLines() {
       return this.lines.length
     },
@@ -151,6 +172,16 @@ export default {
   },
 
   methods: {
+    ...mapActions(['addResult']),
+
+    saveQuestion() {
+      if (!this.question) {
+        this.question = this.questionPlaceholder
+      }
+
+      this.phase = 1
+    },
+
     tossCoin(position) {
       this.coins[position] = Coin.fromToss()
 
@@ -183,6 +214,7 @@ export default {
 
       if (!this.needsMoreLines) {
         this.hexagram = new Hexagram(this.lines)
+        this.addResult({ question: this.question, hexagram: this.hexagram, createdAt: this.createdAt })
 
         this.phase = 2
       }
@@ -190,14 +222,12 @@ export default {
 
     restart() {
       this.hasTossed = false
+      this.question = ''
+      this.createdAt = new Date()
       this.coins = []
       this.lines = []
       this.hexagram = null
       this.phase = 0
-    },
-
-    setActive(event) {
-      console.log(event)
     },
   },
 
@@ -208,8 +238,13 @@ export default {
     },
 
     $route(newRoute) {
-      console.log(newRoute)
-      this.$nextTick(this.routeLoaded)
+      if (newRoute.path === '/oracle') {
+        this.$nextTick(() => {
+          if (this.phase === 2) {
+            this.restart()
+          }
+        })
+      }
     },
   },
 }

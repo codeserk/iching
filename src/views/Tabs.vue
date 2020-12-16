@@ -4,7 +4,7 @@
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="journal" href="/journal">
           <ion-icon :icon="bookOutline" />
-          <ion-label v-t="'sections.journey.tab'" />
+          <ion-label v-t="'sections.journal.tab'" />
         </ion-tab-button>
 
         <ion-tab-button tab="oracle" href="/oracle">

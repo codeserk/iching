@@ -77,6 +77,14 @@ export class HexagramLine {
 
 export type ThreeHexagramLines = [HexagramLine, HexagramLine, HexagramLine]
 export type SixHexagramLines = [HexagramLine, HexagramLine, HexagramLine, HexagramLine, HexagramLine, HexagramLine]
+export type SixHexagramLineValues = [
+  HexagramLineValue,
+  HexagramLineValue,
+  HexagramLineValue,
+  HexagramLineValue,
+  HexagramLineValue,
+  HexagramLineValue,
+]
 
 export class Hexagram {
   /**
@@ -84,7 +92,7 @@ export class Hexagram {
    *
    * @param lines
    */
-  constructor(protected lines: SixHexagramLines) {}
+  constructor(readonly lines: SixHexagramLines) {}
 
   get trigramAbove(): ThreeHexagramLines {
     return [this.lines[3], this.lines[4], this.lines[5]]
@@ -146,5 +154,11 @@ export class Hexagram {
 
   get hasMutations(): boolean {
     return this.mutatedLines.length > 0
+  }
+
+  static fromValues(values: SixHexagramLineValues): Hexagram {
+    const lines = values.map(value => new HexagramLine(value)) as SixHexagramLines
+
+    return new Hexagram(lines)
   }
 }

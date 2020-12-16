@@ -5,20 +5,58 @@
         <ion-buttons slot="start">
           <ion-back-button />
         </ion-buttons>
-        <ion-title>Hello</ion-title>
+        <ion-title v-text="title" />
+        <ion-buttons slot="end">
+          <ion-button @click="showDeletePopup">
+            <ion-icon slot="start" name="trash-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
       </ion-toolbar>
     </ion-header>
     <ion-content fullscreen class="ion-padding">
-      <p>Some description</p>
+      <ion-toolbar v-if="hexagram && hexagram.hasSecondary">
+        <ion-segment :value="activeHexagram" @ion-change="activeHexagram = $event.detail.value">
+          <ion-segment-button value="primary">Primary</ion-segment-button>
+          <ion-segment-button value="secondary">Secondary</ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+
+      <template v-if="hexagram">
+        <hexagram-details
+          v-if="hexagram.hasSecondary && activeHexagram === 'secondary'"
+          :number="hexagram.secondaryNumber"
+        />
+        <hexagram-details v-else :number="hexagram.number" :mutated-lines="hexagram.mutatedLines" />
+      </template>
     </ion-content>
   </ion-page>
 </template>
 
-<script lang="ts">
-import { IonBackButton, IonPage, IonButtons, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue'
+<script>
+import {
+  IonSegment,
+  IonSegmentButton,
+  IonBackButton,
+  IonIcon,
+  IonButton,
+  IonPage,
+  IonButtons,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  alertController,
+} from '@ionic/vue'
+import { mapActions, mapGetters } from 'vuex'
+
+import HexagramDetails from '../../components/hexagram-details.vue'
 
 export default {
   components: {
+    IonSegment,
+    IonSegmentButton,
+    IonIcon,
+    IonButton,
     IonBackButton,
     IonPage,
     IonButtons,
@@ -26,13 +64,63 @@ export default {
     IonToolbar,
     IonTitle,
     IonContent,
+
+    HexagramDetails,
+  },
+
+  data: () => ({
+    activeHexagram: 'primary',
+  }),
+
+  computed: {
+    ...mapGetters(['resultById']),
+
+    id() {
+      return this.$route.params.id
+    },
+
+    result() {
+      if (!this.id) {
+        return
+      }
+
+      return this.resultById(this.id)
+    },
+
+    title() {
+      return this.result?.question
+    },
+
+    hexagram() {
+      return this.result?.hexagram
+    },
+  },
+
+  methods: {
+    ...mapActions(['removeResult']),
+
+    async showDeletePopup() {
+      const alert = await alertController.create({
+        header: 'Confirm deletion',
+        message: 'Are you sure you want to delete this answer from the Oracle?',
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+          },
+          {
+            text: 'Yes',
+            handler: async () => {
+              await this.removeResult(this.id)
+              this.$nextTick(() => {
+                this.$router.back()
+              })
+            },
+          },
+        ],
+      })
+      return alert.present()
+    },
   },
 }
 </script>
-
-<style scoped>
-.content {
-  background: red;
-  color: blue !important;
-}
-</style>
