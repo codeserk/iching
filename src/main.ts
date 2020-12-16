@@ -38,7 +38,7 @@ app.mixin({
      * Whether the dark mode is enabled.
      */
     isDarkMode(): boolean {
-      return !!window?.matchMedia('(prefers-color-scheme: dark)')
+      return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
     },
   },
 })
