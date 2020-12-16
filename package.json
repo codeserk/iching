@@ -51,7 +51,7 @@
     "stylelint-order": "^4.1.0",
     "stylelint-processor-styled-components": "^1.10.0",
     "stylelint-scss": "^3.18.0",
-    "typescript": "~3.9.3",
+    "typescript": "^3.9.7",
     "vue-jest": "^5.0.0-0"
   },
   "description": "An Ionic project"

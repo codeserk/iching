@@ -12,6 +12,15 @@
             <h3 v-text="`${tech.title} - ${count}`" />
           </ion-label>
         </ion-item>
+        <ion-item-sliding>
+          <ion-item button @click="$router.push(`/journal/test`)">
+            <ion-label>New Message</ion-label>
+          </ion-item>
+
+          <ion-item-options side="end">
+            <ion-item-option color="danger">Delete</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
       </ion-list>
     </ion-content>
   </ion-page>
@@ -19,10 +28,25 @@
 
 <script lang="ts">
 import { mapGetters } from 'vuex'
-import { IonList, IonItem, IonLabel, IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue'
+import {
+  IonItemSliding,
+  IonItemOptions,
+  IonItemOption,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonPage,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+} from '@ionic/vue'
 
 export default {
   components: {
+    IonItemSliding,
+    IonItemOptions,
+    IonItemOption,
     IonList,
     IonItem,
     IonLabel,

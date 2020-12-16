@@ -1,3 +1,4 @@
+import { HEXAGRAM_CODE_TO_HEXAGRAM_NUMBER } from './hexagram-code-to-number'
 import { Coin } from './coin'
 
 export enum HexagramLineValue {
@@ -5,6 +6,11 @@ export enum HexagramLineValue {
   Yang = 'yang',
   Yin = 'yin',
   MutableYang = 'mutable-yang',
+}
+
+export enum HexagramLineCode {
+  Yin = '¦',
+  Yang = '|',
 }
 
 export const COINS_VALUE_TO_HEXAGRAM_LINE_VALUE: Record<number, HexagramLineValue> = {
@@ -49,6 +55,13 @@ export class HexagramLine {
   }
 
   /**
+   * Whether the line is a mutation.
+   */
+  get isMutation(): boolean {
+    return this.value === HexagramLineValue.MutableYang || this.value === HexagramLineValue.MutableYin
+  }
+
+  /**
    * Creates a line from 3 coins.
    *
    * @param coinA
@@ -90,7 +103,9 @@ export class Hexagram {
   }
 
   get code(): string {
-    return this.primaryLines.map(line => (line.value === HexagramLineValue.Yin ? '¦' : '|')).join('')
+    return this.primaryLines
+      .map(line => (line.value === HexagramLineValue.Yin ? HexagramLineCode.Yin : HexagramLineCode.Yang))
+      .join('')
   }
 
   get primaryCode(): string {
@@ -98,6 +113,38 @@ export class Hexagram {
   }
 
   get secondaryCode(): string {
-    return this.secondaryLines.map(line => (line.value === HexagramLineValue.Yin ? '¦' : '|')).join('')
+    return this.secondaryLines
+      .map(line => (line.value === HexagramLineValue.Yin ? HexagramLineCode.Yin : HexagramLineCode.Yang))
+      .join('')
+  }
+
+  get number(): number {
+    return HEXAGRAM_CODE_TO_HEXAGRAM_NUMBER[this.code]
+  }
+
+  get primaryNumber(): number {
+    return this.number
+  }
+
+  get secondaryNumber(): number {
+    return HEXAGRAM_CODE_TO_HEXAGRAM_NUMBER[this.secondaryCode]
+  }
+
+  get hasSecondary(): boolean {
+    return this.primaryNumber !== this.secondaryNumber
+  }
+
+  get mutatedLines(): number[] {
+    return this.lines.reduce((result, line, index) => {
+      if (line.isMutation) {
+        result.push(index + 1)
+      }
+
+      return result
+    }, [] as number[])
+  }
+
+  get hasMutations(): boolean {
+    return this.mutatedLines.length > 0
   }
 }

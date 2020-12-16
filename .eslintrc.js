@@ -25,6 +25,7 @@ module.exports = {
     semi: ['error', 'never'],
     'getter-return': 'off',
     '@typescript-eslint/no-this-alias': 'off',
+    '@typescript-eslint/member-delimiter-style': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/no-empty-interface': 'error',

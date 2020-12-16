@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import hexagrams from './hexagrams'
 
 export const store = createStore({
   state() {
@@ -13,5 +14,9 @@ export const store = createStore({
     increment(state: any) {
       state.count++
     },
+  },
+
+  modules: {
+    hexagrams,
   },
 })

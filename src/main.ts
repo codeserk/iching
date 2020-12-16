@@ -46,3 +46,12 @@ app.mixin({
 router.isReady().then(() => {
   app.mount('#app')
 })
+
+// Icons
+import { addIcons } from 'ionicons'
+import { refresh, trashOutline } from 'ionicons/icons'
+
+addIcons({
+  refresh,
+  'trash-outline': trashOutline,
+})

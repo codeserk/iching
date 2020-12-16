@@ -30,7 +30,6 @@ export class Coin {
    */
   static fromToss(): Coin {
     const position = getRandomInt(0, 1)
-
     if (position === 0) {
       return new Coin(CoinPosition.Heads)
     }
