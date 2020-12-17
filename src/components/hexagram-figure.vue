@@ -1,13 +1,13 @@
 <template>
-  <div class="hexagram-figure">
+  <div class="hexagram-figure" :class="size">
     <div
+      v-for="(line, index) in allLines"
+      :key="line"
       class="line"
       :class="{
         [line.value]: true,
-        mutation: line.value.includes('mutable'),
+        highlighted: (highlightMutations && line.value.includes('mutable')) || highlightLine === index + 1,
       }"
-      v-for="line in allLines"
-      :key="line"
     >
       <template v-if="line.value === 'yin' || line.value === 'mutable-yin'">
         <div class="bar bar-left" />
@@ -32,6 +32,21 @@ export default {
     lines: {
       type: Array,
       defualt: () => [],
+    },
+
+    size: {
+      type: String,
+      default: 'md',
+    },
+
+    highlightMutations: {
+      type: Boolean,
+      default: false,
+    },
+
+    highlightLine: {
+      type: Number,
+      default: null,
     },
   },
 
@@ -63,15 +78,11 @@ export default {
   position: relative;
   height: 15px;
   margin-bottom: 10px;
-
-  /* background: white; */
 }
 
 .line.empty {
-  /* background: white; */
-}
-.line.yin {
-  /* background: red; */
+  border: 1px solid var(--ion-text-color);
+  opacity: 0.1;
 }
 
 .line .bar {
@@ -91,8 +102,8 @@ export default {
   background: var(--ion-text-color);
 }
 
-.line.mutation .bar {
-  background: var(--ion-color-tertiary-tint);
+.line.highlighted .bar {
+  background: var(--color-highlighted-line);
 }
 
 .line .circle,
@@ -104,8 +115,8 @@ export default {
 }
 
 .line .circle {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 100%;
   background: var(--ion-background-color);
 }
@@ -127,9 +138,9 @@ export default {
   transform: rotate(-45deg);
 }
 
-.line.mutation .cross::before,
-.line.mutation .cross::after {
-  background: var(--ion-color-tertiary-tint);
+.line.highlighted .cross::before,
+.line.highlighted .cross::after {
+  background: var(--color-highlighted-line);
 }
 
 .line .bar-left {
@@ -137,5 +148,29 @@ export default {
 }
 .line .bar-right {
   right: 0;
+}
+
+/** Size: xs */
+.hexagram-figure.xs {
+  width: 50px;
+  margin: 0 auto;
+  padding: 0;
+}
+.hexagram-figure.xs .line {
+  height: 5px;
+  margin-bottom: 3px;
+}
+
+.hexagram-figure.xs .line .cross::before,
+.hexagram-figure.xs .line .cross::after {
+  top: -3px;
+  left: -1px;
+  width: 1px;
+  height: 6px;
+}
+
+.hexagram-figure.xs .line .circle {
+  width: 4px;
+  height: 4px;
 }
 </style>

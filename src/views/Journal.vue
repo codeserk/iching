@@ -5,7 +5,7 @@
         <ion-title>Journal</ion-title>
       </ion-toolbar>
       <ion-toolbar class="android-only">
-        <ion-searchbar animated></ion-searchbar>
+        <ion-searchbar animated @ion-change="search = $event.detail.value"></ion-searchbar>
       </ion-toolbar>
     </ion-header>
     <ion-content class="content" :fullscreen="true">

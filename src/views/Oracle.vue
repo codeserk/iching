@@ -10,7 +10,7 @@
           </ion-button>
         </ion-buttons>
         <ion-buttons slot="end" v-if="phase === 2">
-          <ion-button>
+          <ion-button @click="showDeletePopup">
             <ion-icon slot="start" name="trash-outline"></ion-icon>
           </ion-button>
         </ion-buttons>
@@ -48,12 +48,8 @@
           </ion-text>
         </ion-slide>
         <ion-slide class="slide-result">
-          <ion-toolbar color="transparent">
-            <ion-segment
-              :value="activeHexagram"
-              v-if="hexagram && hexagram.hasSecondary"
-              @ion-change="activeHexagram = $event.detail.value"
-            >
+          <ion-toolbar color="transparent" v-if="hexagram && hexagram.hasSecondary">
+            <ion-segment :value="activeHexagram" @ion-change="activeHexagram = $event.detail.value">
               <ion-segment-button value="primary">Primary</ion-segment-button>
               <ion-segment-button value="secondary">Secondary</ion-segment-button>
             </ion-segment>
@@ -103,12 +99,7 @@ import { wait } from '../util/time'
 import HexagramDetails from '../components/hexagram-details.vue'
 import HexagramFigure from '../components/hexagram-figure.vue'
 import { mapActions } from 'vuex'
-
-// enum Phase {
-//   ThinkQuestion,
-//   TossCoins,
-//   Result,
-// }
+import { alertController } from '@ionic/vue'
 
 export default {
   components: {
@@ -153,6 +144,7 @@ export default {
     lines: [],
     hexagram: null,
     activeHexagram: 'primary',
+    result: null,
   }),
 
   computed: {
@@ -186,7 +178,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['addResult']),
+    ...mapActions(['addResult', 'removeResult']),
 
     saveQuestion() {
       if (!this.question) {
@@ -227,9 +219,13 @@ export default {
       this.lines.push(line)
 
       if (!this.needsMoreLines) {
-        setTimeout(() => {
+        setTimeout(async () => {
           this.hexagram = new Hexagram(this.lines)
-          this.addResult({ question: this.question, hexagram: this.hexagram, createdAt: this.createdAt })
+          this.result = await this.addResult({
+            question: this.question,
+            hexagram: this.hexagram,
+            createdAt: this.createdAt,
+          })
 
           this.phase = 2
         }, 1000)
@@ -243,7 +239,30 @@ export default {
       this.coins = []
       this.lines = []
       this.hexagram = null
+      this.result = null
+      this.activeHexagram = 'primary'
       this.phase = 0
+    },
+
+    async showDeletePopup() {
+      const alert = await alertController.create({
+        header: 'Confirm deletion',
+        message: 'Are you sure you want to delete this answer from the Oracle?',
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+          },
+          {
+            text: 'Yes',
+            handler: async () => {
+              await this.removeResult(this.result?.id)
+              this.restart()
+            },
+          },
+        ],
+      })
+      return alert.present()
     },
   },
 

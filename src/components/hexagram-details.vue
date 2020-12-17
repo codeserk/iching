@@ -3,13 +3,21 @@
     <ion-grid>
       <ion-row>
         <ion-col :size="12" size-sm class="ion-align-self-center ion-justify-content-center">
-          <hexagram-figure class="hexagram-figure" :lines="lines" />
+          <hexagram-figure class="hexagram-figure" :lines="lines" highlight-mutations />
         </ion-col>
         <ion-col :size="12" size-sm class="ion-align-self-center ion-justify-content-center">
           <ion-text class="title">
             <h2>
               {{ number }}. {{ details.name.chinese }} / {{ details.name.pinyin }} / {{ details.name.translated }}
             </h2>
+            <h3>
+              <strong v-t="`trigrams.${details.trigram.above}.name`" />,
+              <span v-t="`trigrams.${details.trigram.above}.image`" />
+            </h3>
+            <h3>
+              <strong v-t="`trigrams.${details.trigram.below}.name`" />,
+              <span v-t="`trigrams.${details.trigram.below}.image`" />
+            </h3>
           </ion-text>
         </ion-col>
       </ion-row>
@@ -28,10 +36,19 @@
         <h3>Mutations</h3>
       </ion-text>
 
-      <ion-text v-for="mutatedLine in mutatedLines" :key="mutatedLine">
-        <h4>Line {{ mutatedLine }}</h4>
-        <blockquote v-text="details.mutations[mutatedLine].quote" />
-      </ion-text>
+      <ion-grid>
+        <ion-row v-for="mutatedLine in mutatedLines" :key="mutatedLine" class="mutations-line">
+          <ion-col :size="3" class="ion-align-self-center ion-justify-content-center">
+            <hexagram-figure class="hexagram-figure" :lines="lines" size="xs" :highlight-line="mutatedLine" />
+          </ion-col>
+          <ion-col :size="9" class="ion-align-self-center ion-justify-content-center">
+            <ion-text>
+              <h4>Line {{ mutatedLine }}</h4>
+              <blockquote v-text="details.mutations[mutatedLine].quote" />
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </template>
   </div>
 </template>
@@ -112,6 +129,13 @@ blockquote::before {
   top: 0.25em;
   bottom: 0.25em;
   left: -1em;
-  border-right: 4px solid var(--ion-color-primary-contrast);
+  border-right: 6px solid var(--ion-text-color);
+}
+
+.mutations-line h4 {
+  margin-top: 0;
+}
+.mutations-line {
+  margin-bottom: 1em;
 }
 </style>

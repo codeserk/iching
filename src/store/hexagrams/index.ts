@@ -45,6 +45,8 @@ export default {
       }
 
       state.results[id] = newResult
+
+      return newResult
     },
 
     removeResult(state: State, id: string) {
@@ -73,10 +75,13 @@ export default {
       }
     },
 
-    async addResult({ commit, dispatch }: any, { question, hexagram, createdAt }: any) {
-      commit('addResult', { question, hexagram, createdAt })
+    async addResult({ getters, commit, dispatch }: any, { question, hexagram, createdAt }: any) {
+      const id = createdAt.getTime().toString()
+      commit('addResult', { id, question, hexagram, createdAt })
 
       await dispatch('save')
+
+      return getters.resultById(id)
     },
 
     async removeResult({ commit, dispatch }: any, id: string): Promise<void> {
