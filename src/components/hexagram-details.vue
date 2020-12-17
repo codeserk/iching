@@ -1,8 +1,19 @@
 <template>
   <div class="hexagram-details" v-if="details">
-    <ion-text>
-      <h2>{{ number }}. {{ details.name.chinese }} / {{ details.name.pinyin }} / {{ details.name.translated }}</h2>
-    </ion-text>
+    <ion-grid>
+      <ion-row>
+        <ion-col :size="12" size-sm class="ion-align-self-center ion-justify-content-center">
+          <hexagram-figure class="hexagram-figure" :lines="lines" />
+        </ion-col>
+        <ion-col :size="12" size-sm class="ion-align-self-center ion-justify-content-center">
+          <ion-text class="title">
+            <h2>
+              {{ number }}. {{ details.name.chinese }} / {{ details.name.pinyin }} / {{ details.name.translated }}
+            </h2>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
     <ion-text>
       <h3>Judgement</h3>
@@ -26,20 +37,30 @@
 </template>
 
 <script>
-import { IonText } from '@ionic/vue'
+import { IonGrid, IonRow, IonCol, IonText } from '@ionic/vue'
 import { informationOutline } from 'ionicons/icons'
-
 import { mapGetters } from 'vuex'
+
+import HexagramFigure from './hexagram-figure.vue'
 
 export default {
   components: {
     IonText,
+    IonGrid,
+    IonRow,
+    IonCol,
+    HexagramFigure,
   },
 
   props: {
     number: {
       type: Number,
       default: () => null,
+    },
+
+    lines: {
+      type: Array,
+      default: () => [],
     },
 
     mutatedLines: {
@@ -71,6 +92,13 @@ export default {
   text-align: left;
 }
 
+.title {
+  text-align: center;
+}
+.title h2 {
+  margin-top: 0;
+}
+
 blockquote {
   position: relative;
   margin: 0;
@@ -83,7 +111,7 @@ blockquote::before {
   position: absolute;
   top: 0.25em;
   bottom: 0.25em;
-  left: calc(-1em + 4px);
-  border-right: 4px solid black;
+  left: -1em;
+  border-right: 4px solid var(--ion-color-primary-contrast);
 }
 </style>

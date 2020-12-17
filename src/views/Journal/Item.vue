@@ -14,7 +14,7 @@
       </ion-toolbar>
     </ion-header>
     <ion-content fullscreen class="ion-padding">
-      <ion-toolbar v-if="hexagram && hexagram.hasSecondary">
+      <ion-toolbar v-if="hexagram && hexagram.hasSecondary" color="transparent">
         <ion-segment :value="activeHexagram" @ion-change="activeHexagram = $event.detail.value">
           <ion-segment-button value="primary">Primary</ion-segment-button>
           <ion-segment-button value="secondary">Secondary</ion-segment-button>
@@ -25,8 +25,14 @@
         <hexagram-details
           v-if="hexagram.hasSecondary && activeHexagram === 'secondary'"
           :number="hexagram.secondaryNumber"
+          :lines="hexagram.secondaryLines"
         />
-        <hexagram-details v-else :number="hexagram.number" :mutated-lines="hexagram.mutatedLines" />
+        <hexagram-details
+          v-else
+          :number="hexagram.number"
+          :lines="hexagram.lines"
+          :mutated-lines="hexagram.mutatedLines"
+        />
       </template>
     </ion-content>
   </ion-page>

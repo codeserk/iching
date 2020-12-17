@@ -58,13 +58,15 @@ export default {
         const resultsJson = await Storage.get({ key: 'oracle_results' })
         const results = JSON.parse(resultsJson.value)
 
-        for (const result of results) {
-          commit('addResult', {
-            id: result.id,
-            question: result.question,
-            hexagram: Hexagram.fromValues(result.values),
-            createdAt: result.createdAt,
-          })
+        if (results) {
+          for (const result of results) {
+            commit('addResult', {
+              id: result.id,
+              question: result.question,
+              hexagram: Hexagram.fromValues(result.values),
+              createdAt: result.createdAt,
+            })
+          }
         }
       } catch (error) {
         console.error(error)

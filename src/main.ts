@@ -40,17 +40,6 @@ app.mixin({
     isDarkMode(): boolean {
       return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
     },
-
-    isAndroidTheme(): boolean {
-      const app = document.body.firstChild
-      console.log(app)
-
-      return true
-    },
-
-    isIOS(): boolean {
-      return this.platform.is('ios')
-    },
   },
 })
 
@@ -60,9 +49,10 @@ router.isReady().then(() => {
 
 // Icons
 import { addIcons } from 'ionicons'
-import { refresh, trashOutline } from 'ionicons/icons'
+import { refresh, trashOutline, arrowForwardOutline } from 'ionicons/icons'
 
 addIcons({
   refresh,
   'trash-outline': trashOutline,
+  'arrow-forward-outline': arrowForwardOutline,
 })

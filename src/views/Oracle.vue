@@ -19,30 +19,36 @@
 
     <ion-content class="content ion-padding page-oracle" fullscreen>
       <ion-slides id="slides" ref="slides" class="ion-slides" :options="slidesOptions">
-        <ion-slide>
+        <ion-slide class="slide-question">
           <ion-text color="medium">
             <h1>Think about your question...</h1>
-            <ion-input :placeholder="questionPlaceholder" v-model="question"></ion-input>
 
-            <ion-button @click="saveQuestion">Click</ion-button>
+            <ion-input clear-input :placeholder="questionPlaceholder" v-model="question" />
+
+            <ion-button shape="round" @click="saveQuestion">
+              <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+
+              Continue
+            </ion-button>
           </ion-text>
         </ion-slide>
-        <ion-slide>
+        <ion-slide class="slide-coins">
           <ion-text color="medium">
+            <hexagram-figure class="hexagram-figure" :lines="lines" />
             <h1>Toss the coins</h1>
 
             {{ lines }}
             <br />
 
-            <ion-button v-if="!hasTossed" @click="tossAll">Toss ALL</ion-button>
+            <ion-button v-if="!hasTossed && needsMoreLines" @click="tossAll">Toss ALL</ion-button>
 
             <br />
 
             {{ coins }}
           </ion-text>
         </ion-slide>
-        <ion-slide class="result-slide">
-          <ion-toolbar>
+        <ion-slide class="slide-result">
+          <ion-toolbar color="transparent">
             <ion-segment
               :value="activeHexagram"
               v-if="hexagram && hexagram.hasSecondary"
@@ -57,8 +63,14 @@
             <hexagram-details
               v-if="hexagram.hasSecondary && activeHexagram === 'secondary'"
               :number="hexagram.secondaryNumber"
+              :lines="hexagram.secondaryLines"
             />
-            <hexagram-details v-else :number="hexagram.number" :mutated-lines="hexagram.mutatedLines" />
+            <hexagram-details
+              v-else
+              :number="hexagram.number"
+              :mutated-lines="hexagram.mutatedLines"
+              :lines="hexagram.lines"
+            />
           </template>
         </ion-slide>
       </ion-slides>
@@ -89,6 +101,7 @@ import { Hexagram, HexagramLine } from '../models/hexagram'
 import { getRandomNumber } from '../util/random'
 import { wait } from '../util/time'
 import HexagramDetails from '../components/hexagram-details.vue'
+import HexagramFigure from '../components/hexagram-figure.vue'
 import { mapActions } from 'vuex'
 
 // enum Phase {
@@ -115,6 +128,7 @@ export default {
     IonSegmentButton,
 
     HexagramDetails,
+    HexagramFigure,
   },
 
   data: () => ({
@@ -182,11 +196,11 @@ export default {
       this.phase = 1
     },
 
-    tossCoin(position) {
+    async tossCoin(position) {
       this.coins[position] = Coin.fromToss()
 
       if (!this.needsMoreCoins) {
-        this.addHexagramLine()
+        await this.addHexagramLine()
       }
     },
 
@@ -213,10 +227,12 @@ export default {
       this.lines.push(line)
 
       if (!this.needsMoreLines) {
-        this.hexagram = new Hexagram(this.lines)
-        this.addResult({ question: this.question, hexagram: this.hexagram, createdAt: this.createdAt })
+        setTimeout(() => {
+          this.hexagram = new Hexagram(this.lines)
+          this.addResult({ question: this.question, hexagram: this.hexagram, createdAt: this.createdAt })
 
-        this.phase = 2
+          this.phase = 2
+        }, 1000)
       }
     },
 
@@ -255,12 +271,27 @@ export default {
   height: 100%;
 }
 
-.page-oracle .result-slide {
+.page-oracle .slide-question {
+  display: block;
+  text-align: left;
+}
+
+.page-oracle .slide-coins {
+  display: block;
+  text-align: left;
+}
+
+.hexagram-figure {
+  width: 200px;
+  height: 150px;
+}
+
+.page-oracle .slide-result {
   display: block;
   overflow: auto;
 }
 
-.page-oracle .result-slide .toolbar {
+.page-oracle .slide-result .toolbar {
   margin-top: 1em;
 }
 </style>
