@@ -24,20 +24,26 @@
     </ion-grid>
 
     <ion-text>
+      <p v-text="details.name.description" />
+    </ion-text>
+
+    <ion-text>
       <h3>Judgement</h3>
       <blockquote v-text="details.judgement.quote" />
+      <p v-text="details.judgement.description" />
 
       <h3>Images</h3>
       <blockquote v-text="details.images.quote" />
+      <p v-text="details.images.description" />
     </ion-text>
 
-    <template v-if="mutatedLines.length > 0">
+    <template v-if="mutations.length > 0">
       <ion-text>
         <h3>Mutations</h3>
       </ion-text>
 
       <ion-grid>
-        <ion-row v-for="mutatedLine in mutatedLines" :key="mutatedLine" class="mutations-line">
+        <ion-row v-for="mutatedLine in mutations" :key="mutatedLine" class="mutations-line">
           <ion-col :size="3" class="ion-align-self-center ion-justify-content-center">
             <hexagram-figure class="hexagram-figure" :lines="lines" size="xs" :highlight-line="mutatedLine" />
           </ion-col>
@@ -45,6 +51,7 @@
             <ion-text>
               <h4>Line {{ mutatedLine }}</h4>
               <blockquote v-text="details.mutations[mutatedLine].quote" />
+              <p v-text="details.mutations[mutatedLine].description" />
             </ion-text>
           </ion-col>
         </ion-row>
@@ -84,6 +91,11 @@ export default {
       type: Array,
       default: () => [],
     },
+
+    showAllMutations: {
+      type: Boolean,
+      defauilt: false,
+    },
   },
 
   data: () => ({
@@ -99,6 +111,14 @@ export default {
       }
 
       return this.getHexagramDetails(this.number)
+    },
+
+    mutations() {
+      if (this.showAllMutations) {
+        return [1, 2, 3, 4, 5, 6]
+      }
+
+      return this.mutatedLines
     },
   },
 }
@@ -137,5 +157,9 @@ blockquote::before {
 }
 .mutations-line {
   margin-bottom: 1em;
+}
+
+p {
+  white-space: pre-line;
 }
 </style>

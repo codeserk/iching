@@ -20,6 +20,11 @@ export const COINS_VALUE_TO_HEXAGRAM_LINE_VALUE: Record<number, HexagramLineValu
   9: HexagramLineValue.MutableYang,
 }
 
+export const HEXAGRAM_LINE_CODE_TO_VALUE: Record<HexagramLineCode, HexagramLineValue> = {
+  [HexagramLineCode.Yin]: HexagramLineValue.Yin,
+  [HexagramLineCode.Yang]: HexagramLineValue.Yang,
+}
+
 export class HexagramLine {
   /**
    * Constructor.
@@ -160,5 +165,19 @@ export class Hexagram {
     const lines = values.map(value => new HexagramLine(value)) as SixHexagramLines
 
     return new Hexagram(lines)
+  }
+
+  static fromCode(code: string): Hexagram {
+    const lines = code
+      .split('')
+      .map((code: string) => new HexagramLine(HEXAGRAM_LINE_CODE_TO_VALUE[code as HexagramLineCode]))
+
+    return new Hexagram(lines as SixHexagramLines)
+  }
+
+  static fromNumber(num: number): Hexagram {
+    const entry = Object.entries(HEXAGRAM_CODE_TO_HEXAGRAM_NUMBER).find(([itemCode, itemNumber]) => itemNumber === num)
+
+    return Hexagram.fromCode(entry![0] as string)
   }
 }

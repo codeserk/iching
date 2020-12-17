@@ -1,7 +1,7 @@
 import { HexagramDetails, HexagramDictionary } from '../../interfaces/hexagram-details.interface'
 import { Storage } from '@capacitor/core'
 
-import hexagrams from './hexagrams'
+import hexagrams from './dictionary.en'
 import { OracleResult } from '../../interfaces/oracle-result.interface'
 import { Hexagram, HexagramLine, HexagramLineValue } from '../../models/hexagram'
 

@@ -29,6 +29,10 @@ const routes: Array<RouteRecordRaw> = [
     ],
   },
   {
+    path: '/hexagram/:id',
+    component: () => import('@/views/HexagramView.vue'),
+  },
+  {
     path: '/introduction',
     component: () => import('@/views/Introduction.vue'),
   },
