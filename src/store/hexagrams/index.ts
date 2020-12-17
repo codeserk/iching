@@ -21,6 +21,20 @@ export default {
       return state.dictionary[num]
     },
 
+    hexagramTitle: (state: State, getters: any) => (num: number): string => {
+      const details = getters.getHexagramDetails(num)
+      const parts: string[] = []
+      if (getters.config.display.name.chinese) {
+        parts.push(details?.name.chinese)
+      }
+      if (getters.config.display.name.pinyin) {
+        parts.push(details?.name.pinyin)
+      }
+      parts.push(details?.name.translated)
+
+      return `${num}. ${parts.join(' / ')}`
+    },
+
     results: (state: State) =>
       Object.values(state.results).sort(
         (resultA, resultB) => resultB.createdAt.getTime() - resultA.createdAt.getTime(),

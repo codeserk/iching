@@ -17,11 +17,11 @@ export default defineComponent({
   },
 
   methods: {
-    ...mapActions(['init']),
+    ...mapActions(['loadConfig', 'init']),
   },
 
   async mounted() {
-    await this.init()
+    await Promise.all([this.loadConfig(), this.init()])
   },
 })
 </script>

@@ -36,7 +36,7 @@ export default {
   }),
 
   computed: {
-    ...mapGetters(['getHexagramDetails']),
+    ...mapGetters(['getHexagramDetails', 'hexagramTitle']),
 
     id() {
       return this.$route.params.id
@@ -55,7 +55,7 @@ export default {
     },
 
     title() {
-      return `${this.id}. ${this.details?.name.chinese} / ${this.details?.name.pinyin} / ${this.details?.name.translated}`
+      return this.hexagramTitle(this.id)
     },
   },
 }

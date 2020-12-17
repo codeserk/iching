@@ -7,37 +7,40 @@
         </ion-col>
         <ion-col :size="12" size-sm class="ion-align-self-center ion-justify-content-center">
           <ion-text class="title">
-            <h2>
-              {{ number }}. {{ details.name.chinese }} / {{ details.name.pinyin }} / {{ details.name.translated }}
-            </h2>
-            <h3>
+            <h2 v-text="title" />
+          </ion-text>
+
+          <div v-if="config.display.trigrams" class="title">
+            <h4>
               <strong v-t="`trigrams.${details.trigram.above}.name`" />,
               <span v-t="`trigrams.${details.trigram.above}.image`" />
-            </h3>
-            <h3>
+            </h4>
+            <h4>
               <strong v-t="`trigrams.${details.trigram.below}.name`" />,
               <span v-t="`trigrams.${details.trigram.below}.image`" />
-            </h3>
-          </ion-text>
+            </h4>
+          </div>
         </ion-col>
       </ion-row>
     </ion-grid>
 
-    <ion-text>
+    <ion-text v-if="config.display.name.description">
       <p v-text="details.name.description" />
     </ion-text>
 
-    <ion-text>
+    <div class="section-judgmenet" v-if="config.display.judgement.quote || config.display.judgement.description">
       <h3>Judgement</h3>
-      <blockquote v-text="details.judgement.quote" />
-      <p v-text="details.judgement.description" />
+      <blockquote v-text="details.judgement.quote" v-if="config.display.judgement.quote" />
+      <p v-text="details.judgement.description" v-if="config.display.judgement.description" />
+    </div>
 
-      <h3>Images</h3>
-      <blockquote v-text="details.images.quote" />
-      <p v-text="details.images.description" />
-    </ion-text>
+    <div class="section-image" v-if="config.display.images.quote || config.display.images.description">
+      <h3>Image</h3>
+      <blockquote v-text="details.images.quote" v-if="config.display.images.quote" />
+      <p v-text="details.images.description" v-if="config.display.images.description" />
+    </div>
 
-    <template v-if="mutations.length > 0">
+    <template v-if="mutations.length > 0 && (config.display.mutations.quote || config.display.mutations.description)">
       <ion-text>
         <h3>Mutations</h3>
       </ion-text>
@@ -50,8 +53,8 @@
           <ion-col :size="9" class="ion-align-self-center ion-justify-content-center">
             <ion-text>
               <h4>Line {{ mutatedLine }}</h4>
-              <blockquote v-text="details.mutations[mutatedLine].quote" />
-              <p v-text="details.mutations[mutatedLine].description" />
+              <blockquote v-text="details.mutations[mutatedLine].quote" v-if="config.display.mutations.quote" />
+              <p v-text="details.mutations[mutatedLine].description" v-if="config.display.mutations.description" />
             </ion-text>
           </ion-col>
         </ion-row>
@@ -103,7 +106,7 @@ export default {
   }),
 
   computed: {
-    ...mapGetters(['getHexagramDetails']),
+    ...mapGetters(['config', 'getHexagramDetails', 'hexagramTitle']),
 
     details() {
       if (!this.number) {
@@ -111,6 +114,10 @@ export default {
       }
 
       return this.getHexagramDetails(this.number)
+    },
+
+    title() {
+      return this.hexagramTitle(this.number)
     },
 
     mutations() {

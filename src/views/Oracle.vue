@@ -37,14 +37,7 @@
             <hexagram-figure class="hexagram-figure" :lines="lines" />
             <h1>Toss the coins</h1>
 
-            {{ lines }}
-            <br />
-
             <ion-button v-if="!hasTossed && needsMoreLines" @click="tossAll">Toss ALL</ion-button>
-
-            <br />
-
-            {{ coins }}
           </ion-text>
         </ion-slide>
         <ion-slide class="slide-result">
