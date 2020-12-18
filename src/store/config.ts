@@ -66,9 +66,7 @@ export default {
     async loadConfig({ commit }: any) {
       try {
         const resultsJson = await Storage.get({ key: 'config' })
-        console.log(resultsJson)
         const config = JSON.parse(resultsJson.value)
-        console.log(config)
 
         if (config) {
           for (const key in config) {
