@@ -45,20 +45,18 @@
         <h3>Mutations</h3>
       </ion-text>
 
-      <ion-grid>
-        <ion-row v-for="mutatedLine in mutations" :key="mutatedLine" class="mutations-line">
-          <ion-col :size="3" class="ion-align-self-center ion-justify-content-center">
+      <div v-for="mutatedLine in mutations" :key="mutatedLine" class="mutations-line">
+        <div class="mutation-line-header">
+          <div class="mutation-line-header-content">
+            <h4>Line {{ mutatedLine }}</h4>
+            <blockquote v-text="details.mutations[mutatedLine].quote" v-if="config.display.mutations.quote" />
+          </div>
+          <div class="hexagram-figure-container">
             <hexagram-figure class="hexagram-figure" :lines="lines" size="xs" :highlight-line="mutatedLine" />
-          </ion-col>
-          <ion-col :size="9" class="ion-align-self-center ion-justify-content-center">
-            <ion-text>
-              <h4>Line {{ mutatedLine }}</h4>
-              <blockquote v-text="details.mutations[mutatedLine].quote" v-if="config.display.mutations.quote" />
-              <p v-text="details.mutations[mutatedLine].description" v-if="config.display.mutations.description" />
-            </ion-text>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+          </div>
+        </div>
+        <p v-text="details.mutations[mutatedLine].description" v-if="config.display.mutations.description" />
+      </div>
     </template>
   </div>
 </template>
@@ -153,20 +151,46 @@ blockquote {
 blockquote::before {
   content: '';
   position: absolute;
-  top: 0.25em;
-  bottom: 0.25em;
+  top: 0;
+  bottom: 0;
   left: -1em;
-  border-right: 6px solid var(--ion-text-color);
+  border-right: 5px solid var(--ion-text-color);
 }
 
 .mutations-line h4 {
   margin-top: 0;
 }
 .mutations-line {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--ion-color-step-500);
+}
+.mutations-line:last-child {
+  border: none;
+}
+.mutation-line-header {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
 }
 
-p {
+.mutation-line-header .mutation-line-header-content {
+  flex: 1;
+}
+
+.mutation-line-header .hexagram-figure-container {
+  margin-left: 24px;
+}
+
+p,
+blockquote {
   white-space: pre-line;
+}
+
+@media (min-width: 820px) {
+  .hexagram-details {
+    width: 820px;
+    margin: auto;
+  }
 }
 </style>
