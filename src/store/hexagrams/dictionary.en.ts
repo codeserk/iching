@@ -115,7 +115,7 @@ const dictionary: HexagramDictionary = {
       },
       3: {
         quote:
-          'Hidden mutations.\nOne is able to remain persevering.\nIf by chance you are in the service of a king,\nSeek not works, but bring to completion.\n',
+          'Hidden lines.\nOne is able to remain persevering.\nIf by chance you are in the service of a king,\nSeek not works, but bring to completion.\n',
         description: `If a man is free of vanity he is able to conceal his abilities and keep them from attracting attention too soon; thus he can mature undisturbed. If conditions demand it, he can also enter public life, but that too he does with restraint. The wise man gladly leaves fame to others. He does not seek to have credited to himself things that stand accomplished, but hopes to release active forces; that is, he completes his works in such a manner that they may bear fruit for the future.
         `,
       },
@@ -228,7 +228,7 @@ const dictionary: HexagramDictionary = {
       },
       2: {
         quote:
-          'To bear with fools in kind mutationss brings good fortune.\nTo know how to take women\nBrings good fortune.\nThe son is capable of taking charge of the household.\n',
+          'To bear with fools in kind kindliness brings good fortune.\nTo know how to take women\nBrings good fortune.\nThe son is capable of taking charge of the household.\n',
         description: `These lines picture a man who has no external power, but who has enough strength of mind to bear his burden of responsibility. He has the inner superiority and that enable him to tolerate with kindliness the shortcomings of human folly. The same attitude is owed to women as the weaker sex. One must understand them and give them recognition in a spirit of chivalrous consideration. Only this combination of inner strength with outer reserve enables one to take on the responsibility of directing a larger social body with real success.`,
       },
       3: {
@@ -2551,7 +2551,7 @@ const dictionary: HexagramDictionary = {
         `,
       },
       5: {
-        quote: 'A melon covered with willow leaves.\nHidden mutations.\nThen it drops down to one from heaven.\n',
+        quote: 'A melon covered with willow leaves.\nHidden lines.\nThen it drops down to one from heaven.\n',
         description: `The melon, like the fish, is a symbol of the principle of darkness. It is sweet but spoils easily and for this reason is protected with a cover of willow leaves. This is a situation in which a strong, superior, well-poised man tolerates and protects the inferiors in his charge. He has the firm lines of order an beauty within himself but he does not lay stress upon them. He does not bother his subordinates with outward show or tiresome admonitions but leaves them quite free, putting his trust in the transforming power of a strong and upright personality. And behold! Fate is favorable. His inferiors respond to his influence and fall to his disposition like ripe fruit.
         `,
       },
@@ -3251,7 +3251,7 @@ const dictionary: HexagramDictionary = {
         `,
       },
       5: {
-        quote: 'mutations are coming,\nBlessing and fame draw near.\nGood fortune.\n',
+        quote: 'Lines are coming,\nBlessing and fame draw near.\nGood fortune.\n',
         description: `The ruler is modest and therefore open to the counsel of able men. Thus he is surrounded by men who suggest to him the lines of action. This brings blessing, fame, and good fortune to him and all the people.
         `,
       },
