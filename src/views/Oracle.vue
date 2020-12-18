@@ -17,9 +17,9 @@
       </ion-toolbar>
     </ion-header>
 
-    <ion-content class="content ion-padding page-oracle" fullscreen>
+    <ion-content class="content page-oracle" fullscreen>
       <ion-slides id="slides" ref="slides" class="ion-slides" :options="slidesOptions">
-        <ion-slide class="slide-question">
+        <ion-slide class="slide-question ion-padding">
           <ion-text color="medium">
             <h1>Think about your question...</h1>
 
@@ -32,7 +32,7 @@
             </ion-button>
           </ion-text>
         </ion-slide>
-        <ion-slide class="slide-coins">
+        <ion-slide class="slide-coins ion-padding">
           <ion-text color="medium">
             <hexagram-figure class="hexagram-figure" :lines="lines" />
             <h1>Toss the coins</h1>
@@ -41,14 +41,14 @@
           </ion-text>
         </ion-slide>
         <ion-slide class="slide-result">
-          <ion-toolbar color="transparent" v-if="hexagram && hexagram.hasSecondary">
+          <ion-toolbar v-if="hexagram && hexagram.hasSecondary">
             <ion-segment :value="activeHexagram" @ion-change="activeHexagram = $event.detail.value">
               <ion-segment-button value="primary">Primary</ion-segment-button>
               <ion-segment-button value="secondary">Secondary</ion-segment-button>
             </ion-segment>
           </ion-toolbar>
 
-          <template v-if="hexagram">
+          <div v-if="hexagram" class="ion-padding">
             <hexagram-details
               v-if="hexagram.hasSecondary && activeHexagram === 'secondary'"
               :number="hexagram.secondaryNumber"
@@ -60,7 +60,7 @@
               :mutated-lines="hexagram.mutatedLines"
               :lines="hexagram.lines"
             />
-          </template>
+          </div>
         </ion-slide>
       </ion-slides>
     </ion-content>
