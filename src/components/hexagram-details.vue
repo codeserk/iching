@@ -52,7 +52,7 @@
             <blockquote v-text="details.mutations[mutatedLine].quote" v-if="config.display.mutations.quote" />
           </div>
           <div class="hexagram-figure-container">
-            <hexagram-figure class="hexagram-figure" :lines="lines" size="xs" :highlight-line="mutatedLine" />
+            <hexagram-figure class="hexagram-figure" :lines="lines" size="sm" :highlight-line="mutatedLine" />
           </div>
         </div>
         <p v-text="details.mutations[mutatedLine].description" v-if="config.display.mutations.description" />

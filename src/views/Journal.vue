@@ -22,6 +22,15 @@
         <ion-item-sliding v-for="result in filteredResults" :key="result.id">
           <ion-item button @click="$router.push(`/journal/${result.id}`)">
             <ion-label v-text="result.question" />
+            <div slot="start">
+              <hexagram-figure
+                slot="start"
+                class="hexagram-figure"
+                :lines="result.hexagram.lines"
+                highlight-mutations
+                size="xs"
+              />
+            </div>
           </ion-item>
 
           <ion-item-options side="end">
@@ -51,6 +60,7 @@ import {
   IonContent,
   alertController,
 } from '@ionic/vue'
+import HexagramFigure from '../components/hexagram-figure.vue'
 
 export default {
   components: {
@@ -66,6 +76,8 @@ export default {
     IonTitle,
     IonContent,
     IonPage,
+
+    HexagramFigure,
   },
 
   data: () => ({

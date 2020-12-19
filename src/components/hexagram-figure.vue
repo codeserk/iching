@@ -1,5 +1,5 @@
 <template>
-  <div class="hexagram-figure" :class="size">
+  <div class="hexagram-figure with-images" :class="size">
     <div
       v-for="(line, index) in allLines"
       :key="line"
@@ -14,7 +14,7 @@
         <div class="bar bar-right" />
       </template>
       <template v-else-if="line.value !== 'empty'">
-        <div class="bar full-bar" />
+        <div class="bar full-bar" :class="`full-bar-${index + 1}`" />
       </template>
       <template v-if="line.value === 'mutable-yang'">
         <div class="circle"></div>
@@ -150,27 +150,43 @@ export default {
   right: 0;
 }
 
-/** Size: xs */
-.hexagram-figure.xs {
+/** Size: sm */
+.hexagram-figure.sm {
   width: 50px;
   margin: 0 auto;
   padding: 0;
 }
-.hexagram-figure.xs .line {
+.hexagram-figure.sm .line {
   height: 5px;
   margin-bottom: 3px;
 }
 
-.hexagram-figure.xs .line .cross::before,
-.hexagram-figure.xs .line .cross::after {
+.hexagram-figure.sm .line .cross::before,
+.hexagram-figure.sm .line .cross::after {
   top: -3px;
   left: -1px;
   width: 1px;
   height: 6px;
 }
 
-.hexagram-figure.xs .line .circle {
+.hexagram-figure.sm .line .circle {
   width: 4px;
   height: 4px;
+}
+
+/** Size: xs */
+.hexagram-figure.xs {
+  width: 30px;
+  margin: 0 auto;
+  padding: 0;
+}
+.hexagram-figure.xs .line {
+  height: 3px;
+  margin-bottom: 1px;
+}
+
+.hexagram-figure.xs .circle,
+.hexagram-figure.xs .cross {
+  display: none;
 }
 </style>
