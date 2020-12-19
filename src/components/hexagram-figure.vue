@@ -1,11 +1,14 @@
 <template>
-  <div class="hexagram-figure with-images" :class="size">
+  <div class="hexagram-figure" :class="[size, { 'with-images': withImages, 'with-reveal-delay': withRevealDelay }]">
     <div
       v-for="(line, index) in allLines"
       :key="line"
       class="line"
       :class="{
         [line.value]: true,
+        [`line-${index + 1}`]: true,
+        'line-split': line.value.includes('yin'),
+        'line-full': line.value.includes('yang'),
         highlighted: (highlightMutations && line.value.includes('mutable')) || highlightLine === index + 1,
       }"
     >
@@ -14,7 +17,7 @@
         <div class="bar bar-right" />
       </template>
       <template v-else-if="line.value !== 'empty'">
-        <div class="bar full-bar" :class="`full-bar-${index + 1}`" />
+        <div class="bar full-bar" />
       </template>
       <template v-if="line.value === 'mutable-yang'">
         <div class="circle"></div>
@@ -48,6 +51,16 @@ export default {
       type: Number,
       default: null,
     },
+
+    withImages: {
+      type: Boolean,
+      default: false,
+    },
+
+    withRevealDelay: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -64,6 +77,14 @@ export default {
 </script>
 
 <style scoped>
+@keyframes reveal-right-to-left {
+  0% {
+    clip-path: inset(0% 0% 0% 100%);
+  }
+  100% {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
 .hexagram-figure {
   display: flex;
   flex-direction: column-reverse;
@@ -148,6 +169,105 @@ export default {
 }
 .line .bar-right {
   right: 0;
+}
+
+/** With images */
+.hexagram-figure.with-images {
+  padding: 0;
+}
+
+.hexagram-figure.with-images .line {
+  height: 30px;
+  margin-bottom: 0;
+  background: none;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 1s;
+  animation: reveal-right-to-left 200ms;
+  animation-timing-function: cubic-bezier(0.5, 0.25, 0.5, 0.75);
+  animation-fill-mode: both;
+}
+.hexagram-figure.with-images .line.empty {
+  border: none;
+  animation: none;
+}
+
+.hexagram-figure.with-images.with-reveal-delay .line.line-2 {
+  animation-delay: 100ms;
+}
+.hexagram-figure.with-images.with-reveal-delay .line.line-3 {
+  animation-delay: 200ms;
+}
+.hexagram-figure.with-images.with-reveal-delay .line.line-4 {
+  animation-delay: 300ms;
+}
+.hexagram-figure.with-images.with-reveal-delay .line.line-5 {
+  animation-delay: 400ms;
+}
+.hexagram-figure.with-images.with-reveal-delay .line.line-6 {
+  animation-delay: 500ms;
+}
+
+.hexagram-figure.with-images .line .bar {
+  display: none;
+}
+.hexagram-figure.with-images .line.line-full.line-1 {
+  background-image: url('/assets/img/line-full-1.png');
+}
+.hexagram-figure.with-images .line.line-full.line-2 {
+  background-image: url('/assets/img/line-full-2.png');
+}
+.hexagram-figure.with-images .line.line-full.line-3 {
+  background-image: url('/assets/img/line-full-3.png');
+}
+.hexagram-figure.with-images .line.line-full.line-4 {
+  background-image: url('/assets/img/line-full-4.png');
+}
+.hexagram-figure.with-images .line.line-full.line-5 {
+  background-image: url('/assets/img/line-full-5.png');
+}
+.hexagram-figure.with-images .line.line-full.line-6 {
+  background-image: url('/assets/img/line-full-6.png');
+}
+
+.hexagram-figure.with-images .line.line-split.line-1 {
+  background-image: url('/assets/img/line-split-1.png');
+}
+.hexagram-figure.with-images .line.line-split.line-2 {
+  background-image: url('/assets/img/line-split-5.png');
+}
+.hexagram-figure.with-images .line.line-split.line-3 {
+  background-image: url('/assets/img/line-split-3.png');
+}
+.hexagram-figure.with-images .line.line-split.line-4 {
+  background-image: url('/assets/img/line-split-4.png');
+}
+.hexagram-figure.with-images .line.line-split.line-5 {
+  background-image: url('/assets/img/line-split-5.png');
+}
+.hexagram-figure.with-images .line.line-split.line-6 {
+  background-image: url('/assets/img/line-split-6.png');
+}
+
+.hexagram-figure.with-images .line .cross {
+  left: calc(50% - 1px);
+  width: 15px;
+  height: 15px;
+  background-image: url('/assets/img/yang.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hexagram-figure.with-images .line .cross::after,
+.hexagram-figure.with-images .line .cross::before {
+  display: none;
+}
+
+.hexagram-figure.with-images .line .circle {
+  top: calc(50% + 2px);
+  width: 10px;
+  height: 10px;
 }
 
 /** Size: sm */

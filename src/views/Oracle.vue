@@ -34,8 +34,14 @@
         </ion-slide>
         <ion-slide class="slide-coins ion-padding">
           <ion-text color="medium">
-            <hexagram-figure class="hexagram-figure" :lines="lines" />
+            <hexagram-figure class="hexagram-figure" :lines="lines" with-images />
             <h1>Toss the coins</h1>
+
+            <div class="coins">
+              <ion-img src="/assets/img/yin.png" />
+              <ion-img src="/assets/img/yin.png" />
+              <ion-img src="/assets/img/yang.png" />
+            </div>
 
             <ion-button v-if="!hasTossed && needsMoreLines" @click="tossAll">Toss ALL</ion-button>
           </ion-text>
@@ -291,6 +297,10 @@ export default {
 .page-oracle .slide-coins {
   display: block;
   text-align: left;
+}
+
+.page-oracle .slide-coins .coins {
+  display: flex;
 }
 
 .hexagram-figure {

@@ -169,6 +169,7 @@ export class Hexagram {
 
   static fromCode(code: string): Hexagram {
     const lines = code
+      .trim()
       .split('')
       .map((code: string) => new HexagramLine(HEXAGRAM_LINE_CODE_TO_VALUE[code as HexagramLineCode]))
 

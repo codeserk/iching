@@ -3,7 +3,7 @@
     <ion-grid>
       <ion-row>
         <ion-col :size="12" size-sm class="ion-align-self-center ion-justify-content-center">
-          <hexagram-figure class="hexagram-figure" :lines="lines" highlight-mutations />
+          <hexagram-figure class="hexagram-figure" :lines="lines" highlight-mutations with-images with-reveal-delay />
         </ion-col>
         <ion-col :size="12" size-sm class="ion-align-self-center ion-justify-content-center">
           <ion-text class="title">
@@ -111,6 +111,7 @@ export default {
         return
       }
 
+      console.log('details', this.number)
       return this.getHexagramDetails(this.number)
     },
 
