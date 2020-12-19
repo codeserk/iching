@@ -20,31 +20,56 @@
     <ion-content class="content page-oracle" fullscreen>
       <ion-slides id="slides" ref="slides" class="ion-slides" :options="slidesOptions">
         <ion-slide class="slide-question ion-padding">
-          <ion-text color="medium">
-            <h1>Think about your question...</h1>
+          <div class="container">
+            <ion-text color="medium">
+              <h1>Think about your question...</h1>
 
-            <ion-input clear-input :placeholder="questionPlaceholder" v-model="question" />
+              <ion-input :placeholder="questionPlaceholder" v-model="question" />
 
-            <ion-button shape="round" @click="saveQuestion">
-              <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+              <ion-button shape="round" @click="saveQuestion">
+                <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
 
-              Continue
-            </ion-button>
-          </ion-text>
+                Continue
+              </ion-button>
+            </ion-text>
+          </div>
         </ion-slide>
         <ion-slide class="slide-coins ion-padding">
-          <ion-text color="medium">
-            <hexagram-figure class="hexagram-figure" :lines="lines" with-images />
-            <h1>Toss the coins</h1>
-
-            <div class="coins">
-              <ion-img src="/assets/img/yin.png" />
-              <ion-img src="/assets/img/yin.png" />
-              <ion-img src="/assets/img/yang.png" />
+          <div class="container">
+            <div class="toss-coins" @click="tossAll">
+              <div class="button-toss" :class="{ 'has-tossed': hasTossed }">
+                <h3>Press to toss the coins.</h3>
+              </div>
+              <div class="coins">
+                <div
+                  class="coin coin-1"
+                  :style="{
+                    'background-image': `url(/assets/img/${
+                      coins[0] ? (coins[0]?.position === 'heads' ? 'yin-v2' : 'yang') : 'line-full-1'
+                    }.png)`,
+                  }"
+                />
+                <div
+                  class="coin coin-2"
+                  :style="{
+                    'background-image': `url(/assets/img/${
+                      coins[1] ? (coins[1]?.position === 'heads' ? 'yin-v2' : 'yang') : 'line-full-2'
+                    }.png)`,
+                  }"
+                />
+                <div
+                  class="coin coin-3"
+                  :style="{
+                    'background-image': `url(/assets/img/${
+                      coins[2] ? (coins[2]?.position === 'heads' ? 'yin-v2' : 'yang') : 'line-full-3'
+                    }.png)`,
+                  }"
+                />
+              </div>
             </div>
 
-            <ion-button v-if="!hasTossed && needsMoreLines" @click="tossAll">Toss ALL</ion-button>
-          </ion-text>
+            <hexagram-figure :lines="lines" with-images />
+          </div>
         </ion-slide>
         <ion-slide class="slide-result">
           <ion-toolbar v-if="hexagram && hexagram.hasSecondary">
@@ -196,16 +221,20 @@ export default {
     },
 
     async tossAll() {
+      if (this.hasTossed || !this.needsMoreLines) {
+        return
+      }
+
       this.hasTossed = true
       this.coins = []
 
-      await wait(getRandomNumber(0, 1) * 100)
+      await wait(getRandomNumber(1, 2) * 500)
       this.$nextTick(() => this.tossCoin(0))
 
-      await wait(getRandomNumber(0, 1) * 100)
+      await wait(getRandomNumber(0, 1) * 1000)
       this.$nextTick(() => this.tossCoin(1))
 
-      await wait(getRandomNumber(0, 1) * 100)
+      await wait(getRandomNumber(0, 1) * 1000)
       this.$nextTick(() => this.tossCoin(2))
 
       this.hasTossed = false
@@ -284,7 +313,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .ion-slides {
   height: 100%;
 }
@@ -295,22 +324,72 @@ export default {
 }
 
 .page-oracle .slide-coins {
-  display: block;
-  text-align: left;
-}
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
 
-.page-oracle .slide-coins .coins {
-  display: flex;
-}
+    .hexagram-figure {
+      width: 400px;
+    }
 
-.hexagram-figure {
-  width: 200px;
-  height: 150px;
+    .toss-coins {
+      position: relative;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      max-height: 300px;
+      margin-top: 1em;
+
+      .button-toss {
+        flex: 1;
+        transition: opacity 0.4s ease-in-out;
+
+        &.has-tossed {
+          opacity: 0.4;
+        }
+
+        h3 {
+          text-align: right;
+        }
+      }
+
+      .coins {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        height: 100%;
+
+        .coin {
+          flex: 1;
+          width: 100px;
+          height: 100px;
+          margin: 0 1em;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+
+          @media (prefers-color-scheme: dark) {
+            filter: invert(100%);
+          }
+        }
+      }
+    }
+  }
 }
 
 .page-oracle .slide-result {
   display: block;
   overflow: auto;
+
+  .ion-padding {
+    padding-top: 0;
+  }
 }
 
 .page-oracle .slide-result .toolbar {

@@ -25,3 +25,17 @@ export default defineComponent({
   },
 })
 </script>
+
+<style lang="scss">
+.container {
+  @media (min-width: 820px) {
+    width: 820px;
+    margin: auto;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+</style>

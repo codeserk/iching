@@ -76,7 +76,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @keyframes reveal-right-to-left {
   0% {
     clip-path: inset(0% 0% 0% 100%);
@@ -85,228 +85,288 @@ export default {
     clip-path: inset(0% 0% 0% 0%);
   }
 }
+
 .hexagram-figure {
   display: flex;
   flex-direction: column-reverse;
   align-content: space-around;
   justify-content: space-around;
-  max-width: 200px;
-  margin: 1em auto;
+  max-width: 100%;
+  margin: 10px auto;
   padding: 0 10px;
-}
 
-.line {
-  position: relative;
-  height: 15px;
-  margin-bottom: 10px;
-}
+  .line {
+    position: relative;
+    height: 15px;
+    margin-bottom: 10px;
 
-.line.empty {
-  border: 1px solid var(--ion-text-color);
-  opacity: 0.1;
-}
+    .bar {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 40%;
+      background: var(--ion-text-color);
 
-.line .bar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 40%;
-  background: var(--ion-text-color);
-}
+      &.full-bar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: var(--ion-text-color);
+      }
 
-.line .full-bar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: var(--ion-text-color);
-}
+      &.bar-left {
+        left: 0;
+      }
 
-.line.highlighted .bar {
-  background: var(--color-highlighted-line);
-}
+      &.bar-right {
+        right: 0;
+      }
+    }
 
-.line .circle,
-.line .cross {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-}
+    &.highlighted {
+      .bar {
+        background: var(--color-highlighted-line);
+      }
 
-.line .circle {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: var(--ion-background-color);
-}
+      .cross::before,
+      .cross::after {
+        background: var(--color-highlighted-line);
+      }
+    }
 
-.line .cross::before,
-.line .cross::after {
-  content: ' ';
-  position: absolute;
-  top: -6px;
-  left: -1px;
-  width: 2px;
-  height: 12px;
-  background-color: var(--ion-text-color);
-}
-.line .cross::before {
-  transform: rotate(45deg);
-}
-.line .cross::after {
-  transform: rotate(-45deg);
-}
+    .circle,
+    .cross {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
 
-.line.highlighted .cross::before,
-.line.highlighted .cross::after {
-  background: var(--color-highlighted-line);
-}
+    .circle {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background: var(--ion-background-color);
+    }
 
-.line .bar-left {
-  left: 0;
-}
-.line .bar-right {
-  right: 0;
-}
+    .cross::before,
+    .cross::after {
+      content: ' ';
+      position: absolute;
+      top: -6px;
+      left: -1px;
+      width: 2px;
+      height: 12px;
+      background-color: var(--ion-text-color);
+    }
+    .cross::before {
+      transform: rotate(45deg);
+    }
+    .cross::after {
+      transform: rotate(-45deg);
+    }
 
-/** With images */
-.hexagram-figure.with-images {
-  padding: 0;
-}
+    &.empty {
+      border: 1px solid var(--ion-text-color);
+      opacity: 0.1;
+    }
+  }
 
-.hexagram-figure.with-images .line {
-  height: 30px;
-  margin-bottom: 0;
-  background: none;
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all 1s;
-  animation: reveal-right-to-left 200ms;
-  animation-timing-function: cubic-bezier(0.5, 0.25, 0.5, 0.75);
-  animation-fill-mode: both;
-}
-.hexagram-figure.with-images .line.empty {
-  border: none;
-  animation: none;
-}
+  /** With images */
+  &.with-images {
+    padding: 0;
 
-.hexagram-figure.with-images.with-reveal-delay .line.line-2 {
-  animation-delay: 100ms;
-}
-.hexagram-figure.with-images.with-reveal-delay .line.line-3 {
-  animation-delay: 200ms;
-}
-.hexagram-figure.with-images.with-reveal-delay .line.line-4 {
-  animation-delay: 300ms;
-}
-.hexagram-figure.with-images.with-reveal-delay .line.line-5 {
-  animation-delay: 400ms;
-}
-.hexagram-figure.with-images.with-reveal-delay .line.line-6 {
-  animation-delay: 500ms;
-}
+    .line {
+      height: 30px;
+      margin-bottom: 5px;
+      background: none;
+      background-position: top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: reveal-right-to-left 200ms;
+      animation-timing-function: cubic-bezier(0.5, 0.25, 0.5, 0.75);
+      animation-fill-mode: both;
 
-.hexagram-figure.with-images .line .bar {
-  display: none;
-}
-.hexagram-figure.with-images .line.line-full.line-1 {
-  background-image: url('/assets/img/line-full-1.png');
-}
-.hexagram-figure.with-images .line.line-full.line-2 {
-  background-image: url('/assets/img/line-full-2.png');
-}
-.hexagram-figure.with-images .line.line-full.line-3 {
-  background-image: url('/assets/img/line-full-3.png');
-}
-.hexagram-figure.with-images .line.line-full.line-4 {
-  background-image: url('/assets/img/line-full-4.png');
-}
-.hexagram-figure.with-images .line.line-full.line-5 {
-  background-image: url('/assets/img/line-full-5.png');
-}
-.hexagram-figure.with-images .line.line-full.line-6 {
-  background-image: url('/assets/img/line-full-6.png');
-}
+      .bar {
+        display: none;
+      }
 
-.hexagram-figure.with-images .line.line-split.line-1 {
-  background-image: url('/assets/img/line-split-1.png');
-}
-.hexagram-figure.with-images .line.line-split.line-2 {
-  background-image: url('/assets/img/line-split-5.png');
-}
-.hexagram-figure.with-images .line.line-split.line-3 {
-  background-image: url('/assets/img/line-split-3.png');
-}
-.hexagram-figure.with-images .line.line-split.line-4 {
-  background-image: url('/assets/img/line-split-4.png');
-}
-.hexagram-figure.with-images .line.line-split.line-5 {
-  background-image: url('/assets/img/line-split-5.png');
-}
-.hexagram-figure.with-images .line.line-split.line-6 {
-  background-image: url('/assets/img/line-split-6.png');
-}
+      .cross {
+        top: calc(50% + 1px);
+        left: calc(50% - 1px);
+        width: 18px;
+        height: 18px;
+        background-image: url('/assets/img/yang.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
 
-.hexagram-figure.with-images .line .cross {
-  left: calc(50% - 1px);
-  width: 15px;
-  height: 15px;
-  background-image: url('/assets/img/yang.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.hexagram-figure.with-images .line .cross::after,
-.hexagram-figure.with-images .line .cross::before {
-  display: none;
-}
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
 
-.hexagram-figure.with-images .line .circle {
-  top: calc(50% + 2px);
-  width: 10px;
-  height: 10px;
-}
+      .circle {
+        top: calc(50% + 2px);
+        width: 12px;
+        height: 12px;
+      }
 
-/** Size: sm */
-.hexagram-figure.sm {
-  width: 50px;
-  margin: 0 auto;
-  padding: 0;
-}
-.hexagram-figure.sm .line {
-  height: 5px;
-  margin-bottom: 3px;
-}
+      &.empty {
+        border: none;
+        animation: none;
+      }
 
-.hexagram-figure.sm .line .cross::before,
-.hexagram-figure.sm .line .cross::after {
-  top: -3px;
-  left: -1px;
-  width: 1px;
-  height: 6px;
-}
+      &.line-full {
+        &.line-1 {
+          background-image: url('/assets/img/line-full-1.png');
+        }
+        &.line-2 {
+          background-image: url('/assets/img/line-full-2.png');
+        }
+        &.line-3 {
+          background-image: url('/assets/img/line-full-3.png');
+        }
+        &.line-4 {
+          background-image: url('/assets/img/line-full-4.png');
+        }
+        &.line-5 {
+          background-image: url('/assets/img/line-full-5.png');
+        }
+        &.line-6 {
+          background-image: url('/assets/img/line-full-6.png');
+        }
+      }
 
-.hexagram-figure.sm .line .circle {
-  width: 4px;
-  height: 4px;
-}
+      &.line-split {
+        &.line-1 {
+          background-image: url('/assets/img/line-split-1.png');
+        }
+        &.line-2 {
+          background-image: url('/assets/img/line-split-5.png');
+        }
+        &.line-3 {
+          background-image: url('/assets/img/line-split-3.png');
+        }
+        &.line-4 {
+          background-image: url('/assets/img/line-split-4.png');
+        }
+        &.line-5 {
+          background-image: url('/assets/img/line-split-5.png');
+        }
+        &.line-6 {
+          background-image: url('/assets/img/line-split-6.png');
+        }
+      }
 
-/** Size: xs */
-.hexagram-figure.xs {
-  width: 30px;
-  margin: 0 auto;
-  padding: 0;
-}
-.hexagram-figure.xs .line {
-  height: 3px;
-  margin-bottom: 1px;
-}
+      @media (prefers-color-scheme: dark) {
+        filter: invert(100%);
+      }
+    }
 
-.hexagram-figure.xs .circle,
-.hexagram-figure.xs .cross {
-  display: none;
+    &.with-reveal-delay {
+      .line.line-2 {
+        animation-delay: 200ms;
+      }
+      .line.line-3 {
+        animation-delay: 400ms;
+      }
+      .line.line-4 {
+        animation-delay: 600ms;
+      }
+      .line.line-5 {
+        animation-delay: 800ms;
+      }
+      .line.line-6 {
+        animation-delay: 1000ms;
+      }
+    }
+
+    @media (min-width: 620px) {
+      width: 300px;
+
+      .line {
+        height: 40px;
+        margin-bottom: 7px;
+
+        .cross {
+          top: calc(50% + 1px);
+          width: 20px;
+          height: 20px;
+        }
+        .circle {
+          top: calc(50% + 3px);
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    @media (min-width: 820px) {
+      width: 400px;
+      max-width: 400px;
+
+      .line {
+        height: 50px;
+        margin-bottom: 10px;
+
+        .cross {
+          top: calc(50% + 5px);
+          width: 30px;
+          height: 30px;
+        }
+        .circle {
+          top: calc(50% + 5px);
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+
+  /** Sizes */
+
+  &.sm {
+    width: 50px;
+    margin: 0 auto;
+    padding: 0;
+
+    .line {
+      height: 5px;
+      margin-bottom: 3px;
+
+      .cross::before,
+      .cross::after {
+        top: -3px;
+        left: -1px;
+        width: 1px;
+        height: 6px;
+      }
+
+      .circle {
+        width: 4px;
+        height: 4px;
+      }
+    }
+  }
+
+  &.xs {
+    width: 30px;
+    margin: 0 auto;
+    padding: 0;
+
+    .line {
+      height: 3px;
+      margin-bottom: 1px;
+    }
+
+    .circle,
+    .cross {
+      display: none;
+    }
+  }
 }
 </style>
