@@ -21,17 +21,38 @@
       <ion-slides id="slides" ref="slides" class="ion-slides" :options="slidesOptions">
         <ion-slide class="slide-question ion-padding">
           <div class="container">
-            <ion-text color="medium">
+            <ion-text class="text-heading">
               <h1>Think about your question...</h1>
-
-              <ion-input :placeholder="questionPlaceholder" v-model="question" />
-
-              <ion-button shape="round" @click="saveQuestion">
-                <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
-
-                Continue
-              </ion-button>
             </ion-text>
+
+            <ion-text class="text-instructions" color="medium">
+              <ul>
+                <li>
+                  Ask about one thing at a time. Instead of <em>Should I do this, or that?</em> ask
+                  <em>What if I do this?</em>
+                </li>
+                <li>
+                  Don’t ask for a <em>yes</em> or <em>no</em>. Instead of <em>Should I…?</em> ask
+                  <em>What if I…?</em> Instead of <em>Will it happen?</em> you could ask <em>What will happen?</em>.
+                </li>
+                <li>
+                  Make a habit of asking about your own choices and feelings, not other people’s.
+                </li>
+                <li>
+                  Write your question down before you cast the reading, and keep thinking about it while you are tossing
+                  the coins.
+                </li>
+              </ul>
+            </ion-text>
+
+            <div class="fill" />
+
+            <div class="question-input">
+              <ion-input :placeholder="questionPlaceholder" v-model="question" />
+              <ion-button size="small" @click="saveQuestion">
+                <ion-icon slot="icon-only" size="small" name="arrow-forward-outline"></ion-icon>
+              </ion-button>
+            </div>
           </div>
         </ion-slide>
         <ion-slide class="slide-coins ion-padding">
@@ -45,7 +66,7 @@
                   class="coin coin-1"
                   :style="{
                     'background-image': `url(/assets/img/${
-                      coins[0] ? (coins[0]?.position === 'heads' ? 'yin-v2' : 'yang') : 'line-full-1'
+                      coins[0] ? (coins[0]?.position === 'heads' ? 'yin' : 'yang') : 'line-full-1'
                     }.png)`,
                   }"
                 />
@@ -53,7 +74,7 @@
                   class="coin coin-2"
                   :style="{
                     'background-image': `url(/assets/img/${
-                      coins[1] ? (coins[1]?.position === 'heads' ? 'yin-v2' : 'yang') : 'line-full-2'
+                      coins[1] ? (coins[1]?.position === 'heads' ? 'yin' : 'yang') : 'line-full-2'
                     }.png)`,
                   }"
                 />
@@ -61,7 +82,7 @@
                   class="coin coin-3"
                   :style="{
                     'background-image': `url(/assets/img/${
-                      coins[2] ? (coins[2]?.position === 'heads' ? 'yin-v2' : 'yang') : 'line-full-3'
+                      coins[2] ? (coins[2]?.position === 'heads' ? 'yin' : 'yang') : 'line-full-3'
                     }.png)`,
                   }"
                 />
@@ -319,8 +340,31 @@ export default {
 }
 
 .page-oracle .slide-question {
-  display: block;
-  text-align: left;
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+
+    .text-instructions {
+      overflow: scroll;
+      font-size: 0.8em;
+
+      ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .question-input {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .page-oracle .slide-coins {
@@ -378,6 +422,16 @@ export default {
             filter: invert(100%);
           }
         }
+      }
+    }
+
+    @media (max-height: 500px) {
+      flex-direction: row;
+
+      .toss-coins .coins .coin {
+        width: 50px;
+        min-height: 50px;
+        margin: auto;
       }
     }
   }

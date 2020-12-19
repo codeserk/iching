@@ -91,7 +91,7 @@ export default {
   flex-direction: column-reverse;
   align-content: space-around;
   justify-content: space-around;
-  max-width: 100%;
+  max-width: 300px;
   margin: 10px auto;
   padding: 0 10px;
 
@@ -211,8 +211,8 @@ export default {
 
       .circle {
         top: calc(50% + 2px);
-        width: 12px;
-        height: 12px;
+        width: 15px;
+        height: 15px;
       }
 
       &.empty {
@@ -264,6 +264,10 @@ export default {
 
       @media (prefers-color-scheme: dark) {
         filter: invert(100%);
+
+        .circle {
+          filter: invert(100%);
+        }
       }
     }
 
@@ -285,7 +289,7 @@ export default {
       }
     }
 
-    @media (min-width: 620px) {
+    @media (min-width: 620px) and (min-height: 500px) {
       width: 300px;
 
       .line {
@@ -305,7 +309,7 @@ export default {
       }
     }
 
-    @media (min-width: 820px) {
+    @media (min-width: 820px) and (min-height: 500px) {
       width: 400px;
       max-width: 400px;
 

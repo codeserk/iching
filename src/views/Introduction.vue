@@ -3,7 +3,7 @@
     <ion-content class="content" :fullscreen="true">
       <ion-slides class="ion-slides">
         <ion-slide>
-          <div class="slide">
+          <div class="slide container">
             <img :src="`/assets/img/header-${isDarkMode ? 'white' : 'black'}.png`" />
             <h2>Welcome</h2>
             <p>

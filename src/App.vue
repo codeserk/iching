@@ -34,6 +34,10 @@ export default defineComponent({
   }
 }
 
+.fill {
+  flex: 1;
+}
+
 *::-webkit-scrollbar {
   width: 0;
   background: transparent;
