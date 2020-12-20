@@ -52,6 +52,7 @@ import { addIcons } from 'ionicons'
 import {
   refresh,
   trashOutline,
+  arrowForwardCircle,
   arrowForwardOutline,
   optionsOutline,
   bookOutline,
@@ -61,6 +62,7 @@ import {
 addIcons({
   refresh,
   'trash-outline': trashOutline,
+  'arrow-forward-circle': arrowForwardCircle,
   'arrow-forward-outline': arrowForwardOutline,
   'options-outline': optionsOutline,
   'book-outline': bookOutline,

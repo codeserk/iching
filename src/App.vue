@@ -1,6 +1,6 @@
 <template>
   <ion-app>
-    <ion-router-outlet />
+    <ion-router-outlet v-if="ready" />
   </ion-app>
 </template>
 
@@ -11,10 +11,15 @@ import { mapActions } from 'vuex'
 
 export default defineComponent({
   name: 'App',
+
   components: {
     IonApp,
     IonRouterOutlet,
   },
+
+  data: () => ({
+    ready: false,
+  }),
 
   methods: {
     ...mapActions(['loadConfig', 'init']),
@@ -22,6 +27,8 @@ export default defineComponent({
 
   async mounted() {
     await Promise.all([this.loadConfig(), this.init()])
+
+    this.ready = true
   },
 })
 </script>

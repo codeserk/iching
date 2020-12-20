@@ -193,7 +193,7 @@ export default {
   }),
 
   computed: {
-    ...mapGetters(['config']),
+    ...mapGetters(['config', 'configKey']),
 
     title() {
       if (this.phase !== 0) {
@@ -322,6 +322,13 @@ export default {
       })
       return alert.present()
     },
+  },
+
+  mounted() {
+    console.log(this.configKey('introduction.seen'))
+    if (!this.configKey('introduction.seen')) {
+      this.$router.push('/introduction')
+    }
   },
 
   watch: {

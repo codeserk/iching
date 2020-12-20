@@ -42,6 +42,10 @@ export default {
      * Gets the whole config.
      */
     config: (state: State, getters: any): Config => ({
+      introduction: {
+        seen: getters.configKey('introduction.seen'),
+      },
+
       display: {
         name: {
           chinese: getters.configKey('display.name.chinese'),
@@ -112,10 +116,10 @@ export default {
      * @param param0
      * @param param1
      */
-    updateKey({ commit, dispatch }: any, { key, value }: any) {
+    async updateKey({ commit, dispatch }: any, { key, value }: any) {
       commit('updateKey', { key, value })
 
-      dispatch('saveConfig')
+      await dispatch('saveConfig')
     },
 
     /**

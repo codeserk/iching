@@ -1,35 +1,43 @@
 export interface Config {
+  readonly introduction: {
+    readonly seen: boolean
+  }
+
   readonly display: {
     readonly name: {
-      chinese: boolean
-      pinyin: boolean
-      description: boolean
+      readonly chinese: boolean
+      readonly pinyin: boolean
+      readonly description: boolean
     }
 
-    trigrams: boolean
+    readonly trigrams: boolean
 
     readonly judgement: {
-      quote: boolean
-      description: boolean
+      readonly quote: boolean
+      readonly description: boolean
     }
 
     readonly images: {
-      quote: boolean
-      description: boolean
+      readonly quote: boolean
+      readonly description: boolean
     }
 
     readonly mutations: {
-      quote: boolean
-      description: boolean
+      readonly quote: boolean
+      readonly description: boolean
     }
   }
 
   readonly journal: {
-    confirmDeletion: boolean
+    readonly confirmDeletion: boolean
   }
 }
 
 export const DEFAULT_CONFIG: Config = {
+  introduction: {
+    seen: false,
+  },
+
   display: {
     name: {
       chinese: true,

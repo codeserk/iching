@@ -1,4 +1,7 @@
 export default {
+  skip: 'SKIP',
+  start: 'Start',
+
   sections: {
     journal: {
       tab: 'Journal',
@@ -63,8 +66,12 @@ export default {
         description: `The resulting coins highly depend on the <strong>exact moment</strong> when you toss them. You have <em>impact</em> on the final result.`,
       },
       4: {
-        title: 'Check your journal',
-        description: `All the answers you receive from the <strong>oracle</strong> will be saved, so you can check them later.`,
+        title: 'Customize your experience',
+        description: `Decide what information you want to display (trigrams, quotes, descriptions).`,
+      },
+      5: {
+        title: 'Check your journal!',
+        description: 'You can always check previous answers from the oracle.',
       },
     },
   },
