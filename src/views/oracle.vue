@@ -58,7 +58,7 @@
         <ion-slide class="slide-coins ion-padding">
           <div class="container">
             <div class="toss-coins" @click="tossAll">
-              <div class="button-toss" :class="{ 'has-tossed': hasTossed }">
+              <div class="button-toss" :class="{ 'has-tossed': hasTossed || !needsMoreLines }">
                 <h3>Press to toss the coins.</h3>
               </div>
               <div class="coins">
@@ -143,7 +143,7 @@ import { getRandomNumber } from '../util/random'
 import { wait } from '../util/time'
 import HexagramDetails from '../components/hexagram-details.vue'
 import HexagramFigure from '../components/hexagram-figure.vue'
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import { alertController } from '@ionic/vue'
 
 export default {
@@ -193,6 +193,8 @@ export default {
   }),
 
   computed: {
+    ...mapGetters(['config']),
+
     title() {
       if (this.phase !== 0) {
         return this.question
@@ -294,6 +296,13 @@ export default {
     },
 
     async showDeletePopup() {
+      if (!this.config.journal.confirmDeletion) {
+        await this.removeResult(this.result?.id)
+        this.restart()
+
+        return
+      }
+
       const alert = await alertController.create({
         header: 'Confirm deletion',
         message: 'Are you sure you want to delete this answer from the Oracle?',

@@ -131,6 +131,18 @@
             ></ion-checkbox>
           </ion-item>
         </ion-item-group>
+        <ion-list-header>
+          Journal
+        </ion-list-header>
+        <ion-item lines="none">
+          <ion-label>Confirm deletion</ion-label>
+          <ion-checkbox
+            color="primary"
+            :checked="configKey('journal.confirm-deletion')"
+            @ion-change="updateKey({ key: 'journal.confirm-deletion', value: !configKey('journal.confirm-deletion') })"
+            slot="start"
+          ></ion-checkbox>
+        </ion-item>
       </ion-list>
     </ion-content>
   </ion-page>

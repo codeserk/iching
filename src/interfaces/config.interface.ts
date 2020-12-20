@@ -23,6 +23,10 @@ export interface Config {
       description: boolean
     }
   }
+
+  readonly journal: {
+    confirmDeletion: boolean
+  }
 }
 
 export const DEFAULT_CONFIG: Config = {
@@ -49,5 +53,9 @@ export const DEFAULT_CONFIG: Config = {
       quote: true,
       description: true,
     },
+  },
+
+  journal: {
+    confirmDeletion: true,
   },
 }

@@ -8,6 +8,7 @@ export interface State {
 export default {
   state: (): State => ({
     configKeys: {
+      // Display
       'display.name.chinese': true,
       'display.name.pinyin': true,
       'display.name.description': true,
@@ -22,6 +23,9 @@ export default {
 
       'display.mutations.quote': true,
       'display.mutations.description': true,
+
+      // Journal
+      'journal.confirm-deletion': true,
     },
   }),
 
@@ -52,6 +56,10 @@ export default {
           quote: getters.configKey('display.mutations.quote'),
           description: getters.configKey('display.mutations.description'),
         },
+      },
+
+      journal: {
+        confirmDeletion: getters.configKey('journal.confirm-deletion'),
       },
     }),
   },

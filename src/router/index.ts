@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router'
 import { RouteRecordRaw } from 'vue-router'
-import Tabs from '../views/Tabs.vue'
+import Tabs from '../views/router.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -10,31 +10,31 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '/oracle',
-        component: () => import('@/views/Oracle.vue'),
+        component: () => import('@/views/oracle.vue'),
       },
       {
         path: '/journal',
-        component: () => import('@/views/Journal.vue'),
+        component: () => import('@/views/journal.vue'),
         children: [
           {
             path: ':id',
-            component: () => import('@/views/Journal/Item.vue'),
+            component: () => import('@/views/journal/item.vue'),
           },
         ],
       },
       {
         path: '/settings',
-        component: () => import('@/views/SettingsPage.vue'),
+        component: () => import('@/views/settings.vue'),
       },
     ],
   },
   {
     path: '/hexagram/:id',
-    component: () => import('@/views/HexagramView.vue'),
+    component: () => import('@/views/hexagram.vue'),
   },
   {
     path: '/introduction',
-    component: () => import('@/views/Introduction.vue'),
+    component: () => import('@/views/introduction.vue'),
   },
 ]
 

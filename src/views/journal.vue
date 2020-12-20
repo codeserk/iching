@@ -85,7 +85,7 @@ export default {
   }),
 
   computed: {
-    ...mapGetters(['results']),
+    ...mapGetters(['config', 'results']),
 
     filteredResults() {
       if (!this.search) {
@@ -101,6 +101,10 @@ export default {
     ...mapActions(['removeResult']),
 
     async showDeletePopup(id) {
+      if (!this.config.journal.confirmDeletion) {
+        return await this.removeResult(id)
+      }
+
       const alert = await alertController.create({
         header: 'Confirm deletion',
         message: 'Are you sure you want to delete this answer from the Oracle?',

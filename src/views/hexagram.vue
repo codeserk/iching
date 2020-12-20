@@ -58,7 +58,6 @@ export default {
     },
 
     hexagram() {
-      console.log('getting exagram', Hexagram.fromNumber(this.id))
       return Hexagram.fromNumber(this.id)
     },
 

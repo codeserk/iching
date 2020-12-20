@@ -49,10 +49,20 @@ router.isReady().then(() => {
 
 // Icons
 import { addIcons } from 'ionicons'
-import { refresh, trashOutline, arrowForwardOutline } from 'ionicons/icons'
+import {
+  refresh,
+  trashOutline,
+  arrowForwardOutline,
+  optionsOutline,
+  bookOutline,
+  stopCircleOutline,
+} from 'ionicons/icons'
 
 addIcons({
   refresh,
   'trash-outline': trashOutline,
   'arrow-forward-outline': arrowForwardOutline,
+  'options-outline': optionsOutline,
+  'book-outline': bookOutline,
+  'stop-circle-outline': stopCircleOutline,
 })

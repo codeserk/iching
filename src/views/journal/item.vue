@@ -81,7 +81,7 @@ export default {
   }),
 
   computed: {
-    ...mapGetters(['resultById']),
+    ...mapGetters(['config', 'resultById']),
 
     id() {
       return this.$route.params.id
@@ -108,6 +108,15 @@ export default {
     ...mapActions(['removeResult']),
 
     async showDeletePopup() {
+      if (!this.config.journal.confirmDeletion) {
+        await this.removeResult(this.id)
+        this.$nextTick(() => {
+          this.$router.back()
+        })
+
+        return
+      }
+
       const alert = await alertController.create({
         header: 'Confirm deletion',
         message: 'Are you sure you want to delete this answer from the Oracle?',

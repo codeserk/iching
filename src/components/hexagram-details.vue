@@ -111,7 +111,6 @@ export default {
         return
       }
 
-      console.log('details', this.number)
       return this.getHexagramDetails(this.number)
     },
 
