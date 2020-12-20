@@ -8,6 +8,9 @@ export interface State {
 export default {
   state: (): State => ({
     configKeys: {
+      // Introduction
+      'introduction.seen': false,
+
       // Display
       'display.name.chinese': true,
       'display.name.pinyin': true,
@@ -30,8 +33,14 @@ export default {
   }),
 
   getters: {
+    /**
+     * Gets a config value by its key.
+     */
     configKey: (state: State) => (key: string): any => state.configKeys[key],
 
+    /**
+     * Gets the whole config.
+     */
     config: (state: State, getters: any): Config => ({
       display: {
         name: {
@@ -65,12 +74,23 @@ export default {
   },
 
   mutations: {
+    /**
+     * Updates a config value
+     *
+     * @param state
+     * @param param1
+     */
     updateKey(state: State, { key, value }: any) {
       state.configKeys[key] = value
     },
   },
 
   actions: {
+    /**
+     * Loads the saved configuration.
+     *
+     * @param param0
+     */
     async loadConfig({ commit }: any) {
       try {
         const resultsJson = await Storage.get({ key: 'config' })
@@ -86,12 +106,23 @@ export default {
       }
     },
 
+    /**
+     * Updates a config value
+     *
+     * @param param0
+     * @param param1
+     */
     updateKey({ commit, dispatch }: any, { key, value }: any) {
       commit('updateKey', { key, value })
 
       dispatch('saveConfig')
     },
 
+    /**
+     * Saves the configuration.
+     *
+     * @param param0
+     */
     async saveConfig({ state }: any) {
       await Storage.set({ key: 'config', value: JSON.stringify(state.configKeys) })
     },
