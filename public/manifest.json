@@ -1,5 +1,5 @@
 {
- "name": "App",
+ "name": "I-Ching · Jose Camara [@codeserk]",
  "icons": [
   {
    "src": "\/icon\/android-icon-36x36.png",
@@ -36,6 +36,12 @@
    "sizes": "192x192",
    "type": "image\/png",
    "density": "4.0"
-  }
+  },
+  {
+    "src": "\/icon\/android-icon-192x192.png",
+    "sizes": "192x192",
+    "type": "image\/png",
+    "purpose": "maskable"
+   }
  ]
 }
