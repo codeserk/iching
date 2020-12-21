@@ -325,7 +325,6 @@ export default {
   },
 
   mounted() {
-    console.log(this.configKey('introduction.seen'))
     if (!this.configKey('introduction.seen')) {
       this.$router.push('/introduction')
     }
