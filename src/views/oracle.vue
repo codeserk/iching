@@ -379,6 +379,7 @@ export default {
     .question-input {
       display: flex;
       flex-wrap: wrap;
+      margin-bottom: 1em;
     }
   }
 }

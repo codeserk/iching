@@ -2,20 +2,21 @@
   <ion-page class="app-router">
     <div class="side-panel">
       <div class="tabs-inner">
-        <journal side-menu />
+        <journal v-if="isJournal" />
+        <oracle v-else-if="isOracle" />
       </div>
-      <ion-tab-bar>
-        <ion-tab-button tab="journal" href="/journal">
+      <ion-tab-bar :selected-tab="selelectedTab">
+        <ion-tab-button tab="/journal" href="/journal">
           <ion-icon name="book-outline" />
           <ion-label v-t="'sections.journal.tab'" />
         </ion-tab-button>
 
-        <ion-tab-button tab="oracle" href="/oracle">
+        <ion-tab-button href="/oracle" tab="oracle">
           <ion-icon name="stop-circle-outline" />
           <ion-label v-t="'sections.oracle.tab'" />
         </ion-tab-button>
 
-        <ion-tab-button tab="settings" href="/settings">
+        <ion-tab-button href="/settings" tab="settings">
           <ion-icon name="options-outline" />
           <ion-label v-t="'sections.settings.tab'" />
         </ion-tab-button>
@@ -42,12 +43,31 @@
   </ion-page>
 </template>
 
-<script lang="ts">
+<script>
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage } from '@ionic/vue'
 import Journal from './side-panel/journal.vue'
+import Oracle from './side-panel/oracle.vue'
 
 export default {
-  components: { Journal, IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage },
+  components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage, Journal, Oracle },
+
+  data: () => ({
+    showSettings: false,
+  }),
+
+  computed: {
+    isJournal() {
+      return this.$route.path.includes('journal')
+    },
+
+    isOracle() {
+      return this.$route.path.includes('oracle')
+    },
+
+    isSettings() {
+      return this.$route.path.includes('settings')
+    },
+  },
 }
 </script>
 
@@ -60,6 +80,7 @@ export default {
     flex-direction: column;
     width: 300px;
     height: 100%;
+    border-right: 1px solid var(--ion-color-light);
 
     .tabs-inner {
       position: relative;
