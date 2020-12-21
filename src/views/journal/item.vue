@@ -139,5 +139,11 @@ export default {
       return alert.present()
     },
   },
+
+  watch: {
+    id() {
+      this.activeHexagram = 'primary'
+    },
+  },
 }
 </script>

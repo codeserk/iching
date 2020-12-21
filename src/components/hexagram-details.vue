@@ -187,7 +187,7 @@ blockquote {
   white-space: pre-line;
 }
 
-@media (min-width: 820px) {
+@media (min-width: 1120px) {
   .hexagram-details {
     width: 820px;
     margin: auto;

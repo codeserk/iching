@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <ion-header collapse>
+    <ion-header collapse class="condensed-only">
       <ion-toolbar>
         <ion-title>Journal</ion-title>
       </ion-toolbar>
@@ -11,124 +11,70 @@
     <ion-content class="content" :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Journal</ion-title>
+          <ion-title size="large">
+            <span class="condensed-only">Journal</span>
+          </ion-title>
         </ion-toolbar>
-        <ion-toolbar>
+        <ion-toolbar class="condensed-only">
           <ion-searchbar animated @ion-change="search = $event.detail.value"></ion-searchbar>
         </ion-toolbar>
       </ion-header>
 
-      <ion-list>
-        <ion-item-sliding v-for="result in filteredResults" :key="result.id">
-          <ion-item button @click="$router.push(`/journal/${result.id}`)">
-            <ion-label v-text="result.question" />
-            <div slot="start">
-              <hexagram-figure
-                slot="start"
-                class="hexagram-figure"
-                :lines="result.hexagram.lines"
-                highlight-mutations
-                size="xs"
-              />
-            </div>
-          </ion-item>
+      <journal-items-list class="condensed-only" :search="search" />
 
-          <ion-item-options side="end">
-            <ion-item-option color="danger" @click="showDeletePopup(result.id)">Delete</ion-item-option>
-          </ion-item-options>
-        </ion-item-sliding>
-      </ion-list>
+      <div class="journal-text container full-only">
+        <ion-icon class="icon-journal" name="book-outline" size="large" />
+
+        <div class="text-content">
+          <h2 v-t="'introduction.slides.5.title'" />
+          <p v-html="$t('introduction.slides.5.description')" />
+        </div>
+      </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
-
-import {
-  IonSearchbar,
-  IonItemSliding,
-  IonItemOptions,
-  IonItemOption,
-  IonList,
-  IonItem,
-  IonLabel,
-  IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonContent,
-  alertController,
-} from '@ionic/vue'
-import HexagramFigure from '../components/hexagram-figure.vue'
+import { IonSearchbar, IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue'
+import JournalItemsList from '../components/journal-items-list'
 
 export default {
   components: {
     IonSearchbar,
-    IonItemSliding,
-    IonItemOptions,
-    IonItemOption,
-    IonList,
-    IonItem,
-    IonLabel,
     IonHeader,
     IonToolbar,
     IonTitle,
     IonContent,
     IonPage,
 
-    HexagramFigure,
+    JournalItemsList,
   },
 
   data: () => ({
     search: '',
   }),
-
-  computed: {
-    ...mapGetters(['config', 'results']),
-
-    filteredResults() {
-      if (!this.search) {
-        return this.results
-      }
-
-      const search = this.search.toLowerCase()
-      return this.results.filter(result => result.question.toLowerCase().includes(search))
-    },
-  },
-
-  methods: {
-    ...mapActions(['removeResult']),
-
-    async showDeletePopup(id) {
-      if (!this.config.journal.confirmDeletion) {
-        return await this.removeResult(id)
-      }
-
-      const alert = await alertController.create({
-        header: 'Confirm deletion',
-        message: 'Are you sure you want to delete this answer from the Oracle?',
-        buttons: [
-          {
-            text: 'Cancel',
-            role: 'cancel',
-          },
-          {
-            text: 'Yes',
-            handler: async () => {
-              await this.removeResult(id)
-            },
-          },
-        ],
-      })
-      return alert.present()
-    },
-  },
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 ion-app.ios .android-only {
   display: none;
+}
+
+.journal-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .text-content {
+    max-width: 400px;
+  }
+
+  ion-icon.icon-journal {
+    width: 150px;
+    height: 150px;
+  }
 }
 </style>

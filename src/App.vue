@@ -45,6 +45,20 @@ export default defineComponent({
   flex: 1;
 }
 
+@media (max-width: 919px) {
+  .full-only {
+    display: none !important;
+    opacity: 0 !important;
+  }
+}
+
+@media (min-width: 920px) {
+  .condensed-only {
+    display: none !important;
+    opacity: 0 !important;
+  }
+}
+
 *::-webkit-scrollbar {
   width: 0;
   background: transparent;
