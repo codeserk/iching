@@ -1,6 +1,6 @@
 {
   "appId": "es.codeserk.iching",
-  "appName": "iching",
+  "appName": "I-Ching",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "dist",

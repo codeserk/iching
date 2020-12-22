@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package es.codeserk.iching;
 
 import android.os.Bundle;
 
