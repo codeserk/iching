@@ -177,8 +177,9 @@ export class Hexagram {
   }
 
   static fromNumber(num: number): Hexagram {
-    const entry = Object.entries(HEXAGRAM_CODE_TO_HEXAGRAM_NUMBER).find(([itemCode, itemNumber]) => itemNumber === num)
+    return null as any
+    // const entry = Object.entries(HEXAGRAM_CODE_TO_HEXAGRAM_NUMBER).find(([itemCode, itemNumber]) => itemNumber === 1)
 
-    return Hexagram.fromCode(entry![0] as string)
+    // return Hexagram.fromCode(entry![0] as string)
   }
 }

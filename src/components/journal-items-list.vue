@@ -1,28 +1,32 @@
 <template>
-  <ion-list>
-    <ion-item-sliding v-for="result in filteredResults" :key="result.id">
-      <ion-item
-        button
-        @click="$router.push(`/journal/${result.id}`)"
-        :color="result.id === activeId ? 'primary' : undefined"
-      >
-        <ion-label v-text="result.question" />
-        <div slot="start">
-          <hexagram-figure
-            slot="start"
-            class="hexagram-figure"
-            :lines="result.hexagram.lines"
-            highlight-mutations
-            size="xs"
-          />
-        </div>
-      </ion-item>
+  <div class="items-list">
+    <ion-list>
+      <ion-item-sliding v-for="result in filteredResults" :key="result.id">
+        <ion-item
+          button
+          @click="$router.push(`/journal/${result.id}`)"
+          :color="result.id === activeId ? 'primary' : undefined"
+        >
+          <ion-label v-text="result.question" />
+          <div slot="start">
+            <hexagram-figure
+              slot="start"
+              class="hexagram-figure"
+              :lines="result.hexagram.lines"
+              highlight-mutations
+              size="xs"
+            />
+          </div>
+        </ion-item>
 
-      <ion-item-options side="end">
-        <ion-item-option color="danger" @click="showDeletePopup(result.id)">Delete</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>
+        <ion-item-options side="end">
+          <ion-item-option color="danger" @click="showDeletePopup(result.id)">Delete</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
+    <ion-button v-if="!showAll" @click="showAll = true" expand="block" fill="clear">Show more...</ion-button>
+  </div>
 </template>
 
 <script>
@@ -35,6 +39,14 @@ export default {
   components: {
     HexagramFigure,
   },
+
+  data: () => ({
+    /**
+     * Whether all the results should be shown.
+     * Default to false to prevent long rendering periods.
+     */
+    showAll: false,
+  }),
 
   props: {
     /**
@@ -63,12 +75,16 @@ export default {
      * @returns {HexagramResult[]}
      */
     filteredResults() {
-      if (!this.search) {
-        return this.results
+      if (this.search) {
+        const search = this.search.toLowerCase()
+        return this.results.filter(result => result.question.toLowerCase().includes(search))
       }
 
-      const search = this.search.toLowerCase()
-      return this.results.filter(result => result.question.toLowerCase().includes(search))
+      if (!this.showAll) {
+        return this.results.slice(0, 10)
+      }
+
+      return this.results
     },
   },
 
