@@ -25,7 +25,9 @@
       </ion-item-sliding>
     </ion-list>
 
-    <ion-button v-if="!showAll" @click="showAll = true" expand="block" fill="clear">Show more...</ion-button>
+    <ion-button v-if="shouldShowShowAllButton" @click="showAll = true" expand="block" fill="clear"
+      >Show more...</ion-button
+    >
   </div>
 </template>
 
@@ -68,6 +70,15 @@ export default {
 
   computed: {
     ...mapGetters(['config', 'results']),
+
+    /**
+     * Whether the button to show all should be visible
+     *
+     * @returns {Boolean}
+     */
+    shouldShowShowAllButton() {
+      return this.results.length > 10 && !this.showAll
+    },
 
     /**
      * Filtered results.
