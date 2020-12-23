@@ -1,40 +1,48 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router'
 import { RouteRecordRaw } from 'vue-router'
-import Tabs from '../views/router.vue'
+import RouterView from '../views/RouterView.vue'
+
+// Views
+import OracleView from '@/views/OracleView.vue'
+import JournalView from '@/views/JournalView.vue'
+import JournalItemView from '@/views/journal/JournalItemView.vue'
+import SettingsView from '@/views/SettingsView.vue'
+import HexagramView from '@/views/HexagramView.vue'
+import IntroductionView from '@/views/IntroductionView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    component: Tabs,
+    component: RouterView,
     redirect: '/oracle',
     children: [
       {
         path: '/oracle',
-        component: () => import('@/views/oracle.vue'),
+        component: OracleView,
       },
       {
         path: '/journal',
-        component: () => import('@/views/journal.vue'),
+        component: JournalView,
         children: [
           {
             path: ':id',
-            component: () => import('@/views/journal/item.vue'),
+            component: JournalItemView,
           },
         ],
       },
       {
         path: '/settings',
-        component: () => import('@/views/SettingsView.vue'),
+        component: SettingsView,
       },
     ],
   },
   {
     path: '/hexagram/:id',
-    component: () => import('@/views/hexagram.vue'),
+    component: HexagramView,
   },
   {
     path: '/introduction',
-    component: () => import('@/views/introduction.vue'),
+    component: IntroductionView,
   },
 ]
 

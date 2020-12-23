@@ -41,52 +41,42 @@
 </template>
 
 <script>
-import {
-  IonSegment,
-  IonSegmentButton,
-  IonBackButton,
-  IonIcon,
-  IonButton,
-  IonPage,
-  IonButtons,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonContent,
-  alertController,
-} from '@ionic/vue'
+import { alertController } from '@ionic/vue'
 import { mapActions, mapGetters } from 'vuex'
 
 import HexagramDetails from '../../components/hexagram-details.vue'
 
 export default {
   components: {
-    IonSegment,
-    IonSegmentButton,
-    IonIcon,
-    IonButton,
-    IonBackButton,
-    IonPage,
-    IonButtons,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    IonContent,
-
     HexagramDetails,
   },
 
   data: () => ({
+    /**
+     * Hexagram active
+     *
+     * @var {'primary'|'secondary}
+     */
     activeHexagram: 'primary',
   }),
 
   computed: {
     ...mapGetters(['config', 'resultById']),
 
+    /**
+     * Oracle result id.
+     *
+     * @returns {String|undefined}
+     */
     id() {
       return this.$route.params.id
     },
 
+    /**
+     * Hexagram result
+     *
+     * @returns {HexagramResult|undefined}
+     */
     result() {
       if (!this.id) {
         return
@@ -95,10 +85,20 @@ export default {
       return this.resultById(this.id)
     },
 
+    /**
+     * Toolbar title: question asked.
+     *
+     * @returns {String|undefined}
+     */
     title() {
       return this.result?.question
     },
 
+    /**
+     * Hexagram in the result.
+     *
+     * @returns {Hexagram|undefined}
+     */
     hexagram() {
       return this.result?.hexagram
     },
@@ -107,6 +107,11 @@ export default {
   methods: {
     ...mapActions(['removeResult']),
 
+    /**
+     * Shows a popup to delete the result.
+     *
+     * @TODO Actually the popup only shows if it's configured like that.
+     */
     async showDeletePopup() {
       if (!this.config.journal.confirmDeletion) {
         await this.removeResult(this.id)
@@ -141,6 +146,9 @@ export default {
   },
 
   watch: {
+    /**
+     * Changes the active hexagram to the primary if the active result changes.
+     */
     id() {
       this.activeHexagram = 'primary'
     },

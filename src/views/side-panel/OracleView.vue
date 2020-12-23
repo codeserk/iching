@@ -137,38 +137,9 @@
 </template>
 
 <script lang="ts">
-import {
-  IonList,
-  IonListHeader,
-  IonItemDivider,
-  IonItemGroup,
-  IonItem,
-  IonLabel,
-  IonCheckbox,
-  IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonContent,
-} from '@ionic/vue'
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-  components: {
-    IonList,
-    IonListHeader,
-    IonItemDivider,
-    IonItemGroup,
-    IonItem,
-    IonLabel,
-    IonCheckbox,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    IonContent,
-    IonPage,
-  },
-
   computed: {
     ...mapGetters(['configKey']),
   },

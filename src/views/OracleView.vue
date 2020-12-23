@@ -120,23 +120,6 @@
 </template>
 
 <script>
-import {
-  IonTitle,
-  IonHeader,
-  IonToolbar,
-  IonButton,
-  IonIcon,
-  IonSlides,
-  IonSlide,
-  IonButtons,
-  IonText,
-  IonInput,
-  IonPage,
-  IonContent,
-  IonSegment,
-  IonSegmentButton,
-} from '@ionic/vue'
-
 import { Coin } from '../models/coin'
 import { Hexagram, HexagramLine } from '../models/hexagram'
 import { getRandomNumber } from '../util/random'
@@ -148,32 +131,29 @@ import { alertController } from '@ionic/vue'
 
 export default {
   components: {
-    IonTitle,
-    IonHeader,
-    IonButton,
-    IonSlides,
-    IonSlide,
-    IonIcon,
-    IonButtons,
-    IonText,
-    IonInput,
-    IonContent,
-    IonPage,
-    IonToolbar,
-    IonSegment,
-    IonSegmentButton,
-
     HexagramDetails,
     HexagramFigure,
   },
 
   data: () => ({
+    /**
+     * Options for the slider.
+     *
+     * @var {Object}
+     */
     slidesOptions: {
       allowTouchMove: false,
     },
 
     /**
-     * @var {Phase} phase Current phase
+     * Current phase.
+     * This was an enum before, but TS was adding more problems than solutions.
+     *
+     * 0: Question
+     * 1: Coins
+     * 2: Result
+     *
+     * @var {Number}
      */
     phase: 0,
 
@@ -182,19 +162,64 @@ export default {
      */
     question: '',
 
+    /**
+     * Whether the user has tossed the coins
+     *
+     * @var {Boolean}
+     */
     hasTossed: false,
 
+    /**
+     * Time when the question was created.
+     *
+     * @var {Date}
+     */
     createdAt: new Date(),
+
+    /**
+     * Already tossed coins
+     *
+     * @var {Coin[]}
+     */
     coins: [],
+
+    /**
+     * Revealed hexagram lines
+     *
+     * @var {HexagramLine[]}
+     */
     lines: [],
+
+    /**
+     * Resulting hexagram
+     *
+     * @var {Hexagram|null}
+     */
     hexagram: null,
+
+    /**
+     * Hexagram active
+     *
+     * @var {'primary'|'secondary}
+     */
     activeHexagram: 'primary',
+
+    /**
+     * Final result
+     *
+     * @var {HexagramResult|null}
+     */
     result: null,
   }),
 
   computed: {
     ...mapGetters(['config', 'configKey']),
 
+    /**
+     * Page title (to show in the top toolbar). Depends on the current phase
+     *
+     * @returns {String}
+     */
     title() {
       if (this.phase !== 0) {
         return this.question
@@ -203,22 +228,47 @@ export default {
       return this.question || 'Ask the Oracle'
     },
 
+    /**
+     * Placeholder for the question, before the user writes anything.
+     *
+     * @returns {String}
+     */
     questionPlaceholder() {
       return `Question from ${this.createdAt.toLocaleString()}`
     },
 
+    /**
+     * Number of hexagram lines revealed
+     *
+     * @returns {Number}
+     */
     numLines() {
       return this.lines.length
     },
 
+    /**
+     * Whether the user needs to reveal more lines
+     *
+     * @returns {Boolean}
+     */
     needsMoreLines() {
       return this.numLines < 6
     },
 
+    /**
+     * Number of coins that have been flipped.
+     *
+     * @returns {Number}
+     */
     numCoins() {
       return this.coins.filter(Boolean).length
     },
 
+    /**
+     * Whether the user is waiting for more coins to be flipped
+     *
+     * @returns {Boolean}
+     */
     needsMoreCoins() {
       return this.numCoins < 3
     },
@@ -227,6 +277,9 @@ export default {
   methods: {
     ...mapActions(['addResult', 'removeResult']),
 
+    /**
+     * Saves the question in the store and moves to the next phase.
+     */
     saveQuestion() {
       if (!this.question) {
         this.question = this.questionPlaceholder
@@ -235,6 +288,11 @@ export default {
       this.phase = 1
     },
 
+    /**
+     * Tosses a coin in a given position.
+     *
+     * @param {Number} position.
+     */
     async tossCoin(position) {
       this.coins[position] = Coin.fromToss()
 
@@ -243,6 +301,9 @@ export default {
       }
     },
 
+    /**
+     * Tosses all the coins.
+     */
     async tossAll() {
       if (this.hasTossed || !this.needsMoreLines) {
         return
@@ -263,6 +324,9 @@ export default {
       this.hasTossed = false
     },
 
+    /**
+     * Adds a new hexagram line from the tossed coins.
+     */
     addHexagramLine() {
       const [coinA, coinB, coinC] = this.coins
       const line = HexagramLine.fromCoins(coinA, coinB, coinC)
@@ -283,6 +347,9 @@ export default {
       }
     },
 
+    /**
+     * Restarts the oracle (sets all the values to the initial ones).
+     */
     restart() {
       this.hasTossed = false
       this.question = ''
@@ -295,6 +362,11 @@ export default {
       this.phase = 0
     },
 
+    /**
+     * Shows a popup to delete the result.
+     *
+     * @TODO Actually the popup only shows if it's configured like that.
+     */
     async showDeletePopup() {
       if (!this.config.journal.confirmDeletion) {
         await this.removeResult(this.result?.id)
@@ -324,6 +396,9 @@ export default {
     },
   },
 
+  /**
+   * Handles mounted life-cycle event.
+   */
   mounted() {
     if (!this.configKey('introduction.seen')) {
       this.$router.push('/introduction')
@@ -331,11 +406,18 @@ export default {
   },
 
   watch: {
+    /**
+     * Changes the active slide (ionic component) when the phase changes.
+     */
     phase(newPhase) {
       const byId = document.getElementById('slides')
       byId.swiper.slideTo(newPhase)
     },
 
+    /**
+     * Restarts the oracle if the user comes back to this page after showing
+     * the result page.
+     */
     $route(newRoute) {
       if (newRoute.path === '/oracle') {
         this.$nextTick(() => {

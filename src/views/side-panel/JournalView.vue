@@ -16,22 +16,19 @@
 </template>
 
 <script>
-import { IonSearchbar, IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue'
 import JournalItemsList from '../../components/journal-items-list'
 
 export default {
   components: {
-    IonSearchbar,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    IonContent,
-    IonPage,
-
     JournalItemsList,
   },
 
   data: () => ({
+    /**
+     * Current search.
+     *
+     * @returns {String}
+     */
     search: '',
   }),
 }

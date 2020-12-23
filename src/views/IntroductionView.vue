@@ -117,18 +117,25 @@
 </template>
 
 <script>
-import { IonSlides, IonIcon, IonSlide, IonButton, IonPage, IonContent } from '@ionic/vue'
 import { wait } from '../util/time'
 import { getRandomNumber } from '../util/random'
 import { Coin } from '../models/coin'
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-  components: { IonSlides, IonSlide, IonIcon, IonButton, IonContent, IonPage },
-
   data: () => ({
+    /**
+     * Coins, used in one of the slides.
+     *
+     * @var {Coin[]}
+     */
     coins: [],
 
+    /**
+     * Active slide number
+     *
+     * @var {Number}
+     */
     currentSlide: 0,
   }),
 
@@ -139,14 +146,28 @@ export default {
   methods: {
     ...mapActions(['updateKey']),
 
-    async onSlideChanged(event, b) {
+    /**
+     * Handler for event triggered when the slide has changed.
+     * Changes the value of `currentSlide` using ionic's API
+     *
+     * @param {any} event
+     */
+    async onSlideChanged(event) {
       this.currentSlide = await event.target.getActiveIndex()
     },
 
+    /**
+     * Tosses the coin in a given position.
+     *
+     * @param {Number} position
+     */
     async tossCoin(position) {
       this.coins[position] = Coin.fromToss()
     },
 
+    /**
+     * Tosses all the coins.
+     */
     async tossCoins() {
       await wait(getRandomNumber(1, 2) * 500)
       this.$nextTick(() => this.tossCoin(0))
@@ -163,6 +184,9 @@ export default {
       await this.tossCoins()
     },
 
+    /**
+     * Finishes the introduction (skips or clicks on "start")
+     */
     async finish() {
       await this.updateKey({ key: 'introduction.seen', value: true })
 
@@ -170,6 +194,9 @@ export default {
     },
   },
 
+  /**
+   * Mounted life-cycle event.
+   */
   async mounted() {
     await this.tossCoins()
   },

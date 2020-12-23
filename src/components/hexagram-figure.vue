@@ -64,6 +64,11 @@ export default {
   },
 
   computed: {
+    /**
+     * All the lines, ensures there are 6 lines using "empty".
+     *
+     * @returns {HexagramLine[]}
+     */
     allLines() {
       const result = [...this.lines]
       while (result.length < 6) {

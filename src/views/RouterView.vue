@@ -2,10 +2,10 @@
   <ion-page class="app-router">
     <div class="side-panel">
       <div class="tabs-inner">
-        <journal v-if="isJournal" />
-        <oracle v-else-if="isOracle" />
+        <journal-view v-if="isJournal" />
+        <oracle-view v-else-if="isOracle" />
       </div>
-      <ion-tab-bar :selected-tab="selelectedTab">
+      <ion-tab-bar>
         <ion-tab-button tab="/journal" href="/journal">
           <ion-icon name="book-outline" />
           <ion-label v-t="'sections.journal.tab'" />
@@ -44,26 +44,36 @@
 </template>
 
 <script>
-import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage } from '@ionic/vue'
-import Journal from './side-panel/journal.vue'
-import Oracle from './side-panel/oracle.vue'
+import JournalView from './side-panel/JournalView.vue'
+import OracleView from './side-panel/OracleView.vue'
 
 export default {
-  components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage, Journal, Oracle },
-
-  data: () => ({
-    showSettings: false,
-  }),
+  components: { JournalView, OracleView },
 
   computed: {
+    /**
+     * Whether it's showing the journal view.
+     *
+     * @returns {Boolean}
+     */
     isJournal() {
       return this.$route.path.includes('journal')
     },
 
+    /**
+     * Whether it's showing the oracle view
+     *
+     * @returns {Boolean}
+     */
     isOracle() {
       return this.$route.path.includes('oracle')
     },
 
+    /**
+     * Whether it's showing the settings view.
+     *
+     * @returns {Boolean}
+     */
     isSettings() {
       return this.$route.path.includes('settings')
     },

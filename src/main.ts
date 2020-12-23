@@ -49,6 +49,75 @@ router.isReady().then(() => {
   app.mount('#app')
 })
 
+// Ionic components
+import {
+  IonTabBar,
+  IonTabButton,
+  IonTabs,
+  IonLabel,
+  IonIcon,
+  IonPage,
+  IonSlides,
+  IonSlide,
+  IonButton,
+  IonContent,
+  IonTitle,
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonText,
+  IonInput,
+  IonSegment,
+  IonSegmentButton,
+  IonList,
+  IonListHeader,
+  IonItemDivider,
+  IonItemGroup,
+  IonItem,
+  IonCheckbox,
+  IonSearchbar,
+  IonBackButton,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonItemSliding,
+  IonItemOptions,
+  IonItemOption,
+} from '@ionic/vue'
+app
+  .component('IonTabBar', IonTabBar)
+  .component('IonTabButton', IonTabButton)
+  .component('IonTabs', IonTabs)
+  .component('IonLabel', IonLabel)
+  .component('IonIcon', IonIcon)
+  .component('IonPage', IonPage)
+  .component('IonSlides', IonSlides)
+  .component('IonSlide', IonSlide)
+  .component('IonButton', IonButton)
+  .component('IonContent', IonContent)
+  .component('IonTitle', IonTitle)
+  .component('IonHeader', IonHeader)
+  .component('IonToolbar', IonToolbar)
+  .component('IonButtons', IonButtons)
+  .component('IonText', IonText)
+  .component('IonInput', IonInput)
+  .component('IonSegment', IonSegment)
+  .component('IonSegmentButton', IonSegmentButton)
+  .component('IonList', IonList)
+  .component('IonListHeader', IonListHeader)
+  .component('IonItemDivider', IonItemDivider)
+  .component('IonItemGroup', IonItemGroup)
+  .component('IonItem', IonItem)
+  .component('IonCheckbox', IonCheckbox)
+  .component('IonSearchbar', IonSearchbar)
+  .component('IonBackButton', IonBackButton)
+  .component('IonGrid', IonGrid)
+  .component('IonRow', IonRow)
+  .component('IonCol', IonCol)
+  .component('IonItemSliding', IonItemSliding)
+  .component('IonItemOptions', IonItemOptions)
+  .component('IonItemOption', IonItemOption)
+
 // Icons
 import { addIcons } from 'ionicons'
 import {

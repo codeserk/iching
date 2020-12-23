@@ -62,50 +62,57 @@
 </template>
 
 <script>
-import { IonGrid, IonRow, IonCol, IonText } from '@ionic/vue'
-import { informationOutline } from 'ionicons/icons'
 import { mapGetters } from 'vuex'
 
 import HexagramFigure from './hexagram-figure.vue'
 
 export default {
   components: {
-    IonText,
-    IonGrid,
-    IonRow,
-    IonCol,
     HexagramFigure,
   },
 
   props: {
+    /**
+     * Hexagram number.
+     */
     number: {
       type: Number,
       default: () => null,
     },
 
+    /**
+     * Hexagram lines.
+     */
     lines: {
       type: Array,
       default: () => [],
     },
 
+    /**
+     * Mutated lines.
+     */
     mutatedLines: {
       type: Array,
       default: () => [],
     },
 
+    /**
+     * Whether it should show all the mutations (useful for the index).
+     */
     showAllMutations: {
       type: Boolean,
-      defauilt: false,
+      default: false,
     },
   },
-
-  data: () => ({
-    informationOutline,
-  }),
 
   computed: {
     ...mapGetters(['config', 'getHexagramDetails', 'hexagramTitle']),
 
+    /**
+     * Hexagram details.
+     *
+     * @returns {HexagramDetails|undefined}
+     */
     details() {
       if (!this.number) {
         return
@@ -114,10 +121,20 @@ export default {
       return this.getHexagramDetails(this.number)
     },
 
+    /**
+     * Toolbar title: Name of the hexagram.
+     *
+     * @returns {String}
+     */
     title() {
       return this.hexagramTitle(this.number)
     },
 
+    /**
+     * Mutated lines
+     *
+     * @returns {Number[]}
+     */
     mutations() {
       if (this.showAllMutations) {
         return [1, 2, 3, 4, 5, 6]

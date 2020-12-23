@@ -28,27 +28,26 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
-import { IonItemSliding, IonItemOptions, IonItemOption, IonList, IonItem, IonLabel, alertController } from '@ionic/vue'
+import { alertController } from '@ionic/vue'
 import HexagramFigure from '../components/hexagram-figure.vue'
 
 export default {
   components: {
-    IonItemSliding,
-    IonItemOptions,
-    IonItemOption,
-    IonList,
-    IonItem,
-    IonLabel,
-
     HexagramFigure,
   },
 
   props: {
+    /**
+     * Search string, used to filter results.
+     */
     search: {
       type: String,
       default: '',
     },
 
+    /**
+     * Id of the active result.
+     */
     activeId: {
       type: String,
       default: null,
@@ -58,6 +57,11 @@ export default {
   computed: {
     ...mapGetters(['config', 'results']),
 
+    /**
+     * Filtered results.
+     *
+     * @returns {HexagramResult[]}
+     */
     filteredResults() {
       if (!this.search) {
         return this.results
@@ -71,6 +75,11 @@ export default {
   methods: {
     ...mapActions(['removeResult']),
 
+    /**
+     * Shows a popup to delete the result.
+     *
+     * @TODO Actually the popup only shows if it's configured like that.
+     */
     async showDeletePopup(id) {
       if (!this.config.journal.confirmDeletion) {
         return await this.removeResult(id)
