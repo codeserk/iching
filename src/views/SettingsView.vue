@@ -4,6 +4,16 @@
       <ion-toolbar>
         <ion-title>Settings</ion-title>
       </ion-toolbar>
+      <ion-toolbar>
+        <ion-segment v-model="section">
+          <ion-segment-button value="config">
+            <ion-label v-text="'Configuration'" />
+          </ion-segment-button>
+          <ion-segment-button value="about">
+            <ion-label>About me</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
     </ion-header>
     <ion-content class="content" :fullscreen="true">
       <ion-header collapse="condense">
@@ -12,7 +22,7 @@
         </ion-toolbar>
       </ion-header>
 
-      <ion-list>
+      <ion-list v-show="section === 'config'">
         <ion-list-header>
           Display
         </ion-list-header>
@@ -144,30 +154,66 @@
           ></ion-checkbox>
         </ion-item>
       </ion-list>
+
+      <ion-list v-if="section === 'about'" class="about-me">
+        <div class="header ion-padding">
+          <ion-img src="/assets/img/avatar.png" />
+          <h3>Thanks for using my app :)</h3>
+          <h3>Jose Camara <strong>[@codeserk]</strong></h3>
+        </div>
+
+        <ion-item button @click="openLink('https://www.codeserk.es/project/android/i-ching')">Website</ion-item>
+        <ion-item button @click="openLink('https://www.codeserk.es/project/android/i-ching/privacy-policy')"
+          >Privacy Policy</ion-item
+        >
+      </ion-list>
     </ion-content>
   </ion-page>
 </template>
 
-<script lang="ts">
+<script>
 import { mapActions, mapGetters } from 'vuex'
+import { Plugins } from '@capacitor/core'
+
+const { Browser } = Plugins
 
 export default {
+  data: () => ({
+    section: 'config',
+  }),
+
   computed: {
     ...mapGetters(['configKey']),
   },
 
   methods: {
     ...mapActions(['updateKey']),
+
+    openLink(link) {
+      Browser.open({ url: link })
+    },
   },
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 ion-list-header {
   margin-bottom: 10px;
 }
 ion-item-divider {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.about-me {
+  .header {
+    text-align: center;
+
+    ion-img {
+      max-width: 250px;
+      margin: auto;
+      image-rendering: pixelated;
+    }
+  }
 }
 </style>
