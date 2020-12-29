@@ -155,18 +155,33 @@
         </ion-item>
       </ion-list>
 
-      <ion-list v-if="section === 'about'" class="about-me">
+      <div v-show="section === 'about'" class="about-me">
         <div class="header ion-padding">
           <ion-img src="/assets/img/avatar.png" />
           <h3>Thanks for using my app :)</h3>
           <h3>Jose Camara <strong>[@codeserk]</strong></h3>
         </div>
 
-        <ion-item button @click="openLink('https://www.codeserk.es/project/android/i-ching')">Website</ion-item>
-        <ion-item button @click="openLink('https://www.codeserk.es/project/android/i-ching/privacy-policy')"
-          >Privacy Policy</ion-item
-        >
-      </ion-list>
+        <ion-list>
+          <ion-item button @click="openLink('https://www.codeserk.es/project/android/i-ching')">
+            <ion-icon slot="start" name="home-outline" />
+            <ion-label v-text="'Website'" />
+          </ion-item>
+          <ion-item button @click="openLink('https://www.codeserk.es/project/android/i-ching/privacy-policy')">
+            <ion-icon slot="start" name="document-outline" />
+            <ion-label v-text="'Privacy Policy'" />
+          </ion-item>
+          <ion-item button @click="openLink('https://www.buymeacoffee.com/codeserk')" color="tertiary">
+            <ion-icon slot="start" name="cafe-outline" />
+            <ion-label v-text="'Buy me a coffee!'" />
+          </ion-item>
+        </ion-list>
+
+        <p
+          class="text-free"
+          v-text="'This app is (and will always be) completely free, but support is always welcomed!'"
+        />
+      </div>
     </ion-content>
   </ion-page>
 </template>
@@ -206,14 +221,28 @@ ion-item-divider {
 }
 
 .about-me {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100% - 50px);
+
   .header {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     text-align: center;
 
     ion-img {
-      max-width: 250px;
-      margin: auto;
+      width: 250px;
+      height: 250px;
       image-rendering: pixelated;
     }
+  }
+
+  .text-free {
+    padding: 0 1em;
   }
 }
 </style>

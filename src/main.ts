@@ -128,6 +128,9 @@ import {
   optionsOutline,
   bookOutline,
   stopCircleOutline,
+  homeOutline,
+  documentOutline,
+  cafeOutline,
 } from 'ionicons/icons'
 
 addIcons({
@@ -138,4 +141,7 @@ addIcons({
   'options-outline': optionsOutline,
   'book-outline': bookOutline,
   'stop-circle-outline': stopCircleOutline,
+  'home-outline': homeOutline,
+  'document-outline': documentOutline,
+  'cafe-outline': cafeOutline,
 })
