@@ -64,6 +64,7 @@ ion-app.ios .android-only {
   align-items: center;
   justify-content: center;
   height: calc(100% - 200px);
+  text-align: center;
 
   .text-content {
     max-width: 400px;
