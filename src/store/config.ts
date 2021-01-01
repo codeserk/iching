@@ -116,13 +116,17 @@ export default {
         }
 
         // Get device lang
-        const { value: language } = await Device.getLanguageCode()
-        if (AVAILABLE_LANGUAGES.includes(language)) {
-          commit('updateKey', { key: 'language', value: language })
-          i18n.global.locale = language
+        if (!config.language) {
+          const { value: language } = await Device.getLanguageCode()
+          if (AVAILABLE_LANGUAGES.includes(language)) {
+            commit('updateKey', { key: 'language', value: language })
+            i18n.global.locale = language
+          } else {
+            commit('updateKey', { key: 'language', value: 'en' })
+            i18n.global.locale = 'en'
+          }
         } else {
-          commit('updateKey', { key: 'language', value: 'en' })
-          i18n.global.locale = 'en'
+          i18n.global.locale = config.language
         }
       } catch (error) {
         console.error(error)
@@ -139,6 +143,13 @@ export default {
       commit('updateKey', { key, value })
 
       await dispatch('saveConfig')
+    },
+
+    async updateLanguage({ dispatch }: any, language: string) {
+      console.log('language', language)
+      i18n.global.locale = language
+
+      await dispatch('updateKey', { key: 'language', value: language })
     },
 
     /**

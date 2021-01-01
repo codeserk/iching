@@ -24,9 +24,27 @@
 
       <ion-list v-show="section === 'config'">
         <ion-list-header v-t="'settings.config.display'" />
+
+        <ion-item-divider>
+          <ion-label v-t="'settings.config.language.label'" />
+        </ion-item-divider>
+        <ion-item>
+          <ion-label v-t="'settings.config.language.label'" />
+          <ion-select
+            :placeholder="$t('settings.config.language.placeholder')"
+            :value="configKey('language')"
+            @ion-change="updateLanguage($event.target.value)"
+            :cancel-text="$t('cancel')"
+            :ok-text="$t('ok')"
+          >
+            <ion-select-option value="en" v-t="'settings.config.language.en'" />
+            <ion-select-option value="es" v-t="'settings.config.language.es'" />
+          </ion-select>
+        </ion-item>
+
         <ion-item-group>
           <ion-item-divider>
-            <ion-label v-t="'settings.config.hexagramHeader'">Hexagram header</ion-label>
+            <ion-label v-t="'settings.config.hexagramHeader'" />
           </ion-item-divider>
           <ion-item>
             <ion-label v-t="'settings.config.chineseName'" />
@@ -195,7 +213,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['updateKey']),
+    ...mapActions(['updateKey', 'updateLanguage']),
 
     openLink(link) {
       Browser.open({ url: link })

@@ -109,6 +109,14 @@ export default {
     },
 
     config: {
+      language: {
+        label: 'Idioma',
+        placeholder: 'Elige el idioma',
+
+        en: 'Inglés',
+        es: 'Castellano',
+      },
+
       quote: 'Cita',
       description: 'Descripción',
       explanation: 'Explicación',
@@ -160,4 +168,7 @@ export default {
     cancel: 'Cancelal',
     accept: 'Sí',
   },
+
+  cancel: 'Cancelar',
+  ok: 'Aceptar',
 }
