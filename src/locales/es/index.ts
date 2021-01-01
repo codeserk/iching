@@ -87,6 +87,67 @@ export default {
     },
   },
 
+  help: {
+    title: 'Ayuda',
+
+    iching: {
+      title: 'I-Ching',
+
+      description: {
+        0: 'El I Ching, Yijing o I King (en chino tradicional: 易經; en chino simplificado: 易经; en pinyin: yì jīng) es un libro oracular chino cuyos primeros textos se suponen escritos hacia el 1200 a. C. Es uno de los Cinco Clásicos confucianos.',
+        1: 'El término i ching significa ‘libro de las mutaciones’. El texto fue aumentado durante la dinastía Zhou y posteriormente por comentaristas de la escuela de Confucio, pero su contenido original es de procedencia taoísta y no confucianista. Se cree que describe o interpreta la situación presente de quien lo consulta y aconseja el modo en que se puede resolver el futuro si se adopta ante él la posición correcta. Es un libro oracular, sapiencial y moral, a la vez que por su estructura y simbología es un libro filosófico y cosmogónico.',
+      },
+
+      moreInfo: {
+        label: 'Más información en Wikipedia',
+        link: 'https://es.wikipedia.org/wiki/I_Ching',
+      },
+    },
+
+    question: {
+      title: 'Pregunta',
+
+      description: {
+        0: 'Es importante que piense en su pregunta durante todo el proceso.',
+        1: 'Algunos consejos:',
+      },
+    },
+    coins: {
+      title: 'Monedas',
+
+      description: {
+        0: 'Para consultar el I-Ching hay que lanzar 3 monedas 6 veces. Estas son las monedas que usamos en esta aplicación.',
+        1: 'Para lanzarlos, simplemente haga clic en ellos o en el botón azul de arriba.',
+        2: 'Las monedas resultantes determinarán las líneas del hexagrama:',
+      },
+
+      table: {
+        combo: 'Combinación de monedas',
+        number: 'Número',
+        line: 'Línea',
+
+        mutableYang: '3 Caras',
+        yin: '2 Caras, 1 Cruz',
+        mutableYin: '1 Cara, 2 Cruz',
+        yang: '3 Cruces',
+      },
+    },
+    hexagram: {
+      title: 'Hexagrama',
+
+      description: {
+        0: 'Los hexagramas que identifiques se pueden llamar "Hexagrama primario" (o "Hexagrama actual"). Para producir un "Hexagrama secundario" (o "Hexagrama futuro"), simplemente hay que cambiar todas las líneas marcadas con una "x" o una "o" por su opuesto. Cualquier línea discontinua (Yin) marcada con una "x" se convierte en su opuesto, una línea continua (Yang), y las líneas continuas Yang marcadas con una "o" se convierten en las líneas discontinuas de Yin.',
+        1: 'El I Ching significa "Libro de los cambios" en chino y tiene que ver con el Cambio, que es la única constante en la vida. Si no obtienes líneas cambiantes cuando lanza un hexagrama (es decir, número 6 o un valor de 9), eso significa que las condiciones relacionadas con su tema son relativamente estables o no están en gran cambio en este momento en particular.',
+        2: 'Una vez que hayas identificado los hexagrama(s), esta aplicación le mostrará el significado:',
+        3: 'Descripción: una descripción general del hexagrama.',
+        4: 'Juicio: una interpretación del hexagrama. Incluye la cita del libro original y una explicación.',
+        5: 'Imagen: Una interpretación de la figura visual. Incluye la cita del libro original y una explicación.',
+        6: 'Mutations: an interpretation of the mutated lines. Includes the quote from the original book, and an explanation.',
+        7: 'Los textos de los hexagramas presentados en esta aplicación son una traducción gratuita al Castellano del I Ching realizada por Richard Wilhelm, cuya primera versión data de 1924.',
+      },
+    },
+  },
+
   oracle: {
     title: 'Pregunta al Oráculo',
 
@@ -169,6 +230,7 @@ export default {
     accept: 'Sí',
   },
 
+  close: 'Cerrar',
   cancel: 'Cancelar',
   ok: 'Aceptar',
 }

@@ -9,13 +9,17 @@
             <ion-icon slot="start" name="refresh"></ion-icon>
           </ion-button>
         </ion-buttons>
-        <ion-buttons slot="end" v-if="phase === 2">
-          <ion-button @click="showDeletePopup">
-            <ion-icon slot="start" name="trash-outline"></ion-icon>
+        <ion-buttons slot="end">
+          <ion-button @click="showHelp = true">
+            <ion-icon slot="start" name="help-circle-outline"></ion-icon>
           </ion-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
+
+    <ion-modal :is-open="showHelp" @ion-dismiss="showHelp = false">
+      <help-modal @close="showHelp = false" />
+    </ion-modal>
 
     <ion-content class="content page-oracle" fullscreen>
       <ion-slides id="slides" ref="slides" class="ion-slides" :options="slidesOptions">
@@ -47,10 +51,6 @@
         <ion-slide class="slide-coins ion-padding">
           <div class="container">
             <div class="toss-coins" @click="tossAll">
-              <ion-button class="button-toss" fill="solid" :class="{ 'has-tossed': hasTossed || !needsMoreLines }">
-                <span v-t="'oracle.toss.title'" />
-                <ion-icon slot="end" name="dice-outline" />
-              </ion-button>
               <div class="coins">
                 <div
                   class="coin coin-1"
@@ -77,6 +77,10 @@
                   }"
                 />
               </div>
+              <ion-button class="button-toss" fill="solid" :class="{ 'has-tossed': hasTossed || !needsMoreLines }">
+                <span v-t="'oracle.toss.title'" />
+                <ion-icon slot="end" name="dice-outline" />
+              </ion-button>
             </div>
 
             <hexagram-figure :lines="lines" with-images />
@@ -114,18 +118,24 @@ import { Coin } from '../models/coin'
 import { Hexagram, HexagramLine } from '../models/hexagram'
 import { getRandomNumber } from '../util/random'
 import { wait } from '../util/time'
-import HexagramDetails from '../components/hexagram-details.vue'
-import HexagramFigure from '../components/hexagram-figure.vue'
 import { mapActions, mapGetters } from 'vuex'
 import { alertController } from '@ionic/vue'
+
+import HexagramFigure from '../components/hexagram-figure.vue'
+import HexagramDetails from '../components/hexagram-details.vue'
+import HelpModal from '@/views/HelpModal'
 
 export default {
   components: {
     HexagramDetails,
     HexagramFigure,
+    HelpModal,
   },
 
   data: () => ({
+    /** Whether the help modal is active */
+    showHelp: false,
+
     /**
      * Options for the slider.
      *

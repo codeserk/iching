@@ -25,9 +25,6 @@
       <ion-list v-show="section === 'config'">
         <ion-list-header v-t="'settings.config.display'" />
 
-        <ion-item-divider>
-          <ion-label v-t="'settings.config.language.label'" />
-        </ion-item-divider>
         <ion-item>
           <ion-label v-t="'settings.config.language.label'" />
           <ion-select

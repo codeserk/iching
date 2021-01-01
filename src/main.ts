@@ -83,6 +83,7 @@ import {
   IonItemSliding,
   IonItemOptions,
   IonItemOption,
+  IonModal,
 } from '@ionic/vue'
 app
   .component('IonTabBar', IonTabBar)
@@ -117,6 +118,7 @@ app
   .component('IonItemSliding', IonItemSliding)
   .component('IonItemOptions', IonItemOptions)
   .component('IonItemOption', IonItemOption)
+  .component('IonModal', IonModal)
 
 // Icons
 import { addIcons } from 'ionicons'
@@ -132,6 +134,8 @@ import {
   documentOutline,
   cafeOutline,
   diceOutline,
+  globeOutline,
+  helpCircleOutline,
 } from 'ionicons/icons'
 
 addIcons({
@@ -146,4 +150,6 @@ addIcons({
   'document-outline': documentOutline,
   'cafe-outline': cafeOutline,
   'dice-outline': diceOutline,
+  'globe-outline': globeOutline,
+  'help-circle-outline': helpCircleOutline,
 })
