@@ -52,7 +52,6 @@ const dictionary: HexagramDictionary = {
 
         Aquí la fuerza creativa todavía permanece oculta dentro de la tierra y aún no tiene efecto. Aplicado a situaciones humanas, esto significa que un hombre notable aún no es reconocido. Sin embargo, él permanece fiel a sí mismo. No se deja influir por el éxito o el fracaso externos, sino que espera su tiempo de actuar de una manera fuerte y despreocupada.
         Por lo tanto, es apropiado para quien consulte el oráculo y tire esta línea, que espere con una pacífica y fuerte paciencia. Los tiempos vendrán pronto. No hay temor de que una firme voluntad no prevalezca. Sin embargo, es importante no gastar prematuramente su energía forzando algo que todavía no sea oportuno.
-
         `,
       },
       2: {
@@ -117,7 +116,6 @@ const dictionary: HexagramDictionary = {
       Cuando hay algo que debe ser bien hecho, se requieren amigos y ayudantes en la hora de trabajo y esfuerzo, una vez que los planes de lo que debe ser realizado han sido determinados con firmeza. El tiempo del trabajo y del esfuerzo está expresado por el oeste y el sur, puesto que es allí donde lo receptivo se abre para lo creativo, de la misma manera que lo hace la naturaleza en verano y en otoño. Si no se movilizan todas las capacidades, la tarea no será bien cumplida. Encontrar amigos significa aquí realizar su tarea. Pero fuera del trabajo y del esfuerzo, también existe un tiempo para los planes y el orden: para ello el aislamiento es necesario. El Este simboliza el lugar donde se reciben las órdenes del maestro y el Norte donde uno se da cuenta de lo que se ha hecho. Allí hace falta estar solo y ser objetivo. Esta hora sagrada no debe ser turbada por odios ni favoritismos.
 
       2. Los cuatro aspectos de lo creativo: el éxito, poder de realizar; la sublimidad, excelencia; el poder de favorecer, aventajar, superar, realizar y la perseverancia, persistencia, permanencia, tenacidad.
-
       `,
     },
     images: {
@@ -150,13 +148,11 @@ const dictionary: HexagramDictionary = {
         Si por azar uno está al servicio de un rey,
         no ocuparse de nuevas tareas, sino acabar las que están empezadas.`,
         description: `Si un hombre se encuentra libre de vanidad es capaz de disimular sus habilidades y no atraer la atención sobre sí demasiado pronto, lo que le permitirá madurar en paz. Si las condiciones lo exigen, es capaz de ponerse en evidencia, pero todavía allí con reserva. El hombre sabio sabe dejar la fama a los otros. No busca ser honrado por las cosas que hace, sino que espera liberar las fuerzas activas que operan en lo receptivo, para que se realicen completamente. Siente su trabajo completo cuando sabe que ellas darán su fruto en el futuro.
-
         `,
       },
       4: {
         quote: `Un saco atado. Ni loas ni reproches.`,
         description: `El principio oscuro se abre cuando se mueve y se cierra cuando reposa. Aquí se encuentra indicada una actitud de extrema reticencia. La época es peligrosa: todo avance se traducirá en una reacción hostil de los adversarios más fuertes si uno es combativo, o en un falso reconocimiento basado en un malentendido si uno es complaciente. Entonces es conveniente permanecer en reserva, sea en la soledad o en la agitación del mundo, puesto que allí también nos podemos ocultar para que nadie nos reconozca.
-
         `,
       },
       5: {
@@ -170,7 +166,6 @@ const dictionary: HexagramDictionary = {
         description: `En el lugar superior, la oscuridad debe ceder el paso a la luz. Si ella intenta permanecer en un lugar que no es el suyo y ordena en lugar de servir, provoca contra ella la ira del fuerte. El resultado es una lucha en la que ella se derrumba, no sin daño para ambas partes. El dragón, símbolo del cielo, viene a luchar contra el falso dragón cuyo principio terrenal usurpa la figura. El azul oscuro es el color del cielo, el amarillo es el color de la tierra. Por lo tanto, cuando fluye sangre negra y amarilla, es una señal de que ambas fuerzas fundamentales están dañadas en esta lucha antinatural. (3)
 
         (3) Mientras que la línea superior del hexagrama "el creador" traduce el orgullo de los Titanes que debe ser puesto en paralelo a la leyenda griega de Ícaro, la línea superior del segundo hexagrama evoca el mito de Lucifer que se opone la deidad suprema, o la lucha de los poderes oscuros contra los dioses del Walhalla, que termina con el Crepúsculo de los dioses.
-
         `,
       },
     },
@@ -209,7 +204,6 @@ const dictionary: HexagramDictionary = {
         Es propicio permanecer perseverante.
          Es ventajoso emplear auxiliares.`,
         description: `Si uno encuentra obstáculos al comenzar una empresa, no se debe proseguir forzando el progreso, sino que debe detenerse cautelosamente. Pero uno no debe desconcertarse sino que constantemente debe vigilar y mantener constantemente su objetivo. Es importante buscar auxiliares adecuados. Pero ellos se encuentran solo si uno permanece modesto en el trato con la gente, evitando toda arrogancia. Solo de esta manera uno atrae las personas cuya ayuda permite enfrentar las dificultades.
-
         `,
       },
       2: {
@@ -242,7 +236,6 @@ const dictionary: HexagramDictionary = {
          Ir trae buena fortuna de cualquier manera que se actúe.
         `,
         description: `Uno está en una situación en la que tiene el deber de actuar pero que le faltan las fuerzas suficientes. Sin embargo se presenta una oportunidad de establecer contacto. Hay que aprovechar la ocasión. No se debe contener el impulso debido a un falso orgullo ni a una reserva desubicada. Atreverse a dar el primer paso es un signo de claridad interior, incluso si ello implica una cierta abnegación. Aceptar ayuda en una situación difícil no es un deshonor. Cuando uno encuentra la ayuda apropiada, todo va bien.
-
         `,
       },
       5: {
@@ -251,7 +244,6 @@ const dictionary: HexagramDictionary = {
          Demasiada perseverancia trae el infortunio.
         `,
         description: `Uno se encuentra en el caso de no tener ninguna posibilidad de traducir sus buenas intenciones de manera que ellas puedan manifestarse realmente y ser comprendidas. Otras personas intervienen y distorsionan lo que se hace. Se debe tener cuidado y dar solo un paso adelante. No se debe querer superar una empresa importante a toda costa, porque tal empresa solo tiene éxito cuando uno ya disfruta de la confianza general. Sólo en la calma, a través de un trabajo fiel y consciente, uno puede actuar gradualmente para que las situaciones se aclaren y se derrumben los obstáculos.
-
         `,
       },
       6: {
@@ -260,7 +252,6 @@ const dictionary: HexagramDictionary = {
         description: `Hay hombres para quienes las dificultades del comienzo son demasiado pesadas. Siguen prisioneros sin poder liberarse. Se dan por vencidos y abandonan la lucha. Tal renuncia es lo más angustioso. Es por eso que Confucio hace sobre ésto la observación siguiente: “Corren lágrimas de sangre: no se debe persistir en tal actitud.” (2)
 
         2. Si llegas a una tal posición en la lucha por la vida, cuando te quedas atascado y un suspiro se escapa de tu pecho, como en ese famoso pasaje de la Sinfonía en C-moll de Beethoven: esta condición no puede durar todo el tiempo. Uno tiene que retomar nuevamente los caballos con una firme voluntad y completar la lucha. “Quien nunca descansa, quién con corazón y sangre imagina lo imposible, es quien gana”.
-
         `,
       },
     },
@@ -292,7 +283,6 @@ const dictionary: HexagramDictionary = {
 
       Cuando a ella se le agrega una perseverancia que no se debilita antes de que se hayan asimilado los diferentes puntos uno tras otro, un hermoso éxito está asegurado.
       Por lo tanto, el consejo del hexagrama está dirigido tanto al maestro como al alumno.
-
       `,
     },
     images: {
@@ -310,7 +300,6 @@ const dictionary: HexagramDictionary = {
          Hay que eliminar todas las trabas.
          Seguir en ese camino acarrea humillación`,
         description: `La Ley está en el principio de la educación. La juventud, en su inexperiencia, se encuentra inclinada a tomar todo de manera informal y lúdica. Hay que mostrarle que la vida es algo serio. Un cierto control a través de la disciplina estricta es bueno. El que juega con la vida nunca lleva algo a buen término. Pero la disciplina no debe degenerar en opresión, que tiene un efecto humillante y paraliza la fuerza.
-
         `,
       },
       2: {
@@ -325,7 +314,6 @@ const dictionary: HexagramDictionary = {
          No pongas obstáculos para que él tome posesión de ella.
          Nada que sea ventajoso.`,
         description: `Un hombre débil y sin experiencia que trata de sobresalir, pierde fácilmente su individualidad cuando trata de imitar a un individuo que ocupa una posición poderosa. Es como una muchacha que se abandona fácilmente cuando encuentra a un hombre atrevido. Una aproximación tan servil no debe ser estimulada, puesto que resulta mala para tanto para el joven como para el maestro. Una muchacha gana en dignidad cuando es cortejada. No es bueno rebajarse y aceptar cualquier cosa que se ofrezca.
-
         `,
       },
       4: {
@@ -333,7 +321,6 @@ const dictionary: HexagramDictionary = {
         description: `En la locura juvenil, la actitud más inadmisible es la de quedarse atrapado en las redes de imaginaciones vacías. Mientras más uno persista en tales fantasías sin relación con la realidad, con más certeza uno se atraerá humillaciones.
 
         Frente a esta perturbación limitada, el maestro a menudo no tendrá otro recurso que abandonarla a sí misma por un tiempo y no ahorrarle la humillación que le sobreviene. Con frecuencia, esta es la única forma de salvación.
-
         `,
       },
       5: {
@@ -348,7 +335,6 @@ const dictionary: HexagramDictionary = {
         description: `En ciertas ocasiones un loco incorregible debe ser castigado. Quien no quiere escuchar debe sentir. Castigar a alguien de esa manera es muy diferente que sacudirlo al comienzo. Pero nunca un castigo debe imponerse bajo la cólera; su objetivo fundamental es impedir que las transgresiones injustificadas. El castigo nunca debe ser un fin en sí mismo sino un medio para restablecer el orden.
 
         Esto se aplica no sólo a las personas sino también en el caso de las medidas que toma un gobierno respecto a su pueblo. La intervención de la autoridad siempre debe ser preventiva y tener como único propósito el de manener la seguridad pública y la paz.
-
         `,
       },
     },
@@ -361,7 +347,6 @@ const dictionary: HexagramDictionary = {
       description: `Todos los seres necesitan ser nutridos desde arriba. Pero el alimento llega en su tiempo y hay que esperarlo. Este hexagrama muestra las nubes en el cielo, dando lluvia y refrescando todo lo que crece y proveyendo comida y bebida a la gente. La lluvia llega por sí misma en su tiempo, no se puede hacerla venir a la fuerza sino que se debe esperar. La idea de “espera” está además sugerida por las propiedades de cada uno de los trigramas: en el interior la fuerza y adelante el peligro. (1) La fuerza frente al peligro no consiste en arremeter contra él sin control, sino en esperar el momento propicio; mientras que la debilidad cae en la agitación y no tiene paciencia de esperar.
 
       1. El trigrama inferior es considerado como estando al interior de una situación, mientras que el superior es considerado como estando adelante.
-
       `,
     },
     trigram: {
@@ -382,7 +367,6 @@ const dictionary: HexagramDictionary = {
       la imagen de la espera: El hombre noble come y bebe.
       Se alegra y se reconforta con buenas cosas.`,
       description: `Cuando las nubes se levantan en el cielo, indican una próxima lluvia. Lo único que se puede hacer es esperar que llueva. Es lo mismo en la vida cuando el destino se prepara. Mientras que todavía no ha llegado el tiempo, es inútil preocuparse y tratar de modelar el futuro interfiriendo en las cosas con su propia acción y actividad, pero es necesario reunir pacíficamente sur fuerzas comiendo y bebiendo, en lo que se refiere al cuerpo, y estando de buen humor, en lo que concierne a la mente. El destino viene por sí mismo y cuando estemos listos.
-
       `,
     },
     mutations: {
@@ -391,7 +375,6 @@ const dictionary: HexagramDictionary = {
         Es ventajoso permanecer en lo que dura.
         Sin culpa.`,
         description: `El peligro aún está muy lejos. Todavía uno espera en el terreno llano. Las condiciones son aún simples. Solo hay algo en el aire que vendrá. Entonces es necesario mantener la regularidad de la vida, siempre que sea posible. Es sólo de esta manera se evita un desperdicio prematuro de fuerzas y uno permanece libre de cualquier mancha o falla que más adelante constituiría un debilitamiento.
-
         `,
       },
       2: {
@@ -431,7 +414,6 @@ const dictionary: HexagramDictionary = {
         description: `La espera ha terminado: el peligro ya no se puede evitar. Uno cae en el agujero y debe resolver lo inevitable. Todo parece haber sido en vano. Pero es precisamente en este estado de necesidad cuando ocurre un giro imprevisto de los acontecimientos. Sin actuar personalmente, hay una intervención externa de la que uno puede primero preguntarse qué significa, si está dirigida a la liberación o la destrucción. Entonces es necesario preservar la movilidad interna: la actitud correcta no es atrincherarse en uno mismo ni oponer un rechazo con un gesto de valentía, sino saludando con respeto este nuevo giro de los acontecimientos. Así se termina fuera de peligro y todo está bien. Incluso los cambios oportunos vienen a menudo con una forma que parece extraña al principio. (3)
 
         3. En “Hermann y Dorothea”, Gooethe espresa esta verdad de la siguiente manera: “Porque los deseos nos ocultan lo que se desea; los regalos descienden desde arriba en sus propias formas”.
-
         `,
       },
     },
@@ -446,7 +428,6 @@ const dictionary: HexagramDictionary = {
       El atributo del creador es la fuerza; y el de lo insondable es el peligro, la perfidia. Allí donde la astucia se enfrenta a la violencia, hay conflicto.
 
       Una tercera indicación es la idea del encuentro de un carácter que reúne una perfidia insondable en el interior con una firme resolución exterior. Un carácter de esa índole es seguramente conflictivo.
-
       `,
     },
     trigram: {
@@ -463,7 +444,6 @@ const dictionary: HexagramDictionary = {
       `,
       description: `El conflicto surge cuando alguien está convencido de su pleno derecho y se enfrenta con la oposición. Si uno no está convencido de su propio derecho, la resistencia origina la astucia o provoca excesos violentos, pero no el conflicto.
       Cuando uno está involucrado en un conflicto, el único medio de salvación reside en la circunspección y en la fuerza interior con la que uno siempre está dispuesto a resolver la disputa y hacer un compromiso compartiendo la diferencia. Continuar un conflicto hasta un desenlace penoso siempre trae malas consecuencias, incluso cuando uno tiene razón, porque así se perpetúa la enemistad. Es importante ver al gran hombre, es decir, a alguien imparcial cuya autoridad sea lo suficientemente amplia, como para llegar con equidad a una solución pacífica del conflicto y decidir con justicia. Por otro lado, es necesario, en tiempos de problemas, no “cruzar las grandes aguas”; es decir, evitar de iniciar empresas peligrosas, cuyo éxito requiere la unión de fuerzas concertadas. El conflicto paraliza la fuerza e impide superar al peligro exterior.
-
       `,
     },
     images: {
@@ -471,8 +451,6 @@ const dictionary: HexagramDictionary = {
       la imagen del Conflicto.
        Asi el hombre noble considera desde el comienzo de todos los asuntos que trata.`,
       description: `La imagen alude al hecho de que las causas del conflicto están latentes en las tendencias opuestas de ambas partes. Donde existen tales disposiciones divergentes, es inevitable que surja un conflicto. Como consecuencia, para prevenir tal conflicto, necesariamente uno debe considerar cada cosa desde el principio. Si el derecho y el deber están exactamente determinados, o si las tendencias espirituales de un grupo de individuos están armonizadas, la causa profunda del conflicto se descarta de antemano.
-
-
       `,
     },
     mutations: {
@@ -481,7 +459,6 @@ const dictionary: HexagramDictionary = {
         habrá una pequeña discusión.
         Finalmente llega la fortuna.`,
         description: `Mientras el conflicto todavía está en sus comienzos, lo mejor que uno puede hacer es apresurar la conclusión. En particular, cuando el oponente es el más fuerte, no es apropiado intensificar el conflicto hasta una decisión. Puede haber una pequeña disputa, pero finalmente todo se arreglará.
-
         `,
       },
       2: {
@@ -499,7 +476,6 @@ const dictionary: HexagramDictionary = {
          Si por casualidad estás al servicio de un rey no busques trabajo.
         `,
         description: `Aquí hay una advertencia sobre el peligro de la tendencia a expandirse. Solo lo que se ha ganado honestamente por propio mérito permanece como posesión duradera. Sin duda, dicha posesión puede ser discutida, pero si es de nuestra propiedad, no podrá ser reclamada. Todo lo que alguien posea por la fuerza puede ser perdido. Si uno está al servicio de un superior, se puede evitar el conflicto solo ocupándose de lo que le corresponde sin buscar otras tareas aspirando al prestigio. Es suficiente que su propio trabajo sea hecho, y dejar el honor para los otros.
-
         `,
       },
       4: {
@@ -531,7 +507,6 @@ const dictionary: HexagramDictionary = {
       description: `El hexagrama está compuesto del trigrama K’an, el agua y K’un la tierra. Simboliza el agua subterránea que se acumula en el interior de la tierra. De la misma forma que la fuerza militar se sustenta en la masa del pueblo, invisible en tiempos de paz, pero siempre disponible como fuente de poder. Los atributos de este hexagrama son el peligro al interior y al exterior la obediencia. Esto corresponde a la naturaleza de un ejército, que en su sustancia es peligroso y un lugar donde deben primar la disciplina y la obediencia.
 
       La línea que controla el hexagrama es el nueve fuerte en el segundo lugar, al cual están subordinados todos los otros trazos. Este trazo fuerte representa al señor, porque está emplazado en el centro de uno de los trigramas. Pero como está en el trigrama inferior, no está en el lugar supremo del soberano sino en el lugar del hábil general que, por su autoridad, mantiene al ejército bajo su poder.
-
       `,
     },
     trigram: {
@@ -549,7 +524,6 @@ const dictionary: HexagramDictionary = {
       la imagen del Ejército.
       El hombre noble acrecienta su influjo por la generosidad hacia el Pueblo.`,
       description: `Cuando el peligro amenaza, todo paisano puede convertirse en un soldado y, al final de la guerra, regresar a su arado. Quien es generoso con su pueblo gana su afecto, y el pueblo que vive bajo un régimen de moderación se vuelve fuerte y enérgico. Solo un pueblo económicamente poderoso puede constituir una fuerza guerrera considerable. Por lo tanto, debemos cultivar el poder favoreciendo las relaciones económicas entre las personas y con un ejercicio benevolente de la autoridad. Solo si existe este nexo invisible entre el gobierno y el pueblo, y que el pueblo esta protegido por tal gobierno, como el agua en la profundidad de la tierra, es posible conducir una guerra a la victoria.
-
       `,
     },
     mutations: {
@@ -557,7 +531,6 @@ const dictionary: HexagramDictionary = {
         quote: `Un ejército debe moverse en buen orden.
         Si el orden no es conveniente, el infortunio amenaza.`,
         description: `En una acción guerrera, en principio debe reinar el orden. Debe existir una causa justa y válida; además, la obediencia y la coordinación de las tropas deben estar bien organizadas, sino el resultado inevitable es el fracaso.
-
         `,
       },
       2: {
@@ -567,7 +540,6 @@ const dictionary: HexagramDictionary = {
          El rey otorga una triple condecoración.
         `,
         description: `El líder debe estar al centro de su ejército, en contacto con él compartiendo lo bueno y lo malo que ocurra a las masas que él dirige. Sólo así estará a la altura de las importantes exigencias que pesan sobre él. Necesita también el la aprobación del soberano. Las distinciones que recibe son merecidas: ellas no constituyen solamente un privilegio acordado a su persona, sino que todo el ejército al cual él pertenece es honrado a través de su persona.
-
         `,
       },
       3: {
@@ -589,7 +561,6 @@ const dictionary: HexagramDictionary = {
          La perseverancia trae el infortunio.
         `,
         description: `La caza está en el campo, es decir, que dejó su sitio habitual en el bosque e irrumpió en los campos desvastándolos. Esto se refiere a una invasión del enemigo. Entonces, un combate enérgico y punitivo se justifica. Pero también puede referirse a una deriva peligrosa del comando. Sin embargo, la guerra debe ser conducida según ciertas reglas. Ella no debe recurrir a un embate salvaje donde cada uno disponga por sí mismo. A pesar de toda la perseverancia y valentía posibles, eso sólo conduciría a la desgracia. El ejército debe ser comandado por un jefe experimentado. La guerra exige ser dirigida. Tampoco se debe permitir que la multitud se contente con golpear hasta la muerte a todo lo que caiga entre sus manos, de lo contrario, el resultado es la derrota y, a pesar de toda la perseverancia desplegada, la desgracia amenaza.
-
         `,
       },
       6: {
@@ -598,7 +569,6 @@ const dictionary: HexagramDictionary = {
          otorga feudos.
          No debe emplearse gente inferior.`,
         description: `La guerra ha terminado victoriosamente. Se gana la victoria, el rey distribuye entre sus leales los feudos y las posesiones familiares. Pero es importante que la gente común no llegue al poder. Dieron una ayuda valiosa y pueden ser compensados con dinero. Pero a ellos no se les debe dar ni tierra ni privilegios para evitar el riesgo de abuso.
-
         `,
       },
     },
@@ -609,7 +579,6 @@ const dictionary: HexagramDictionary = {
       pinyin: `bǐ`,
       translated: `La Solidaridad`,
       description: `Las aguas sobre la tierra fluyen en conjunto, y se reúnen cada vez que pueden hacerlo, por ejemplo, en el mar, donde se acumulan todos los ríos. Este es un símbolo que traduce la solidaridad y sus leyes. La misma idea es sugerida por el hecho de que en el hexagrama todas las líneas son débiles, a excepción de la línea fija gobernante en el quinto lugar. Los débiles se mantienen unidos y cooperan al estar influenciados por la voluntad firme en una posición de liderazgo, que es su centro unificador. Pero esta personalidad fuerte y líder también se mantiene unida a las demás, a través de las cuales encuentra un complemento para su propio ser.
-
       `,
     },
     trigram: {
@@ -629,7 +598,6 @@ const dictionary: HexagramDictionary = {
       Si un hom¬bre reconoce la necesidad de reagrupamiento y no se encuentra suficientemente fuerte como para situarse al centro de la unión, su deber será, entonces, convertirse en un miembro más de la comunidad. (1)
 
       1. Comparar con el dístico de Friedrich Schiller (Pflicht für jeden): “Trata siempre de ser un Todo; y si no puedes devenir un Todo, reúnete a un Todo en calidad de miembro para servirlo”.
-
       `,
     },
     images: {
@@ -638,7 +606,6 @@ const dictionary: HexagramDictionary = {
        Los reyes de la antigüedad dividían los estados en feudos y cultivaban relaciones amistosas con los señores feudales.
       `,
       description: `El agua llena los espacios vacíos de la tierra y se adhiere fuertemente a ella. La organización social de la antigüedad estaba fundada sobre esta máxima de unión entre vasallos y señores. El agua reúne por sí misma todos sus cursos porque en todas sus partes ella está sujeta a las mismas leyes. Así la sociedad humana debe igualmente observar la unión gracia a una comunidad de intereses que hace que los diferentes individuos se sientan miembros de un un todo. El poder central de un organismo social debe asegurar que cada miembro encuentre su verdadero interés en la unión, como era el caso en las relaciones paternales que el rey de la antigua China mantenía con sus vasallos.
-
       `,
     },
     mutations: {
@@ -649,21 +616,17 @@ const dictionary: HexagramDictionary = {
          Al final, la buena fortuna viene del exterior.
         `,
         description: `Cuando se trata de construir relaciones, la total sinceridad es la única base justa. Esta disposición, está representada por un una escudilla de arcilla llena en la que el contenido es todo y la forma vacía es nada. Esto indica que el valor no reside en las palabras hábiles sino en la fuerza interior, y esta fuerza es tan grande que atrae poderosamente la fortuna del exterior.
-
-
          `,
       },
       2: {
         quote: `Sosténganlo interiormente.
          La perseverancia trae la fortuna.`,
         description: `Cuando un hombre responde de una manera adecuada y perseverante a las exigencias superiores que lo incitan a actuar, sus relaciones con los demás son principalmente interiores y él mismo no se pierde. Pero el que busca la adhesión de una manera ambiciosa e inoportuna, no sigue el camino del noble que preserva su dignidad, sino que solo se degrada.
-
         `,
       },
       3: {
         quote: `Estás unido con personas que no son correctas.`,
         description: `A menudo uno se encuentra con personas que no pertenecen a su propia esfera. En este caso, uno no debe permitirse dejarse llevar por la fuerza del hábito hacia una familiaridad fuera de lugar. No hace falta decir que tal actitud es mala. Frente a esas personas, la sociabilidad sin intimidad es la única actitud correcta. Sólo de esta manera uno se mantendrá libre para las relaciones posteriores con sus pares.
-
         `,
       },
       4: {

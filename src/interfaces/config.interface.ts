@@ -1,7 +1,16 @@
+enum Language {
+  English = 'en',
+  Spanish = 'es',
+}
+
+export const AVAILABLE_LANGUAGES = ['en', 'es']
+
 export interface Config {
   readonly introduction: {
     readonly seen: boolean
   }
+
+  readonly language: Language
 
   readonly display: {
     readonly name: {
@@ -37,6 +46,8 @@ export const DEFAULT_CONFIG: Config = {
   introduction: {
     seen: false,
   },
+
+  language: Language.English,
 
   display: {
     name: {

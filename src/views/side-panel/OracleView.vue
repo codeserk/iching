@@ -2,26 +2,24 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Oracle settings</ion-title>
+        <ion-title v-t="'settings.title'" />
       </ion-toolbar>
     </ion-header>
     <ion-content class="content" :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Settings</ion-title>
+          <ion-title size="large" v-t="'settings.title'" />
         </ion-toolbar>
       </ion-header>
 
       <ion-list>
-        <ion-list-header>
-          Display
-        </ion-list-header>
+        <ion-list-header v-t="'settings.config.display'" />
         <ion-item-group>
           <ion-item-divider>
-            <ion-label>Hexagram header</ion-label>
+            <ion-label v-t="'settings.config.hexagramHeader'">Hexagram header</ion-label>
           </ion-item-divider>
           <ion-item>
-            <ion-label>Chinese name</ion-label>
+            <ion-label v-t="'settings.config.chineseName'" />
             <ion-checkbox
               color="primary"
               :checked="configKey('display.name.chinese')"
@@ -36,7 +34,7 @@
               @ion-change="updateKey({ key: 'display.name.pinyin', value: !configKey('display.name.pinyin') })"
               slot="start"
             ></ion-checkbox>
-            <ion-label>Pinyin name</ion-label>
+            <ion-label v-t="'settings.config.pinyinName'" />
           </ion-item>
           <ion-item lines="none">
             <ion-checkbox
@@ -47,13 +45,13 @@
               "
               slot="start"
             ></ion-checkbox>
-            <ion-label>Description</ion-label>
+            <ion-label v-t="'settings.config.description'" />
           </ion-item>
         </ion-item-group>
         <ion-item-group>
-          <ion-item-divider>Trigrams</ion-item-divider>
+          <ion-item-divider v-t="'settings.config.trigrams'" />
           <ion-item lines="none">
-            <ion-label>Trigrams</ion-label>
+            <ion-label v-t="'settings.config.trigrams'" />
             <ion-checkbox
               color="primary"
               :checked="configKey('display.trigrams')"
@@ -63,7 +61,7 @@
           </ion-item>
         </ion-item-group>
         <ion-item-group>
-          <ion-item-divider>Judgement</ion-item-divider>
+          <ion-item-divider v-t="'settings.config.judgement'" />
           <ion-item>
             <ion-checkbox
               color="primary"
@@ -71,10 +69,10 @@
               @ion-change="updateKey({ key: 'display.judgement.quote', value: !configKey('display.judgement.quote') })"
               slot="start"
             ></ion-checkbox>
-            <ion-label>Quote</ion-label>
+            <ion-label v-t="'settings.config.quote'" />
           </ion-item>
           <ion-item lines="none">
-            <ion-label>Explanation</ion-label>
+            <ion-label v-t="'settings.config.explanation'" />
             <ion-checkbox
               color="primary"
               :checked="configKey('display.judgement.description')"
@@ -86,7 +84,7 @@
           </ion-item>
         </ion-item-group>
         <ion-item-group>
-          <ion-item-divider>Image</ion-item-divider>
+          <ion-item-divider v-t="'settings.config.image'" />
           <ion-item>
             <ion-checkbox
               color="primary"
@@ -94,10 +92,10 @@
               @ion-change="updateKey({ key: 'display.images.quote', value: !configKey('display.images.quote') })"
               slot="start"
             ></ion-checkbox>
-            <ion-label>Quote</ion-label>
+            <ion-label v-t="'settings.config.quote'" />
           </ion-item>
           <ion-item lines="none">
-            <ion-label>Explanation</ion-label>
+            <ion-label v-t="'settings.config.explanation'" />
             <ion-checkbox
               color="primary"
               :checked="configKey('display.images.description')"
@@ -109,7 +107,7 @@
           </ion-item>
         </ion-item-group>
         <ion-item-group>
-          <ion-item-divider>Mutations</ion-item-divider>
+          <ion-item-divider v-t="'settings.config.mutations'" />
           <ion-item>
             <ion-checkbox
               color="primary"
@@ -117,10 +115,10 @@
               @ion-change="updateKey({ key: 'display.mutations.quote', value: !configKey('display.mutations.quote') })"
               slot="start"
             ></ion-checkbox>
-            <ion-label>Quote</ion-label>
+            <ion-label v-t="'settings.config.quote'" />
           </ion-item>
           <ion-item lines="none">
-            <ion-label>Explanation</ion-label>
+            <ion-label v-t="'settings.config.explanation'" />
             <ion-checkbox
               color="primary"
               :checked="configKey('display.mutations.description')"

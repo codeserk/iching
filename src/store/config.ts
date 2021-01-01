@@ -1,5 +1,9 @@
 import { Storage } from '@capacitor/core'
-import { Config } from '../interfaces/config.interface'
+import { AVAILABLE_LANGUAGES, Config } from '../interfaces/config.interface'
+import { Plugins } from '@capacitor/core'
+import { i18n } from '../locales'
+
+const { Device } = Plugins
 
 export interface State {
   configKeys: Record<string, any>
@@ -10,6 +14,9 @@ export default {
     configKeys: {
       // Introduction
       'introduction.seen': false,
+
+      // Language
+      'language;': 'en',
 
       // Display
       'display.name.chinese': true,
@@ -45,6 +52,8 @@ export default {
       introduction: {
         seen: getters.configKey('introduction.seen'),
       },
+
+      language: getters.configKey('language'),
 
       display: {
         name: {
@@ -104,6 +113,16 @@ export default {
           for (const key in config) {
             commit('updateKey', { key, value: config[key] })
           }
+        }
+
+        // Get device lang
+        const { value: language } = await Device.getLanguageCode()
+        if (AVAILABLE_LANGUAGES.includes(language)) {
+          commit('updateKey', { key: 'language', value: language })
+          i18n.global.locale = language
+        } else {
+          commit('updateKey', { key: 'language', value: 'en' })
+          i18n.global.locale = 'en'
         }
       } catch (error) {
         console.error(error)

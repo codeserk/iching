@@ -22,26 +22,15 @@
         <ion-slide class="slide-question ion-padding">
           <div class="container">
             <ion-text class="text-heading">
-              <h1>Think about your question...</h1>
+              <h1 v-t="'oracle.question.title'" />
             </ion-text>
 
             <ion-text class="text-instructions" color="medium">
               <ul>
-                <li>
-                  Ask about one thing at a time. Instead of <em>Should I do this, or that?</em> ask
-                  <em>What if I do this?</em>
-                </li>
-                <li>
-                  Don’t ask for a <em>yes</em> or <em>no</em>. Instead of <em>Should I…?</em> ask
-                  <em>What if I…?</em> Instead of <em>Will it happen?</em> you could ask <em>What will happen?</em>.
-                </li>
-                <li>
-                  Make a habit of asking about your own choices and feelings, not other people’s.
-                </li>
-                <li>
-                  Write your question down before you cast the reading, and keep thinking about it while you are tossing
-                  the coins.
-                </li>
+                <li v-html="$t('questions.tip.0')" />
+                <li v-html="$t('questions.tip.1')" />
+                <li v-html="$t('questions.tip.2')" />
+                <li v-html="$t('questions.tip.3')" />
               </ul>
             </ion-text>
 
@@ -58,9 +47,10 @@
         <ion-slide class="slide-coins ion-padding">
           <div class="container">
             <div class="toss-coins" @click="tossAll">
-              <div class="button-toss" :class="{ 'has-tossed': hasTossed || !needsMoreLines }">
-                <h3>Press to toss the coins.</h3>
-              </div>
+              <ion-button class="button-toss" fill="solid" :class="{ 'has-tossed': hasTossed || !needsMoreLines }">
+                <span v-t="'oracle.toss.title'" />
+                <ion-icon slot="end" name="dice-outline" />
+              </ion-button>
               <div class="coins">
                 <div
                   class="coin coin-1"
@@ -95,8 +85,8 @@
         <ion-slide class="slide-result">
           <ion-toolbar v-if="hexagram && hexagram.hasSecondary">
             <ion-segment :value="activeHexagram" @ion-change="activeHexagram = $event.detail.value">
-              <ion-segment-button value="primary">Primary</ion-segment-button>
-              <ion-segment-button value="secondary">Secondary</ion-segment-button>
+              <ion-segment-button value="primary" v-t="'oracle.result.primary'" />
+              <ion-segment-button value="secondary" v-t="'oracle.result.secondary'" />
             </ion-segment>
           </ion-toolbar>
 
@@ -225,7 +215,7 @@ export default {
         return this.question
       }
 
-      return this.question || 'Ask the Oracle'
+      return this.question || this.$t('oracle.title')
     },
 
     /**
@@ -234,7 +224,7 @@ export default {
      * @returns {String}
      */
     questionPlaceholder() {
-      return `Question from ${this.createdAt.toLocaleString()}`
+      return this.$t('oracle.question.name', { date: this.createdAt.toLocaleString() })
     },
 
     /**
@@ -376,15 +366,15 @@ export default {
       }
 
       const alert = await alertController.create({
-        header: 'Confirm deletion',
-        message: 'Are you sure you want to delete this answer from the Oracle?',
+        header: this.$t('delete.title'),
+        message: this.$t('delete.message'),
         buttons: [
           {
-            text: 'Cancel',
+            text: this.$t('delete.cancel'),
             role: 'cancel',
           },
           {
-            text: 'Yes',
+            text: this.$t('delete.accept'),
             handler: async () => {
               await this.removeResult(this.result?.id)
               this.restart()
@@ -482,6 +472,7 @@ export default {
       position: relative;
       display: flex;
       flex: 1;
+      flex-direction: column;
       align-items: center;
       justify-content: space-around;
       width: 100%;
@@ -489,15 +480,10 @@ export default {
       margin-top: 1em;
 
       .button-toss {
-        flex: 1;
         transition: opacity 0.4s ease-in-out;
 
         &.has-tossed {
           opacity: 0.4;
-        }
-
-        h3 {
-          text-align: right;
         }
       }
 

@@ -15,7 +15,7 @@
       <template v-if="hexagram">
         <hexagram-details :number="hexagram.number" :lines="hexagram.lines" show-all-mutations />
       </template>
-      <div v-else>wtf</div>
+      <div v-else>Not found</div>
     </ion-content>
   </ion-page>
 </template>

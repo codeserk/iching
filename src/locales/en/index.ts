@@ -75,4 +75,90 @@ export default {
       },
     },
   },
+
+  questions: {
+    tip: {
+      0: `Ask about one thing at a time. Instead of <em>Should I do this, or that?</em> ask
+      <em>What if I do this?</em>`,
+      1: `Don’t ask for a <em>yes</em> or <em>no</em>. Instead of <em>Should I…?</em> ask
+      <em>What if I…?</em> Instead of <em>Will it happen?</em> you could ask <em>What will happen?</em>.`,
+      2: `Make a habit of asking about your own choices and feelings, not other people’s.`,
+      3: `Write your question down before you cast the reading, and keep thinking about it while you are tossing
+      the coins.`,
+    },
+  },
+
+  oracle: {
+    title: 'Ask the Oracle',
+
+    question: {
+      title: 'Think about your question...',
+      name: 'Question from {date}',
+    },
+
+    toss: {
+      title: 'Toss the coins',
+    },
+  },
+
+  settings: {
+    title: 'Settings',
+
+    tabs: {
+      config: 'Config',
+      about: 'About',
+    },
+
+    config: {
+      quote: 'Quote',
+      description: 'Description',
+      explanation: 'Explanation',
+
+      display: 'Display',
+      hexagramHeader: 'Hexagram Header',
+      chineseName: 'Chinese name',
+      pinyinName: 'Pinyin name',
+      trigrams: 'Trigrams',
+
+      judgement: 'Judgement',
+      image: 'Image',
+      mutations: 'Mutations',
+
+      journal: 'Journal',
+      confirmDeletion: 'Confirm deletion',
+    },
+
+    about: {
+      thanks: 'Thanks for using my app :)',
+
+      website: 'Website',
+      privacyPolicy: 'Privacy Policy',
+      coffee: 'Buy me a coffee!',
+      free: 'This app is (and will always be) completely free, but support is always welcomed!',
+    },
+  },
+
+  hexagram: {
+    primary: 'Primary',
+    secondary: 'Secondary',
+
+    judgement: 'Judgement',
+    image: 'Image',
+    mutations: 'Mutations',
+    lines: {
+      1: 'Bottom Line',
+      2: 'Second Line',
+      3: 'Third Line',
+      4: 'Fourth Line',
+      5: 'Fifth Line',
+      6: 'Top Line',
+    },
+  },
+
+  delete: {
+    title: 'Confirm deletion',
+    message: 'Are you sure you want to delete this answer from the Oracle?',
+    cancel: 'Cancel',
+    accept: 'Yes',
+  },
 }

@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Journal</ion-title>
+        <ion-title v-t="'sections.journal.tab'">Journal</ion-title>
       </ion-toolbar>
       <ion-toolbar>
         <ion-searchbar animated @ion-change="search = $event.detail.value"></ion-searchbar>

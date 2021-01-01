@@ -1,7 +1,7 @@
 import { HexagramDetails, HexagramDictionary } from '../../interfaces/hexagram-details.interface'
 import { Storage } from '@capacitor/core'
 
-import hexagrams from './dictionary.en'
+import hexagrams from './dictionary.es'
 import { OracleResult } from '../../interfaces/oracle-result.interface'
 import { Hexagram, HexagramLine, HexagramLineValue } from '../../models/hexagram'
 
@@ -47,9 +47,6 @@ export default {
       const date = createdAt ? new Date(createdAt) : new Date()
       if (!id) {
         id = date.getTime().toString()
-      }
-      if (!question) {
-        question = `Question from ${date.toLocaleString()}`
       }
       const newResult = {
         id,

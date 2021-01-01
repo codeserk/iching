@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header collapse class="condensed-only">
       <ion-toolbar>
-        <ion-title>Journal</ion-title>
+        <ion-title v-t="'sections.journal.tab'">Journal</ion-title>
       </ion-toolbar>
       <ion-toolbar class="android-only">
         <ion-searchbar animated @ion-change="search = $event.detail.value"></ion-searchbar>

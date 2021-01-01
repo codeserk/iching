@@ -31,21 +31,10 @@
 
             <ion-text class="text-instructions" color="medium">
               <ul>
-                <li>
-                  Ask about one thing at a time. Instead of <em>Should I do this, or that?</em> ask
-                  <em>What if I do this?</em>
-                </li>
-                <li>
-                  Don’t ask for a <em>yes</em> or <em>no</em>. Instead of <em>Should I…?</em> ask
-                  <em>What if I…?</em> Instead of <em>Will it happen?</em> you could ask <em>What will happen?</em>.
-                </li>
-                <li>
-                  Make a habit of asking about your own choices and feelings, not other people’s.
-                </li>
-                <li>
-                  Write your question down before you cast the reading, and keep thinking about it while you are tossing
-                  the coins.
-                </li>
+                <li v-html="$t('questions.tip.0')" />
+                <li v-html="$t('questions.tip.1')" />
+                <li v-html="$t('questions.tip.2')" />
+                <li v-html="$t('questions.tip.3')" />
               </ul>
             </ion-text>
           </div>

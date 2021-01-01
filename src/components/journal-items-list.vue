@@ -113,15 +113,15 @@ export default {
       }
 
       const alert = await alertController.create({
-        header: 'Confirm deletion',
-        message: 'Are you sure you want to delete this answer from the Oracle?',
+        header: this.$t('delete.title'),
+        message: this.$t('delete.message'),
         buttons: [
           {
-            text: 'Cancel',
+            text: this.$t('delete.cancel'),
             role: 'cancel',
           },
           {
-            text: 'Yes',
+            text: this.$t('delete.accept'),
             handler: async () => {
               await this.removeResult(id)
             },

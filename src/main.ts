@@ -131,6 +131,7 @@ import {
   homeOutline,
   documentOutline,
   cafeOutline,
+  diceOutline,
 } from 'ionicons/icons'
 
 addIcons({
@@ -144,4 +145,5 @@ addIcons({
   'home-outline': homeOutline,
   'document-outline': documentOutline,
   'cafe-outline': cafeOutline,
+  'dice-outline': diceOutline,
 })

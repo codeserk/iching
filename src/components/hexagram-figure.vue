@@ -12,6 +12,7 @@
         highlighted: (highlightMutations && line.value.includes('mutable')) || highlightLine === index + 1,
       }"
     >
+      <span v-if="withImages" class="line-number" v-text="index + 1" />
       <template v-if="line.value === 'yin' || line.value === 'mutable-yin'">
         <div class="bar bar-left" />
         <div class="bar bar-right" />
@@ -34,7 +35,7 @@ export default {
   props: {
     lines: {
       type: Array,
-      defualt: () => [],
+      default: () => [],
     },
 
     size: {
@@ -182,10 +183,11 @@ export default {
   /** With images */
   &.with-images {
     padding: 0;
-
     .line {
+      position: relative;
       height: 30px;
       margin-bottom: 5px;
+      padding-left: 20px;
       background: none;
       background-position: top;
       background-size: cover;
@@ -193,6 +195,12 @@ export default {
       animation: reveal-right-to-left 200ms;
       animation-timing-function: cubic-bezier(0.5, 0.25, 0.5, 0.75);
       animation-fill-mode: both;
+
+      .line-number {
+        position: absolute;
+        top: calc(50% - 6px);
+        left: -1px;
+      }
 
       .bar {
         display: none;

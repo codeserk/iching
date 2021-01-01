@@ -2,15 +2,15 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Settings</ion-title>
+        <ion-title v-t="'settings.title'" />
       </ion-toolbar>
       <ion-toolbar>
         <ion-segment v-model="section">
           <ion-segment-button value="config">
-            <ion-label v-text="'Configuration'" />
+            <ion-label v-t="'settings.tabs.config'" />
           </ion-segment-button>
           <ion-segment-button value="about">
-            <ion-label>About me</ion-label>
+            <ion-label v-t="'settings.tabs.about'" />
           </ion-segment-button>
         </ion-segment>
       </ion-toolbar>
@@ -18,20 +18,18 @@
     <ion-content class="content" :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Settings</ion-title>
+          <ion-title size="large" v-t="'settings.title'" />
         </ion-toolbar>
       </ion-header>
 
       <ion-list v-show="section === 'config'">
-        <ion-list-header>
-          Display
-        </ion-list-header>
+        <ion-list-header v-t="'settings.config.display'" />
         <ion-item-group>
           <ion-item-divider>
-            <ion-label>Hexagram header</ion-label>
+            <ion-label v-t="'settings.config.hexagramHeader'">Hexagram header</ion-label>
           </ion-item-divider>
           <ion-item>
-            <ion-label>Chinese name</ion-label>
+            <ion-label v-t="'settings.config.chineseName'" />
             <ion-checkbox
               color="primary"
               :checked="configKey('display.name.chinese')"
@@ -46,7 +44,7 @@
               @ion-change="updateKey({ key: 'display.name.pinyin', value: !configKey('display.name.pinyin') })"
               slot="start"
             ></ion-checkbox>
-            <ion-label>Pinyin name</ion-label>
+            <ion-label v-t="'settings.config.pinyinName'" />
           </ion-item>
           <ion-item lines="none">
             <ion-checkbox
@@ -57,13 +55,13 @@
               "
               slot="start"
             ></ion-checkbox>
-            <ion-label>Description</ion-label>
+            <ion-label v-t="'settings.config.description'" />
           </ion-item>
         </ion-item-group>
         <ion-item-group>
-          <ion-item-divider>Trigrams</ion-item-divider>
+          <ion-item-divider v-t="'settings.config.trigrams'" />
           <ion-item lines="none">
-            <ion-label>Trigrams</ion-label>
+            <ion-label v-t="'settings.config.trigrams'" />
             <ion-checkbox
               color="primary"
               :checked="configKey('display.trigrams')"
@@ -73,7 +71,7 @@
           </ion-item>
         </ion-item-group>
         <ion-item-group>
-          <ion-item-divider>Judgement</ion-item-divider>
+          <ion-item-divider v-t="'settings.config.judgement'" />
           <ion-item>
             <ion-checkbox
               color="primary"
@@ -81,10 +79,10 @@
               @ion-change="updateKey({ key: 'display.judgement.quote', value: !configKey('display.judgement.quote') })"
               slot="start"
             ></ion-checkbox>
-            <ion-label>Quote</ion-label>
+            <ion-label v-t="'settings.config.quote'" />
           </ion-item>
           <ion-item lines="none">
-            <ion-label>Explanation</ion-label>
+            <ion-label v-t="'settings.config.explanation'" />
             <ion-checkbox
               color="primary"
               :checked="configKey('display.judgement.description')"
@@ -96,7 +94,7 @@
           </ion-item>
         </ion-item-group>
         <ion-item-group>
-          <ion-item-divider>Image</ion-item-divider>
+          <ion-item-divider v-t="'settings.config.image'" />
           <ion-item>
             <ion-checkbox
               color="primary"
@@ -104,10 +102,10 @@
               @ion-change="updateKey({ key: 'display.images.quote', value: !configKey('display.images.quote') })"
               slot="start"
             ></ion-checkbox>
-            <ion-label>Quote</ion-label>
+            <ion-label v-t="'settings.config.quote'" />
           </ion-item>
           <ion-item lines="none">
-            <ion-label>Explanation</ion-label>
+            <ion-label v-t="'settings.config.explanation'" />
             <ion-checkbox
               color="primary"
               :checked="configKey('display.images.description')"
@@ -119,7 +117,7 @@
           </ion-item>
         </ion-item-group>
         <ion-item-group>
-          <ion-item-divider>Mutations</ion-item-divider>
+          <ion-item-divider v-t="'settings.config.mutations'" />
           <ion-item>
             <ion-checkbox
               color="primary"
@@ -127,10 +125,10 @@
               @ion-change="updateKey({ key: 'display.mutations.quote', value: !configKey('display.mutations.quote') })"
               slot="start"
             ></ion-checkbox>
-            <ion-label>Quote</ion-label>
+            <ion-label v-t="'settings.config.quote'" />
           </ion-item>
           <ion-item lines="none">
-            <ion-label>Explanation</ion-label>
+            <ion-label v-t="'settings.config.explanation'" />
             <ion-checkbox
               color="primary"
               :checked="configKey('display.mutations.description')"
@@ -141,11 +139,9 @@
             ></ion-checkbox>
           </ion-item>
         </ion-item-group>
-        <ion-list-header>
-          Journal
-        </ion-list-header>
+        <ion-list-header v-t="'settings.config.journal'" />
         <ion-item lines="none">
-          <ion-label>Confirm deletion</ion-label>
+          <ion-label v-t="'settings.config.confirmDeletion'" />
           <ion-checkbox
             color="primary"
             :checked="configKey('journal.confirm-deletion')"
@@ -158,29 +154,26 @@
       <div v-show="section === 'about'" class="about-me">
         <div class="header ion-padding">
           <ion-img src="/assets/img/avatar.png" />
-          <h3>Thanks for using my app :)</h3>
-          <h3>Jose Camara <strong>[@codeserk]</strong></h3>
+          <h3 v-t="'settings.about.thanks'" />
+          <h3>José Cámara <strong>[@codeserk]</strong></h3>
         </div>
 
         <ion-list>
           <ion-item button @click="openLink('https://www.codeserk.es/project/android/i-ching')">
             <ion-icon slot="start" name="home-outline" />
-            <ion-label v-text="'Website'" />
+            <ion-label v-t="'settings.about.website'" />
           </ion-item>
           <ion-item button @click="openLink('https://www.codeserk.es/project/android/i-ching/privacy-policy')">
             <ion-icon slot="start" name="document-outline" />
-            <ion-label v-text="'Privacy Policy'" />
+            <ion-label v-t="'settings.about.privacyPolicy'" />
           </ion-item>
           <ion-item button @click="openLink('https://www.buymeacoffee.com/codeserk')" color="tertiary">
             <ion-icon slot="start" name="cafe-outline" />
-            <ion-label v-text="'Buy me a coffee!'" />
+            <ion-label v-t="'settings.about.coffee'" />
           </ion-item>
         </ion-list>
 
-        <p
-          class="text-free"
-          v-text="'This app is (and will always be) completely free, but support is always welcomed!'"
-        />
+        <p class="text-free" v-t="'settings.about.free'" />
       </div>
     </ion-content>
   </ion-page>

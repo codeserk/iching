@@ -29,26 +29,27 @@
     </ion-text>
 
     <div class="section-judgmenet" v-if="config.display.judgement.quote || config.display.judgement.description">
-      <h3>Judgement</h3>
+      <h3 v-t="'hexagram.judgement'" />
       <blockquote v-text="details.judgement.quote" v-if="config.display.judgement.quote" />
       <p v-text="details.judgement.description" v-if="config.display.judgement.description" />
     </div>
 
     <div class="section-image" v-if="config.display.images.quote || config.display.images.description">
-      <h3>Image</h3>
+      <h3 v-t="'hexagram.image'" />
       <blockquote v-text="details.images.quote" v-if="config.display.images.quote" />
       <p v-text="details.images.description" v-if="config.display.images.description" />
     </div>
 
     <template v-if="mutations.length > 0 && (config.display.mutations.quote || config.display.mutations.description)">
       <ion-text>
-        <h3>Mutations</h3>
+        <h3 v-t="'hexagram.mutations'" />
       </ion-text>
 
       <div v-for="mutatedLine in mutations" :key="mutatedLine" class="mutations-line">
         <div class="mutation-line-header">
           <div class="mutation-line-header-content">
-            <h4>Line {{ mutatedLine }}</h4>
+            <h4 v-t="`hexagram.lines.${mutatedLine}`" />
+
             <blockquote v-text="details.mutations[mutatedLine].quote" v-if="config.display.mutations.quote" />
           </div>
           <div class="hexagram-figure-container">
