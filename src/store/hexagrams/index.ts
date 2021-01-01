@@ -1,24 +1,31 @@
-import { HexagramDetails, HexagramDictionary } from '../../interfaces/hexagram-details.interface'
+import { HexagramDetails } from '../../interfaces/hexagram-details.interface'
 import { Storage } from '@capacitor/core'
 
-import hexagrams from './dictionary.es'
+import englishDictionary from './dictionary.en'
+import spanishDictionary from './dictionary.es'
 import { OracleResult } from '../../interfaces/oracle-result.interface'
 import { Hexagram, HexagramLine, HexagramLineValue } from '../../models/hexagram'
 
 interface State {
-  dictionary: HexagramDictionary
   results: Record<string, OracleResult>
 }
 
 export default {
   state: (): State => ({
-    dictionary: hexagrams,
     results: {},
   }),
 
   getters: {
-    getHexagramDetails: (state: State) => (num: number): HexagramDetails => {
-      return state.dictionary[num]
+    dictionary: (state: any, getters: any) => {
+      if (getters.configKey('language') === 'es') {
+        return spanishDictionary
+      }
+
+      return englishDictionary
+    },
+
+    getHexagramDetails: (state: State, getters: any) => (num: number): HexagramDetails => {
+      return getters.dictionary[num]
     },
 
     hexagramTitle: (state: State, getters: any) => (num: number): string => {

@@ -17,7 +17,7 @@
       </ion-toolbar>
     </ion-header>
 
-    <ion-modal :is-open="showHelp" @ion-dismiss="showHelp = false">
+    <ion-modal :is-open="showHelp" @onDidDismiss="showHelp = false">
       <help-modal @close="showHelp = false" />
     </ion-modal>
 
@@ -89,8 +89,8 @@
         <ion-slide class="slide-result">
           <ion-toolbar v-if="hexagram && hexagram.hasSecondary">
             <ion-segment :value="activeHexagram" @ion-change="activeHexagram = $event.detail.value">
-              <ion-segment-button value="primary" v-t="'oracle.result.primary'" />
-              <ion-segment-button value="secondary" v-t="'oracle.result.secondary'" />
+              <ion-segment-button value="primary" v-t="'hexagram.primary'" />
+              <ion-segment-button value="secondary" v-t="'hexagram.secondary'" />
             </ion-segment>
           </ion-toolbar>
 
