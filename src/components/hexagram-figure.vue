@@ -280,7 +280,7 @@ export default {
         filter: invert(100%);
 
         .circle,
-        .line-text {
+        .line-number {
           filter: invert(100%);
         }
       }
