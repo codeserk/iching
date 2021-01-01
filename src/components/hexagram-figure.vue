@@ -200,6 +200,7 @@ export default {
         position: absolute;
         top: calc(50% - 6px);
         left: -1px;
+        color: var(--ion-color-text);
       }
 
       .bar {
@@ -278,7 +279,8 @@ export default {
       @media (prefers-color-scheme: dark) {
         filter: invert(100%);
 
-        .circle {
+        .circle,
+        .line-text {
           filter: invert(100%);
         }
       }
