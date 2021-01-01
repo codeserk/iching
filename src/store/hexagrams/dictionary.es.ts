@@ -687,7 +687,6 @@ const dictionary: HexagramDictionary = {
         quote: `No se encuentra cabeza para la solidaridad.
         Infortunio.`,
         description: `La cabeza es el comienzo. Sin un comienzo correcto, no hay un correcto final. Si se pierde el momento apropiado para unirse y si se vacila ante la perspectiva de una entrega de sí mismo verdadera y sin reservas, se lamentará el error cuando sea demasiado tarde.
-
         `,
       },
     },
@@ -700,7 +699,6 @@ const dictionary: HexagramDictionary = {
       description: `Este hexagrama representa la fuerza de lo pequeño -el poder de lo sombrío- en cuanto algo que restringe, domestica y frena (1). En el 4º lugar, que es el del ministro, hay una línea débil que limita todas las otras, que son fuertes. La imagen es la del viento que sopla alto en el cielo. Retiene el creciente hálito creador, mueve las nubes, las hace más densas pero no lo suficiente para que se transformen en lluvia. El hexagrama representa una constelación donde un elemento fuerte es por un cierto tiempo refrenado por un elemento débil. Sólo a través de la suavidad y de la gentileza que tal situación puede ser acompañada por el éxito.
 
       1. Wilhelm da a este hexagrama el nombre “des klainen Zähmungskraft” cuya traducción más precisa sería “el poder domesticador de lo pequeño”.
-
       `,
     },
     trigram: {
@@ -729,21 +727,18 @@ const dictionary: HexagramDictionary = {
         ¿Cómo podría haber reproches?
          Fortuna.`,
         description: `Seguir adelante está en la naturaleza de los fuertes. Pero al hacerlo, entra en una zona de obstáculos. Por eso regresa al camino que corresponde a su situación, en el cual se siente libre de avanzar y retroceder. Es algo bueno y razonable no querer obtener nada por la coacción y la fuerza, y de acuerdo con la naturaleza de las cosas, eso trae fortuna.
-
         `,
       },
       2: {
         quote: `Uno se deja arrastrar hacia el regreso.
         Fortuna.`,
         description: `Uno quisiera seguir adelante. Pero antes de llegar más lejos, uno percibe por el ejemplo de otras personas semejantes, que el camino está vedado. En tal caso, alguien inteligente y resuelto no se expondrá en principio a un rechazo personal, sino que se retirará con sus semejantes si el esfuerzo hacia adelante no es apropiado en ese momento. Esto trae fortuna, puesto que uno, de esta manera, no se expone a si mismo.
-
         `,
       },
       3: {
         quote: `Los rayos se desprenden de las ruedas del carro.
         Marido y mujer ponen los ojos en blanco.`,
         description: `Hay un intento de avanzar con la fuerza creyendo que el obstáculo que se presenta no es todavía considerable. Pero, debido a las circunstancias, es en efecto el elemento débil quien posee la fuerza, y este intento de avance sorpresivo está condenado al fracaso. Las condiciones externas impiden el progreso, tal como la pérdida de los rayos de sus ruedas impide el avance del carruaje. Se le resta importancia a las advertencias del destino, como ocurre a menudo con los argumentos molestos entre dos conjugues. Naturalmente no se trata de una situación favorable. Aunque a favor de sus argumentos, la parte más débil logre mantenerse firme, las dificultades son demasiado nu-merosas para alcanzar un feliz resultado. En estas condiciones, la parte más fuerte no podrá utilizar su poder para ejercer una autoridad correcta a su alrededor. El ha recibido un rechazo cuando esperaba una victoria fácil. Finalmente se ha dado un paso en falso.
-
         `,
       },
       4: {
@@ -778,7 +773,6 @@ const dictionary: HexagramDictionary = {
       description: `La marcha significa por un lado la manera correcta de comportarse. Arriba está, el cielo, el padre y abajo, el lago, la hija más joven. En la diferencia entre lo alto y lo bajo está indicada la manera en la que subyace la tranquilidad como conducta correcta de la sociedad. Por otro lado, significa literalmente trillar, marchar sobre algo. (1) Lo pequeño y “alegre” marcha sobre lo grande y “fuerte.” Los dos trigramas traducen un movimiento hacia lo alto. Que lo fuerte marche sobre lo débil es considerado como algo natural en sí mismo, y el Libro de los Cambios no hace una mención especial de ello. Pero cuando lo débil se apoya en lo fuerte, no es peligroso si ello ocurre con alegría y sin arrogancia, de tal manera que lo fuerte no se irrite y lo acepte de buen grado
 
       1. El nombre del hexagrama en alemán es “Auftreten” que se entiende en el sentido primero y etimológico de “treten auf: apoyar el pie, marchar sobre…” (en inglés “to tread on). “Auftreten”, lo mismo que “Liu” significa a la vez “marchar” y “conducirse.”
-
       `,
     },
     trigram: {
@@ -796,7 +790,6 @@ const dictionary: HexagramDictionary = {
       la imagen de la marcha.
        El hombre noble distingue entre lo alto y lo bajo y así consolida el significado de las personas.`,
       description: `El cielo y el lago muestran una diferencia de altura proveniente de su misma naturaleza, y ello¬ no suscita ninguna envidia ni disturbio. En la humanidad también se requieren estas diferencias. La igualdad universal es imposible de realizar, pero es importante que las diferencias existentes no sean arbitrarias ni injustas; si así ocurre llegará la lucha de clases y sus consecuencias son inevitables. Si por el contrario, las diferencias visibles son justificadas por cualidades interiores y que los valores personales son la norma que determina el rango exterior, la gente recobra la calma y se estalece el orden en la sociedad.
-
       `,
     },
     mutations: {
@@ -828,7 +821,6 @@ const dictionary: HexagramDictionary = {
          circunspección llevan finalmente a la buena fortuna.
         `,
         description: `Aquí se trata de una empresa peligrosa. La fuerza interior para realizarla existe, pero debe estar acompañada por una actitud exterior de precaución aparentemente vacilante, en contraste con el trazo precedente que es interiormente débil y que actúa con temeridad excediendo sus fuerzas. Aquí se asegura el éxito final, que consiste en alcanzar la meta venciendo el peligro cuando se avanza con precaución.
-
         `,
       },
       5: {
@@ -841,7 +833,6 @@ const dictionary: HexagramDictionary = {
         quote: `Observa tu marcha y considera los signos favorables.
         Cuando todo se cumple, llega la mejor fortuna`,
         description: `La obra se ha terminado. Para saber si la consecuencia será afortunada deben observarse nuestras acciones anteriores; si tuvieron buenos efectos, la buena fortuna está asegurada. Nadie lo sabe por si mismo. Sólo por el resultado de sus actos y el fruto de sus acciones, el hombre puede discernir lo que puede esperar.
-
         `,
       },
     },
@@ -852,7 +843,6 @@ const dictionary: HexagramDictionary = {
       pinyin: `tài`,
       translated: `L Paz`,
       description: `Lo receptivo, cuyo movimiento está dirigido hacia abajo, está arriba; lo creativo, cuyo movimiento tiende hacia arriba, está abajo. Las influencias de ambos trigramas están en armonía, de manera que todos los seres florecen y prosperan. Este hexagrama está asociado al primer mes (febrero-marzo) en el curso del cual las potentes energías de la naturaleza preparan la nueva primavera.
-
       `,
     },
     trigram: {
@@ -870,7 +860,6 @@ const dictionary: HexagramDictionary = {
       Al interior, al centro, en el lugar decisivo está la luz (2ª línea gobernante); la oscuridad está al afuera. Así, el principio luminoso ejerce una influencia creadora y el principio oscuro conserva una actitud sumisa. De manera que las dos partes reciben lo que es debido y merecen. Cuando en la sociedad los buenos ocupan un lugar predominante y tienen el poder en sus manos, los malos por ellos mismos pasan bajo la influencia de los buenos y se mejoran. Cuando, en el hombre, reina el espíritu que viene del cielo, la sensibilidad también está bajo su influencia y ocupa el lugar que le es propio.
 
       Las diferentes líneas entran en el hexagrama por abajo y lo dejan por arriba. Son los elementos pequeños, débiles y malos que se aprestan a partir, mientras que suben los factores grandes, fuertes y buenos. Ello trae buena fortuna y éxito.
-
       `,
     },
     images: {
@@ -882,7 +871,6 @@ const dictionary: HexagramDictionary = {
       description: `El cielo y la tierra tienen relación uno con el otro y unen sus efectos. Se trata de una época de prosperidad general. Toda esta corriente de energía debe ser regulada por un gobernante apropiado, de manera de que sea aprovechada lo mejor posible. Este resultado es obtenido gracias a la repartición. Así el tiempo indiferenciado está dividido por el hombre en estaciones, según la sucesión de los enómenos naturales; el espacio que envuelve todas las cosas está dividido en puntos cardinales por obra humana. Así, la naturaleza y la abundancia abrumadora de sus fenómenos, debe ser restringida y limitada. Por otra parte, la naturaleza debe promoverse en su producción. Eso ocurre cuando se adapta la producciones con el momento y el lugar conveniente. Se acrecienta así el rendimiento natural. Esta actividad de dominar y favorecer la producción es un trabajo sobre la naturaleza que devuelve lo bueno al hombre. (1)
 
       1. Goethe expresó los mismos pensamientos en el verso: “Para encontrarte con el infinito, debes dividirlo y luego unirlo.” (Dich im Unendlichen zu finden, Mußt unterscheiden und dann verbinden.) Atmosphäre, Gedichte, 1827
-
       `,
     },
     mutations: {
@@ -892,8 +880,6 @@ const dictionary: HexagramDictionary = {
          Emprender trae buena fortuna.
         `,
         description: `En tiempos de prosperidad todo hombre valioso que sea llamado a cumplir una misión atrae inmediatamente hacia él las personas que comparten sus sentimientos. De la misma manera, cuando se arranca una rama de pasto, también vienen con ella las ramas cuyas raíces estaban mezcladas. El propósito del hombre valioso, en momentos en que es posible actuar a gran escala, es salir a la vida y hacer un trabajo.
-
-
         `,
       },
       2: {
@@ -910,7 +896,6 @@ const dictionary: HexagramDictionary = {
           Sin reproches para quien permanece constante ante el peligro.
           No te desoles frente a esa verdad, goza de la felicidad que todavía posees`,
         description: `Todo lo que es terrenal está sujeto a cambios. La prosperidad es seguida por la decadencia. Esta es la ley eterna sobre la Tierra. Sin duda, el mal puede ser rechazado, pero no eliminado definitivamente: él regresa. Esta convicción puede desalentar a algunos, pero no debería tener tal efecto. Uno sólo debe evitar dejarse engañar por la felicidad. Si se tiene en cuenta la idea del peligro, uno permanece constante y no comete fallas. Mientras que el ser interior permanezca más fuerte y más rico que la felicidad externa, mientras uno permanezca interiormente superior al destino, la felicidad permanecerá fiel a nosotros.
-
         `,
       },
       4: {
@@ -933,7 +918,6 @@ const dictionary: HexagramDictionary = {
          La perseverancia trae humillación.
         `,
         description: `El cambio anunciado en el medio del hexagrama (trazo N° 3) ha comenzado. La muralla de la ciudad se ha caído en el foso del cual había sido erigida. La fatalidad se abate. En este caso es necesario someterse al destino y no tratar de oponerle ninguna resistencia violenta. El único recurso consiste en mantenerse en el círculo más estrecho. Si perseveramos tratando de eludir el daño por los medios habituales, el colapso sería aún peor y la humillación sería la consecuencia.
-
         `,
       },
     },
@@ -956,7 +940,6 @@ const dictionary: HexagramDictionary = {
        Lo grande se va y viene lo pequeño.
       `,
       description: `El cielo y la tierra ya no se comunican entre sí y todas las cosas se detienen. Lo alto y lo bajo ya no mantienen relaciones mutuas; la confusión y el desorden reinan sobre la Tierra. Adentro está la oscuridad y la luz al exterior. Adentro está la debilidad, y al exterior la dureza; adentro está el vulgo, y afuera los seres nobles. La naturaleza del vulgo crece y la de los nobles disminuye. Pero los seres nobles no se dejan disuadir de sus principios. No obstante, si ya no tienen la posibilidad de actuar, se mantienen fieles a sus principios y se retiran en secreto.
-
       `,
     },
     images: {
@@ -965,7 +948,6 @@ const dictionary: HexagramDictionary = {
        Así, el hombre noble se retira en su valor interior para escapar de las dificultades.
        No permite ser recompensado con ingresos`,
       description: `Cuando reina la desconfianza mutua en la vida pública, como consecuencia de la influencia ejercida por hombres vulgares, una actividad fructífera es imposible porque las bases son falsas. Es por eso que el hombre noble sabe lo que tiene que hacer en tales circunstancias. No se deja seducir por las brillantes propuestas que lo invitan a participar en los asuntos públicos: sería peligroso para él, porque no puede aceptar la mezquindad de los demás. Es por eso que oculta su mérito y se retira en secreto.
-
 s      `,
     },
     mutations: {
@@ -1012,7 +994,6 @@ s      `,
         quote: `El estancamiento se detiene.
         Primero estancamiento, luego fortuna.`,
         description: `El estancamiento no dura para siempre. Sin embargo, él no se detiene por sí mismo sino que requiere la intervención de alguien adecuado para ponerle fin. Allí está la diferencia entre la paz (hexagrama N° 11) y el estancamiento. La consolidación de la paz demanda un esfuerzo constante, porque librada a ella misma, la paz se transforma en estancamiento y decadencia. Una época de decadencia no cambia espontáneamente en paz y prosperidad, sino que son necesarios esfuerzos para superarla. Así se pone de relieve la actitud creativa del hombre que es necesaria para que llegue el orden en el mundo.
-
         `,
       },
     },
@@ -1024,7 +1005,6 @@ s      `,
       translated: `La Comunidad de los Hombres`,
       description: `La imagen del trigrama superior Ch’ien es el cielo y la del trigrama inferior Li es el fuego. La naturaleza del fuego es elevarse flameante hacia el cielo.
       Así esta evocada la idea de la comunidad. El segundo trazo débil, por su posición central reúne entorno de él las cinco líneas fuertes. Este hexagrama es el opuesto al N° 7, “El Ejército”. Allí, el peligro interior y la obediencia exterior caracterizan una armada marcial que tiene necesidad, para mantenerse unida, de un único trazo fuerte rodeado de trazos débiles. Aquí, la claridad interior caracteriza la unidad pacífica entre los hombres, que necesita, para ser mantenida, de un único trazo débil entre múltiples trazos fuetes. No hay en el hexagrama ningún otro signo de debilidad, sino una unión pacífica entre personas fuertes.
-
       `,
     },
     trigram: {
@@ -1038,7 +1018,6 @@ s      `,
        La perseverancia del hombre es ventajosa.
       `,
       description: `La verdadera comunidad con los hombres debe basarse en intereses universales. No son los objetivos egoístas de sí mismo, sino los designios que conciernen a la humanidad los que forman una comunidad durable con los hombres. Es por eso que se augura el éxito a una comunidad con los hombres en pleno día. Cuando reina la concordia, pueden ser llevadas a cabo con éxito las empresas difíciles como atravesar la gran corriente. De todas maneras, para realizar tal comunidad es necesaria la presencia de un se requiere un líder iluminado con convicciones definidas y entusiastas, que esté dispuesto a llevar adelante la empresa. El trigrama inferior tiene el sentido de claridad y el trigrama superior el sentido de la fuerza creadora.
-
       `,
     },
     images: {
@@ -1047,7 +1026,6 @@ s      `,
         Así, el hombre noble realiza la división en familias y establece distinciones entre las cosas.
        `,
       description: `El cielo se mueve en la misma dirección que el fuego, y sin embargo es distinto de él. Así como los cuerpos luminosos en el cielo sirven para estructurar y dividir el tiempo, así también la comunidad humana y todas las cosas que realmente le pertenecen, deben estar orgánicamente estructuradas. La comunidad no debe ser una mezcla de individuos o de cosas - eso sería un caos, no una comunidad - pero para que el orden se establezca, requiere una multiplicidad estructurada.
-
       `,
     },
     mutations: {
@@ -1070,7 +1048,6 @@ s      `,
          Durante tres años no se levanta.
         `,
         description: `Aquí la comunidad se ha vuelto desconfiada. Se desconfía del otro, se le preparan emboscadas secretas y se lo asecha de lejos. Pero estamos ante un rudo adversario con el cual no conviene maniobrar de esa manera. Se muestran aquí los obstáculos que se presentan en el camino de la comunidad con los demás. Cada uno tiene sus propias intensiones y reservas y se busca la ocasión de sorprender a los otros. Es justamente esta manera de actuar que crea la desconfianza. Se sospecha de los otros las mismas artimañas y astucias que uno esconde, y uno busca espiarlos. En consecuencia, la verdadera comunidad con los hombres se hace difícil y mientras más se mantenga esta situación, más se ella se aleja.
-
         `,
       },
       4: {
@@ -1086,8 +1063,6 @@ s      `,
          ellos logran reencontrarse.`,
         description: `Hay dos personas separadas exteriormente, pero unidas en el corazón. Su situación en la vida los mantiene apartados uno del otro. Hay muchos obstáculos e impedimentos entre ellos que los hacen sufrir. Pero no pueden ser separados por ningún obstáculo y permanecen fieles uno al otro. Y aunque superar los obstáculos les costará duros combates, vencerán y finalmente su tristeza se volverá se transformará en alegría cuando puedan reencontrarse.
         Confucio dice al respecto: “La vida lleva a los seres nobles por caminos tortuosos y diversos. Con frecuencia la marcha encuentra obstáculos pero al superarlos, todo deviene más fácil. Aquí un pensamiento elocuente derrama palabras; allí una sabiduría profunda debe cantonarse en el silencio. Sin embargo, cuando dos personas están unidas por la intimidad del corazón, pueden romper la dureza del hierro y del bronce. Cuando dos personas se comprenden totalmente en la intimidad del corazón, sus palabras son dulces y fuertes como el perfume de orquídea.”
-
-
         `,
       },
       6: {
@@ -1106,7 +1081,6 @@ s      `,
       description: `Arriba y desde lejos, el fuego irradia en el cielo, de modo que todas las cosas se iluminan y aparecen. La quinta línea es débil, pero está en el lugar de honor, y todas las características fuertes se armonizan con ella. Quien ocupa un alto puesto y es humilde y gentil, verá que todas las cosas le acaecen. (1)
 
       1. El sentido de este hexagrama coincide con las palabras de Jesús : “Bienaventurados los mansos porque ellos heredarán la Tierra.”
-
       `,
     },
     trigram: {
@@ -1119,7 +1093,6 @@ s      `,
       description: `Los dos trigramas indican que la fuerza y la claridad se unen. La posesión de lo grande es determinada por el destino y corresponde a la época. ¿Cómo puede ser que la línea débil tenga el poder de mantener juntas y de poseer los elementos fuertes? Por su voluntad libre de egoísmo. La época es favorable. Fortaleza interior, claridad y cultura al exterior. El poder se exterioriza con fineza y control de si mismo. Eso trae un éxito sublime y riqueza. (2)
 
       2. Se podría pensar que el N° 8 «La Solidaridad» es todavía más favorable, puesto que allí una línea fuerte reúne cinco línea débiles. Sin embargo, aquí el juicio trae aquí la indicación de «éxito sublime» , que es mucho más favorable. Eso proviene de que allá los elementos mantenidos juntos por el poderoso soberano no son más que simples sujetos, mientras que aquí el jefe benévolo tiene cerca de él hombres fuertes y hábiles.
-
       `,
     },
     images: {
@@ -1137,9 +1110,6 @@ s      `,
          Si uno persevera consciente de la dificultad, uno permanece sin culpa.
         `,
         description: `La posesión de lo grande está todavía en su etapa inicial y aún no tuvo la oportunidad de cometer ningún error. No hay ninguna culpa. Pero todavía hay muchas dificultades por superar. Si uno permanece consciente de estas dificultades y si se libera internamente del riesgo del orgullo y la prodigalidad, uno podrá superar, en principio, cualquier causa de culpa.
-
-
-
         `,
       },
       2: {
@@ -1148,7 +1118,6 @@ s      `,
          Sin reproches.
         `,
         description: `La posesión de lo grande no consiste solamente en la abundancia de bienes, sino sobre todo en su movilidad y utilidad práctica. Entonces se los puede usar en los negocios y así permanecer excento de cargas y errores. Por la imagen del gran carro, en el que se puede cargar un montón de cosas y viajar lejos, hay que entender a los auxiliares eficientes que uno tenga consigo y que estén a la altura de sus tareas. A esas personas se les podrán confiar grandes responsabilidades, lo que es indispensable en las grandes empresas.
-
         `,
       },
       3: {
@@ -1157,7 +1126,6 @@ s      `,
         description: `Es propio de un hombre generoso y libre que no considere sus bienes como una posesión exclusivamente personal sino que los ponga a disposición del soberano o de la colectividad. Haciéndolo así, adopta la actitud correcta con respecto a las propiedades que no pueden permanecer siempre bajo su dominio privado. Un hombre con espíritu mezquino es incapaz de albergar tales sentimientos. Para él, la posesión de lo grande es perjudicial, porque en vez de ofrecerlo, pretende conservarlo todo para sí con gran sacrificio. (3)
 
         3. Esto está expresado en el Evangelio (Lucas 18, 33): «Quien buscará salvar su vida la perderá pero el que la pierda la guardará.»
-
         `,
       },
       4: {
@@ -1166,7 +1134,6 @@ s      `,
         description: `Aquí se trata de una situación que existe entre vecinos ricos y poderosos. Es algo peligroso. Es conveniente no mirar ni a la derecha ni a la izquierda para evitar la envidia y los esfuerzos para competir con los otros. (4)
 
         4. Otra interpretación que se acepta generalmente dice que es conveniente no depender de su riqueza. Así uno permanece libre de errores, poseyendo como si no se poseyera.
-
         `,
       },
       5: {
@@ -1183,7 +1150,6 @@ s      `,
         Confucio dijo a ese respecto: “Bendecir significa ayudar. El cielo ayuda al ser abandonado (5), los hombres ayudan al ser sincero. Aquél que se conduce sinceramente, abandonándose a sus pensamientos y que todavía continúa respetando los hombres de mérito, es bendecido por el cielo. Encuentra la fortuna y todo le será ventajoso.”
 
         5. Quien no opone resistencia a los designios divinos y favorece con ello la ley natural.
-
         `,
       },
     },
@@ -1194,7 +1160,6 @@ s      `,
       pinyin: `qiān`,
       translated: `La Humildad`,
       description: `Este hexagrama está compuesto de Ken, “lo inmóvil, la montaña” y de K’un “lo receptivo, la tierra.” La montaña es el hijo más joven del Creador, el representante del cielo sobre la tierra. Ella dispensa en sus pies las bendiciones del cielo, las nubes y la lluvia que se reúnen en su cima y luego aparece radiante con la luz celeste. Eso indica la modestia y sus efectos en los hombres fuertes y nobles. Arriba está K’un “lo receptivo, la tierra”. La propiedad de la tierra es la bajura, pero en este hexagrama ella está representada precisamente por esta razón como elevada, puesto que está ubicada en lo alto, sobre la montaña. Ello muestra el efecto de la humildad en los hombres modestos y simples : ellos se elevan por este hecho.
-
       `,
     },
     trigram: {
@@ -1207,7 +1172,6 @@ s      `,
       description: `La ley del cielo vacía lo que está lleno y colma lo que es humilde: cuando el Sol está en lo más alto, por ley celestial debe declinar y cuando está en lo más profundo bajo la tierra, debe dirigirse hacia un nuevo levante; cuando la Luna está llena comienza a menguar y cuando ella está vacía, debe comenzar a crecer nuevamente. Esta ley celestial actúa igualmente en los destinos humanos. La ley de la tierra es de cambiar todo lo que está lleno y de fluir hacia lo que es humilde. Las altas montañas son gastadas por las aguas y los valles rellenados. La ley de los poderes del destino es disminuir lo que está lleno y dispensar felicidad al humilde. Los hombres también odian lo que está lleno y aman la humildad.
 
       El destino sigue leyes fijas que actúan de una manera necesaria. Pero el hombre tiene el poder de moldear su destino en la medida que su conducta lo expone a la influencia de las fuerzas de bendición o destrucción. Cuando un hombre ocupa un alto puesto y es humilde, brilla a la luz de la sabiduría. Cuando es rebajado y humilde, no puede ser ignorado. Así, el hombre noble se arregla para llevar a cabo su trabajo hacia un buen fin sin jactarse de lo que ha realizado.
-
       `,
     },
     images: {
@@ -1219,7 +1183,6 @@ s      `,
       description: `La Tierra en la que se oculta una montaña no muestra su riqueza, porque la altura de la montaña sirve para equilibrar las depresiones. Por lo tanto, lo alto y lo bajo se complementan entre sí y el resultado es la llanura. La imagen de la humildad muestra aquí en el hecho que ha requerido un largo trabajo y que parece natural y fácil. Lo mismo hace el hombre noble cuando instaura el orden sobre la Tierra. Iguala las oposiciones sociales que son fuentes de conflicto y, con ello, crea relaciones justas y equitativas (1)
 
       1. Hay en este hexagrama una serie de paralelismos en relación con la enseñanza del Antiguo y del Nuevo Testamento: “Cualquiera que se enaltece será rebajado, y cualquiera que se rebaje, será enaltecido.” (Mateo, 23:12). “Que todo valle sea colmado, y que toda montaña y toda colina sea derribada, y las colinas se conviertan en llanuras, y los estrechos se transformen en valles.” (Isaías 40:4). “Dios se resiste a lo bello, pero da su gracia a los humildes.” (Santiago, 4:6). La concepción del último juicio de los Parsis contiene características similares, y la idea griega de los celos de los dioses (Némesis) se puede comparar con el último rasgo citado (se sabe que el rol de Némesis es castigar el hybris o el exceso).
-
       `,
     },
     mutations: {
@@ -1247,7 +1210,6 @@ s      `,
       4: {
         quote: `Nada que no sea ventajoso puede detener la humildad en movimiento.`,
         description: `Todo debe tener una justa medida. Incluso la modestia en el comportamiento a veces puede ser excesiva. Aquí ella está en marcha, puesto que en esta situación hay un colaborador meritorio en lo bajo y un gobernante benévolo en lo alto que soportan una gran responsabilidad. Pero no se debe abusar de la confianza del superior ni menospreciar el mérito del inferior. Hay funcionarios mediocres que siguen escrupulosamente los reglamentos pero que no asumen ninguna responsabilidad. Sin cumplir con el servicio que se espera de ellos, llevan títulos que ninguna realidad justifica. Tal actitud es contraria a la humildad que aquí se trata. La humildad en esta situación se manifiesta en la eficacia con la cual se realiza el trabajo.
-
         `,
       },
       5: {
@@ -1257,7 +1219,6 @@ s      `,
 
             `,
         description: `La modestia no debe confundirse con la bondad débil que todo lo permite. Cuando alguien tiene un puesto de responsabilidad, en ciertas circunstancias debe saber actuar con energía. Sin embargo, es necesario tratar de no imponerse a los demás haciendo alarde personal de la superioridad, pero de asegurar la posición en su alrededor. Las medidas a tomar deben ser puramente objetivas sin herir la susceptibilidad de las otras personas. La humildad también debe manifestarse en la severidad.
-
         `,
       },
       6: {
@@ -1268,8 +1229,6 @@ s      `,
         description: `Quien sea consecuente con su humildad debe estar atento a que ella se manifieste en la realidad. Se debe actuar enérgicamente en ese dominio. Cuando surge un conflicto nada es más fácil que echar la culpa sobre los otros. Puede haber alguien débil que se sienta ofendido y se repliegue sobre él mismo, compadeciéndose y creyendo actuar con humildad no defendiéndose. La verdadera modestia se manifiesta en la energía a imponer el orden comenzando por sí mismo y por el entorno inmediato. No se cumplirá una obra importante si no se tiene el coraje de poner en marcha los ejércitos contra sí mismo (para corregir las faltas). (2)
 
         2. El Libro de los Cambios contiene pocos hexagramas donde todos los rasgos son favorables, como es el caso en el hexagrama: “Humildad”. Esto muestra la gran estima que la sabiduría china concede a esta virtud.
-
-
         `,
       },
     },
@@ -1280,8 +1239,6 @@ s      `,
       pinyin: `yù`,
       translated: `El entusiasmo`,
       description: `El trazo fuerte en el cuarto lugar, el puesto de los altos funcionarios, encuentra en todos los otros trazos, que son débiles, la cortesía y la obediencia. El trigrama superior, Chen, tiene la propiedad del movimiento, el inferior, K’un, la obediencia y la devoción. Por lo tanto, el hexagrama muestra el comienzo de un movimiento que se enfrenta con una actitud de devoción y, por consiguiente, despierta actos de inspiración y entusiasmo. Además representa una ley muy importante: que el movimiento debe efectuarse siguiendo la línea de la menor resistencia. Este carácter se expresa en este hexagrama como una ley presente en los fenómenos naturales y en las vidas humanas.
-
-
       `,
     },
     trigram: {
@@ -1295,8 +1252,6 @@ s      `,
       El tiempo del entusiasmo llega con la presencia de un hombre notable, que está en simpatía con el alma del pueblo y de acuerdo con ella. Es por eso que encuentra la obediencia general libremente consentida. Para despertar el entusiasmo es necesario acordar las órdenes que uno imparte con la naturaleza de los gobernados. El rigidez de las leyes naturales tiene por fundamento la regla del movimiento que sigue la línea de menor resistencia. Estas leyes no son exteriores a las cosas sino que ellas constituyen la armonía inmanente del movimiento. Por eso los cuerpos celestes no se desvían de sus órbitas y todos los fenómenos naturales se cumplen con una regularidad fija. Lo mismo ocurre en la sociedad humana. Solo son ejecutadas las leyes que se enraízan en el sentimiento popular, mientras que aquellas que lo contradicen, sólo despiertan resentimiento.
 
 El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a las oposiciones secretas. El entusiasmo es también lo que permite uniformizar los movimientos de masas populares, sobre todo durante las guerras, con el fin de obtener la victoria.
-
-
       `,
     },
     images: {
@@ -1312,7 +1267,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       Vinculando así el propio pasado con la divinidad en los solemnes momentos de entusiasmo religioso, se establecía la unión entre Dios y la humanidad.
 
       El gobernante que veneraba la divinidad en sus ancestros era considerado como el Hijo del Cielo, en quien el mundo celeste entraba en contacto místico con el mundo terrestre. Estos pensamientos son el resumen último y supremo de la cultura china. Confucio mismo dijo respecto al gran sacrificio que se cumplía durante estos ritos: “Aquél que haya comprendido completamente este sacrificio podrá gobernar el mundo como si lo hiciera girar en la palma de la mano”
-
       `,
     },
     mutations: {
@@ -1320,8 +1274,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         quote: `El entusiasmo que se expresa,
         trae desgracia`,
         description: `Alguien en una posición subordinada tiene relaciones distinguidas de las que se jacta con entusiasmo. Esta arrogancia le atrae fatalmente el desastre. El entusiasmo nunca debe ser un sentimiento egoísta, sino que sólo se justifica como un sentimiento general que nos comunique con los otros.
-
-
         `,
       },
       2: {
@@ -1331,7 +1283,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `Aquí se alude a alguien que no se deja engañar por ninguna ilusión. Mientras que otros están cegados por el entusiasmo, él reconoce con perfecta claridad los primeros signos de la época. No elogia a los superiores ni desdeña a los inferiores. Es sólido como una roca. Desde que aparece el primer indicio de desacuerdo y sin perder ni un solo día, sabe retirarse en el momento oportuno. Con esta forma de actuar, la perseverancia trae buena fortuna.
 
         Confucio dice al respecto: “Conocer los gérmenes es algo divino. El hombre noble no es halagüeño cuando comercia con los superiores ni arrogante con los inferiores. Conoce con certeza los gérmenes. Los gérmenes son la causa imperceptible de un primer movimiento, un primer signo de aquello que traerá la fortuna o la desgracia. El hombre noble reconoce los gérmenes y actúa rápidamente. No espera ni un solo día.” Se dice en el Libro de los Cambios: “Sólido como una roca. No es un día entero. La perseverancia trae buena fortuna” “Sólido como una roca, ¿Porqué un día entero? El juicio puede conocerse: el hombre noble conoce lo oculto y lo visible, conoce lo débil y también lo fuerte. Por eso una miríada de seres fijan los ojos en él.”
-
         `,
       },
       3: {
@@ -1351,8 +1302,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       5: {
         quote: `Permanentemente enfermo, todavía no llega a morir.`,
         description: `El entusiasmo aquí está obstruido. Uno se encuentra bajo una presión constante que no le permite actuar con libertad. Sin embargo, esta presión puede tener una ventaja: prevenir del hecho de ser consumido por un entusiasmo vacío. La presión constante puede servir, precisamente, para mantenerse vivo.
-
-
         `,
       },
       6: {
@@ -1360,7 +1309,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Pero si se cambia después de que se haya alcanzado el fin,
           entonces no habrá reproches`,
         description: `Si nos dejamos enceguecer por el entusiasmo, es algo malo. Pero si después de consumarse esta torpeza todavía se puede cambiar, entonces no habrá reproches. Recuperarse de un falso entusiasmo es posible y es algo muy favorable.
-
         `,
       },
     },
@@ -1373,8 +1321,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `Arriba está lo feliz cuyo carácter es la alegría; abajo esta lo que despierta, cuyo carácter es el movimiento. La alegría unida al movimiento llama a seguirla. Lo alegre es la hija menor, lo que despierta es el hijo mayor. Un hombre de cierta edad se inclina ante la joven y le muestra su consideración y respeto. De esta manera él es tan conmovedor que ella lo sigue. (1)
 
       1. El nombre en alemán de este hexagrama es die Nachfolge, que se traduce como séquito, seguimiento, consecuencia, etc., todos términos que implican la idea de seguir, son los términos que se han usado en la traducción, según el contexto.
-
-
       `,
     },
     trigram: {
@@ -1389,7 +1335,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `Para hacerse un séquito uno debe primero saberse adaptar. Es solamente sirviendo que uno llega a mandar, puesto que de esa sola manera se puede obtener el consentimiento satisfactorio de los que siguen. Si uno trata de obtener que lo sigan por la fuerza o las intrigas, por las conspiraciones o creando facciones invariablemente encontrará resistencia y obstáculos que impide la libre adhesión. No debemos forzar a los otros para que nos sigan, sino que ellos deben venir espontáneamente.
       Pero un movimiento alegre puede igualmente conducir a resultados enojosos. Es por eso que se agrega “la perseverancia es ventajosa”, es decir la permanencia en lo que es bueno y sin reproches. De la misma manera que solamente bajo esta condición se puede adquirir una adhesión, es solamente bajo esta condición que uno puede seguir a otros sin daños.
       La idea de crearse un séquito adaptándose a las exigencias de la hora es grande e importante; por eso es que el juicio es tan favorable.
-
 `,
     },
     images: {
@@ -1397,7 +1342,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
        Así, al anochecer el sabio entra para recrearse y reposar.
       `,
       description: `Existen situaciones excepcionales donde la actitud del guía y de aquél a quien conduce se modifican. En la idea de sucesión y de adaptación hay la noción de que aquél que quiere dirigir los otros permanece accesible y se deja influenciar por las opiniones de sus subordinados. Al mismo tiempo debe tener ideas firmes allí donde sólo se trata de opiniones efímeras. A partir del momento donde uno está dispuesto para escuchar a los demás, uno no se debe contentarse con encontrar personas que tienen nuestra misma opinión o que son de nuestro propio partido, sino que se debe salir a la puerta y comenzar a tratar con personas de toda clase, sean amigos o enemigos. Es la única manera que permite llevar una obra a bien fin.
-
       `,
     },
     mutations: {
@@ -1415,7 +1359,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         quote: `Si alguien se adhiere a un niño,
         pierde al hombre fuerte.`,
         description: `En la camaradería y otras relaciones estrechas, el individuo debe elegir cuidadosamente. Lo rodean tanto buenas como malas compañías, y no puede tener ambas al mismo tiempo. Si se envilece con los indignos, se pierde la unión con los hombres de gran valor espiritual, los únicos cuya influencia nos es provechosa para hacer lo bueno.
-
         `,
       },
       3: {
@@ -1424,7 +1367,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Siguiendo se encuentra lo que se busca.
           Es ventajoso permanecer perseverante`,
         description: `Cuando se ha establecido la conexión correcta con la gente importante, eso provoca naturalmente una cierta pérdida. Uno debe separarse de los seres inferiores y superficiales. Sin embargo uno se sentirá satisfecho interiormente porque se tiene lo que se busca y lo que es necesario para el desarrollo personal. Solo se requiere permanecer firme. Se debe saber lo que quiere y no debe ser inducido al error por inclinaciones momentáneas.
-
         `,
       },
       4: {
@@ -1433,7 +1375,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          el camino con la verdad aporta claridad. ¿Cómo
          se podría reprochar?`,
         description: `Sucede a menudo cuando uno posee una cierta influencia, que obtenga seguidores siendo condescendiente con los inferiores. Pero los que así se adhieren no son honestos sino que buscan el beneficio personal tratando de hacerse indispensables a través del la adulación y del servilismo. Si uno se acostumbra a tales adherentes de modo que ya no pueda prescindir de ellos, eso le trae infortunio. Sólo cuando uno es sincero, completamente libre de egoísmo y que considera exclusivamente lo que es justo y realista, puede tener la claridad necesaria para distinguir entre la gente y entonces estará libre de culpas.
-
         `,
       },
       5: {
@@ -1446,7 +1387,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          El rey lo presenta a la Montaña del Oeste.
         `,
         description: `Se alude a un hombre que por su propia iniciativa ha dejado detrás suyo las agitaciones del mundo y que es por ello un sabio exaltado. Pero que encuentra a un seguidor que lo comprende y que no lo deja retirarse. Así regresa otra vez al mundo y ayuda al otro en su trabajo. Se crea con ello una conexión eterna. Esta alegoría está tomada de la dinastía Tcheu, que honoraba los servidores meritorios dándoles un lugar en el templo de los ancestros del gobernante en la montaña occidental. Tal hombre compartía entonces el destino de la dinastía gobernante.
-
         `,
       },
     },
@@ -1473,7 +1413,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `Lo que se corrompe por culpa de los hombres puede repararse con el trabajo de los hombres. No se trata de un destino inexorable, como la época del estancamiento, sino de las consecuencias de un abuso de la libertad humana que ha causado tal estado de corrupción. Trabajar mejorando las condiciones favorece al éxito porque está de acuerdo con las posibilidades de la época. No debemos retroceder ante el trabajo y el peligro - simbolizado por el cruce de las grandes aguas - sino que debemos enfrentarlos enérgicamente.
 
       Sin embargo, el éxito tiene como condición previa una justa reflexión de la que depende la decisión correcta. Eso es el significado de “antes del punto de partida, tres días. después del punto de partida, tres días.” Debemos primero conocer las causas de la corrupción antes de poder remediarla. De allí que debemos prestar atención a lo que precede el punto de partida. Además hay que vigilar a tomar el buen camino con el fin de evitar la recaída, de allí que debemos prestar atención a lo que pasa después de la partida. La resolución y la energía deben sustituir a la indiferencia y a la inercia para que finalmente aparezca un nuevo comienzo.
-
       `,
     },
     images: {
@@ -1482,7 +1421,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
        hombre noble agita la gente y fortalece su espíritu.`,
 
       description: `Cuando el viento sopla al pié de la montaña, forma remolinos que arruinan los cultivos. Eso reclama una mejoría. Pasa lo mismo con las bajas disposiciones y las modas de mala calidad : ellas introducen la corrupción en la sociedad humana. Para desterrar la corrupción hay que regenerar la nobleza de la sociedad. Los métodos para hacerlo son indicados con dos signos primitivos, pero sus efectos deben desplegarse en una sucesión ordenada: primero se debe remover el estado de estancamiento, conmoviendo la opinión pública (como el viento que arrasa con todo), y luego fortaleciendo y tranquilizando el ánimo popular (como la montaña nutre y protege las plantas que crecen a su alrededor).
-
       `,
     },
     mutations: {
@@ -1499,21 +1437,18 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         quote: `Reparando lo que fue corrompido por la madre.
         Uno no debe ser demasiado perseverante.`,
         description: `Se refiere aquí a los errores que han sido provocados por la debilidad. De ahí el simbolo de lo que ha sido corrompido por la madre. En este caso es necesario tener ciertas consideraciones, cierta delicadeza cuando se procede a la reparación. Uno no se debe mostrar demasiado severo con el fin de no herir con la brusquedad.
-
         `,
       },
       3: {
         quote: `Reparando lo que fue corrompido por el padre.
         Habrá un pequeño remordimiento. No hay gran culpa.`,
         description: `Se describe aqui alguien que corrige los errores del pasado con una energía algo excesiva. Seguramente eso provocará ciertas discordias y molestias. Pero un exceso de energía es preferible a muy poca. Si en el momento se puede tener algun remordimiento, se permanecerá libre de toda culpa grave.
-
         `,
       },
       4: {
         quote: `Tolerando lo corrompido por el padre.
          Si continúa será humillado.`,
         description: `Se muestra aquí la situacion de alguien que, por debilidad, no se opone a la corrupción proveniente del pasado y que comienza a manifestarse en el presente, sino que por el contrario, la deja seguir su curso. Si continúa así hallará por consecuencia la humillación.
-
         `,
       },
       5: {
@@ -1540,7 +1475,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `La palabra china Lin posee una serie de significaciones que ningún término alemán (1) puede expresar por sí solo. Las viejas interpretaciones del Libro de los Cambios indican la idea de “crecer” como primer sentido. Lo que crece son los dos trazos fuertes que empujan desde abajo en el hexagrama. Con ellos se expande la fuerza luminosa. De allí se pasa a la idea de aproximación, es decir, la aproximación de lo que es fuerte y superior a lo que es débil e inferior. Se tiene entonces el sentido de condescendencia de un hombre superior hacia el pueblo y el de la puesta en marcha de negocios. El hexagrama está atribuido al duocécimo mes (enero-febrero), puesto después del solsticio de invierno, la fuerza luminosa ya es de nuevo ascendente.
 
       1. El nombre del hexagrama Lin es en alemán die Annâherung, que se traduce en el texto como la aproximación.
-
       `,
     },
     trigram: {
@@ -1553,8 +1487,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
        Cuando llega el octavo mes hay desgracia.
       `,
       description: `El hexagrama en conjunto indica una época de progreso esperanzador. Llega la primavera. La alegría y el buen humor acercan lo alto de lo bajo. El éxito está asegurado. El carácter favorable de la época es suficiente. Se debe trabajar con determinación para aprovechar todo lo auspicioso que tiene la época. Otra cosa más, la primavera no durará para siempre. Al octavo mes las cosas se invierten. No quedan más que dos líneas fuertes que no avanzan, sino que retroceden. (Ver el hexagrama siguiente) Hay que recordar esto a tiempo. Si se previene el mal antes de las lluvias o si anticipamos el peligro antes de que se insinúe, entonces podremos dominarlo.
-
-
       `,
     },
     images: {
@@ -1565,7 +1497,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         y proteger el pueblo.`,
 
       description: `La tierra limita al lago por arriba. Es la imagen de la aproximación y de la condescendencia del hombre superior hacia aquellos que están en el fondo. La analogía del hexagrama con esas dos categorías de seres proviene de cada una de sus partes. Tal como el lago es inacabable en su profundidad, el sabio tiene una disposición inagotable a enseñar a la humanidad; tal como la tierra es ilimitadamente vasta para sostener y cuidar a todas las criaturas, el sabio sustenta y aprecia a toda la gente, sin excluir con ningún límite a ninguna parte de la humanidad.
-
       `,
     },
     mutations: {
@@ -1573,7 +1504,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         quote: `Aproximación en común.
         La perseverancia trae la fortuna.`,
         description: `El bien comienza a predominar y encuentra buena recepción en lugares influyentes. Esto constituye un incentivo para los hombres de valor. Entonces uno puede unirse a la marcha hacia adelante. Solamente hay que tener cuidado de no perderse en la corriente de la época y perseverar en la buena dirección: eso trae fortuna.
-
         `,
       },
       2: {
@@ -1581,7 +1511,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          ¡Fortuna! Todo es favorable.
         `,
         description: `Uno se encuentra en la situación de ser incitado por lo superior a aproximarse y porque uno tiene en sí mismo la fuerza y es consecuente, sin ningún reparo obtiene la buena fortuna. Incluso el futuro no debe ser causa de preocupación. Se sabe con certeza que todo lo terrestre es pasajero y que toda ascensión está seguida por un descenso, pero uno no se deja desviar por ese destino general. Todo es favorable. Así se marchará por el camino de la vida rápido, con valentía y osadamente.
-
         `,
       },
       3: {
@@ -1590,8 +1519,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Si alguien es inducido a lamentarse por ello, queda libre de culpa.
         `,
         description: `Se va alegremente adelante. Se adquiere poder e influencia. Pero eso esconde el riesgo de relajarse y que, confiando en su situación, se quede con un sentimiento de comodidad y de negligencia en sus relaciones con la gente. Esto es dañino en toda circunstancia. Sin embargo se da la posibilidad de un cambio de disposición. Si uno siente pena por esa actitud negligente y si decide asumir la responsabilidad que acarrea el poder y la influencia, entonces se libera de las culpas.
-
-
         `,
       },
       4: {
@@ -1612,7 +1539,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Fortuna.
           Sin reproches.`,
         description: `Un sabio que ya ha conquistado el mundo y cuyo interior ya puede retirarse de la vida, puede en ciertas circunstancias retornar una vez más a este bajo mundo y aproximarse a la gente. Esto significa una inmensa fortuna para los hombres que reciban su enseñanza y ayuda. Pero en lo que a él concierne, esta acción magnánima de rebajarse no da lugar a ningún reproche.
-
         `,
       },
     },
@@ -1625,7 +1551,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `El nombre chino de este hexagrama tiene, por medio de una ligera modificación en la entonación, un doble sentido. Significa, por un lado, contemplar y por otro significa ser visto, en el sentido de servir de ejemplo. Estas ideas están sugeridas por el hecho de que el hexagrama puede ser interpretado como la imagen de una torre como las numerosas que existían en la vieja China. De lo alto de esas torres se tenía una amplia visión del entorno y, por otra parte, una torre semejante, situada en lo alto de una montaña, era visible desde lejos. El hexagrama muestra a un gobernante que contempla la ley del cielo por encima suyo y las costumbres del pueblo debajo, y que, por medio de un gobierno acertado, da un alto ejemplo a las masas.
 
       Este hexagrama está ligado al octavo mes (septiembre-octubre). La fuerza luminosa se retira y la de la oscuridad está de nuevo en ascensión. De todas maneras este aspecto no entra aquí en cuenta para la interpretación del hexagrama en conjunto.
-
       `,
     },
     trigram: {
@@ -1640,7 +1565,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `El ritual del sacrificio en China comenzaba por una ablución y una libación que constituía una invocación a la divinidad. Después de ello se ofrecía el sacrificio. El intervalo de tiempo entre esos dos ritos era el más sagrado, el momento de supremo recogimiento interior. Cuando la piedad está inspirada por la fe, la contemplación sincera del espectáculo que se ofrece transforma a los testigos y les inspira respeto.
 
       Así, hay en la naturaleza un sagrado y serio sentido en la regularidad con la cual todos los eventos naturales se suceden. La contemplación de este sentido divino de los acontecimientos del universo pone entre las manos de aquél que es llamado a actuar sobre los hombres el medio de ejercer los mismos efectos. Es necesario para ello un recogimiento interior semejante a aquél que produce la contemplación religiosa en los hombres dotados de una fe grande e intensa. Así, ellos ven las leyes divinas y misteriosas de la vida y las hacen manifestar en su propia personalidad gracias a la extrema intensidad de su recogimiento. Como consecuencia de esta visión, emana de ellos un poderoso poder espiritual que actúa sobre los hombres y los somete sin que tengan consciencia de la manera como ello se produce.
-
       `,
     },
     images: {
@@ -1652,7 +1576,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `Cuando el viento sopla sobre la tierra se hace presente en todos los lugares y la hierba debe plegarse bajo su fuerza. Estos dos hechos se confirman en este hexagrama. Las dos imágenes simbolizan la manera de actuar de los reyes de la antigöedad: por una parte, gracia a sus viajes regulares ellos se procuraban una visión general de su pueblo de tal manera que ninguna costumbre en vigor se le podía escapar. Por otra parte, de ese modo ellos ejercían su influencia gracias a la cual los hábitos inadecuados eran modificados.
 
       El conjunto indica el poder de la personalidad superior. Tal hombre tendrá una vista general de la gran multitud y de sus verdaderas disposiciones, de tal suerte que no podrá engañarse. Por otra parte, él ejercerá su influencia sobre ella por su simple presencia, de modo que la multitud pueda reglarse con él como la hierba lo hace con el viento.
-
       `,
     },
     mutations: {
@@ -1670,34 +1593,29 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `A través de la rendija de la puerta se tiene una visión limitada. Se ve del interior hacia lo exterior. El modo de contemplación es limitado subjetivamente. Se lo relaciona todo a sí mismo pero uno no sabe ponerse en el lugar de los otros y comprender sus motivos. Eso es conveniente para una buena dueña de casa. Ella no tiene necesidad de comprender los asuntos del mundo. Para un hombre que debe actuar en la vida pública, tal contemplación egoista y limitada es naturalmente mala. (1)
 
         1. La diferencia en la evaluación del comportamiento entre un hombre y una mujer no se limitaba solamente a la antigua China. Esta imagen también es caracterizada por Schiller en “El canto de la Campana” que muestra la visión una ama de casa que se movía perfectamente en círculos semejantes.
-
         `,
       },
       3: {
         quote: `Contemplando mi vida decide sobre el progreso o la retirada.`,
         description: `Es aquí el lugar de transición. Ya no se mira hacia el exterior para recibir imágenes más o menos limitadas y confusas sino que se orienta la contemplación hacia si mismo con el fin de encontrar una dirección para las decisiones a tomar. Esto retiro de la contemplación es el ejemplo de una victoria sobre el egoísmo inocente que observa todo desde su punto de vista personal. Se llega a la reflexión, y a través de ella a la objetividad. De todas maneras, el conocimiento de sí mismo no es el exámen de nuestro propio pensamiento sino de los actos que producimos. Solo las acciones de nuestra vida dan una imagen que nos autoriza a decidir sobre el progreso o el retroceso.
-
         `,
       },
       4: {
         quote: `Contemplando la luz del reino,
         es ventajoso actuar como un huésped del rey.`,
         description: `Aquí se describe a un hombre que comprende el secreto gracias al cual se hace prosperar un reino. Tal hombre debe ocupar una posición de autoridad donde pueda actuar. Debe ser, de alguna manera, como un huésped, es decir, que es necesario que actúe con toda independencia, que sea respetado y no utilizado como un instrumento.
-
         `,
       },
       5: {
         quote: `Contemplando mi vida.
         El hombre noble no tiene reproches.`,
         description: `Un hombre que ocupa un puesto de autoridad, hacia el cual los otros elevan su mirada, debe estar constantemente preparado para examinarse a si mismo. Sin embargo, la manera correcta de examinarse no consiste en reflexionar sobre sí mismo sino a examinar los resultados producidos. Solamente si los resultados son buenos y si se ejerce una buena influencia sobre los otros, la contemplación de la propia vida podra procurar satisfacción y se estará libre de reproches.
-
         `,
       },
       6: {
         quote: `Contemplando su vida.
         El hombre noble no tiene reproches.`,
         description: `La línea anterior representaba a un hombre que se contemplaba a sí mismo. Aquí, en el lugar más elevado, todo elemento personal y ligado a sí mismo está excluído. Se muestra un sabio que, fuera de la agitación del mundo y libre de sí mismo, contempla la ley de la vida y reconoce que el bien supremo consiste en saber como permanecer libre de reproches.
-
         `,
       },
     },
@@ -1711,7 +1629,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
 
       Existe otra interpretación basada sobre la idea de que “en lo alto está el sol y en lo bajo el movimiento” Según esta interpretación, el hexagrama representa en lo bajo un mercado bullicioso y animado mientras que el sol ilumina en lo alto del cielo. Se trata de un mercado alimentario. Los alimentos están simbolizados por la carne. El oro y las flechas son también artículos de comercio. La desaparición de la nariz simboliza la ausencia de olfato, es decir, la falta de codicia. El veneno simboliza el peligro de las riquezas, etc.
       Según Confucio, el primer trazo significa : “El vulgo no se avergüenza por la falta de amor ni teme a la injusticia. Si no percibe ventajas no se mueve. Se mejora solamente con amenazas. Pero si es bien conducido en los asuntos menores, permanecerá atento en los asuntos mayores. Esto es una ventaja para los hombres vulgares” Con respecto al trazo superior dice: “Si el Bien no se acumula, no alcanza para hacer la reputación de un hombre. Si el Mal no se acumula, no alcanza para destruir la reputación de un hombre. El hombre vulgar piensa por esta razón que el Bien en las cosas mínimas no tiene ningún valor y es por eso que lo menosprecia. Piensa que las faltas menores no son dañinas y es por eso que no pierde el hábito de cometerlas. Así es que sus faltas se amontonan hasta que ellas no pueden más esconderse y la culpabilidad es tan grande que ya no puede ser omitida.”
-
       `,
     },
     trigram: {
@@ -1732,7 +1649,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
        Así los viejos reyes establecían leyes firmes y con penalidades bien definidas.
       `,
       description: `Los castigos constituyen las aplicaciones individuales de la leyes. Las leyes deben contener la mención de los castigos (previstos para quienes las infringen). La claridad reina si al fijar las penalidades, se distinguen las faltas leves y de las graves según la naturaleza de las transgresiones. Eso es simbolizado por la claridad, por el rayo. La firmeza de las leyes es realizada por la justa aplicación de las penas. Esta claridad y esta severidad tienen por objeto de mantener a los hombres dentro del respeto; los castigos no son importantes por ellos mismos. Los obstáculos cobran importancia en la vida colectiva de los hombres cuando las penas no están claramente determinadas y que ellas son aplicadas con negligencia. La única manera de consolidar las leyes es haciendo que los castigos sean claros, fijos y rápidos.
-
       `,
     },
     mutations: {
@@ -1741,8 +1657,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Sus dedos desaparecen.
          Sin reproches.`,
         description: `Cuando se impone una sentencia a alguien que por primera vez infringe la ley, la pena será leve. Sólo los dedos de los pies se colocan en el cepo. Así se impide que el culpable siga pecando y quedará libre de reproches. Es sólo una advertencia para que se detenga a tiempo en el camino del mal.
-
-
         `,
       },
       2: {
@@ -1767,7 +1681,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Fortuna.
         `,
         description: `Hay grandes obstáculos para superar y oponentes poderosos que deben ser castigados. La tarea es ardua, pero sin embargo se lleva a cabo. Para triunfar hace falta ser duro como el metal y directo como una flecha. Si se reconocen las dificultades y se persevera, se alcanza el éxito. La tarea es delicada pero al final es llevada a cabo.
-
         `,
       },
       5: {
@@ -1784,8 +1697,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         de tal manera que sus orejas desaparecen.
         ¡Desgracia!`,
         description: `A diferencia de la situación que se encuentra en el primer trazo (leve castigo para alguien que infringe la ley por primera vez), aquí se trata de alguien incorregible. Lleva como castigo un arnés de madera que le oprime el cuello. Pero también sus orejas desaparecen, es decir que, a pesar del castigo, permanece sordo a las advertencias y a los consejos. Su obstinación conduce al infortunio.
-
-
         `,
       },
     },
@@ -1796,7 +1707,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       pinyin: `bì`,
       translated: `La Gracia`,
       description: `El hexagrama muestra el fuego que nace de las secretas profundidades de la tierra y arde iluminando la montaña y lo alto del cielo, revistiéndola de belleza. La gracia, la belleza de la forma es necesaria para que toda unión sea armoniosa y amable y no caótica y desordenada.
-
       `,
     },
     trigram: {
@@ -1811,8 +1721,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       Nota: El hexagrama muestra la belleza en reposo. Adentro claridad y afuera quietud. Es la quietud de la contemplación pura.
 
       Cuando el deseo se calla y la voluntad se reposa, el universo se revela como Idea en las apariencias. En tanto que tal eso es bello y sustrae al combate por la existencia. Es el mundo del arte. Pero, en definitiva, la contemplación por ella misma no pone la voluntad en reposo. Esta se despertará y toda la belleza habrá sido solamente un momento de exaltación pasajera. Por eso es que la belleza y la gracia no son verdaderas vías de liberación. En consecuencia, Confucio se sintió muy molesto cuando, consultado el oráculo, obtuvo como respuesta “la gracia”.
-
-
       `,
     },
     images: {
@@ -1822,15 +1730,12 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       pero no es de esta manera que logrará decidir las cuestiones importantes
       .`,
       description: `El fuego, cuya luz ilumina las montañas y las hace agradables, no brilla lejos. En la misma forma, las formas hermosas bastan para iluminar las cuestiones más inmediatas pero no para decidir las cuestiones de importancia. Estas requieren mayor seriedad.
-
       `,
     },
     mutations: {
       1: {
         quote: `Da gracia a los dedos de los pies, deja el carro y camina.`,
         description: `El hecho de encontrarse al comienzo en un puesto subordinado implica que uno debe encargarse por sí mismo del esfuerzo de avanzar. Se podría encontrar una ocasión de aliviarse, representada por la imagen del carro. Pero un hombre resuelto desprecia las facilidades obtenidas de manera dudosa. Es más digno caminar que viajar en carro sin tener el derecho.
-
-
         `,
       },
       2: {
@@ -1844,7 +1749,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `Uno se encuentra en un momento de la vida lleno de gracia. Uno está rodeado de gracia y de un brillo iluminado por la humedad. Esta gracia puede ser merecida pero también puede hacernos zozobrar. De allí la advertencia de no hundirse en la humedad (2) sino de perseverar constantemente. Es sobre ello que se basa la buena fortuna.
 
         2. La humedad, significando la blandura y el bienestar.
-
         `,
       },
       4: {
@@ -1853,7 +1757,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          No es un ladrón, librará en tiempo justo.
         `,
         description: `Un individuo se encuentra en una situación en que comienzan a despertarse las dudas sobre lo que es mejor perseguir la gracia y la apariencia exterior o retornar a la simplicidad. La duda en sí misma lleva implícita la respuesta. La confirmación viene de fuera: el caballo blanco y alado. El blanco es él color de la simplicidad. Al principio resultará molesto renunciar a las comodidades obtenidas por otros medios, pero finalmente se encuentra la paz del espíritu en una relación sincera con los amigos. El caballo alado simboliza los pensamientos que trascienden de los límites del espacio y el tiempo.
-
         `,
       },
       5: {
@@ -1867,7 +1770,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       6: {
         quote: `Gracia simple. Sin error.`,
         description: `Aquí, en el nivel superior se depositan todas las joyas. La forma ya no disimula el contenido, sino que lo deja exponerse en todo su valor. La gracia suprema no consiste en ornamentar exteriormente los materiales, sino a darles una forma simple y práctica.
-
         `,
       },
     },
@@ -1880,7 +1782,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `Las líneas oscuras se aprestan a subir y a causar la caída de la última línea, que es firme y luminosa, desagregándola con su influencia. Lo vulgar y oscuro no combate directamente lo noble y fuerte, sino que lo mina progresivamente con una acción imperceptible, de tal manera que al final se derrumba.
 
       Las líneas del hexagrama dan la imagen de una casa cuyo techo comienza a ser amenazado por un colapso. La línea superior es el techo. El techo una vez que se fisura hace que la casa se derrumbe. Este hexagrama está atribuido al noveno mes (octubre-noviembre). La fuerza yin empuja con un vigor creciente y ella está a punto de derrocar completamente la fuerza yang.
-
       `,
     },
     trigram: {
@@ -1893,7 +1794,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `Muestra una época en que la gente débil e inferior avanza y está en camino de superar a los últimos fuertes y nobles.
 
       Esta situación es una causa del curso del tiempo. En estas circunstancias, no es favorable al hombre noble emprender ningún asunto. La conducta correcta en estos tiempos adversos debe deducirse de la imagen y de sus atributos. El trigrama inferior representa la tierra cuyos atributos son la docilidad y la devoción; el trigrama superior representa la montaña cuyo atributo es el sociego. Ello sugiere de conformarse con el mal tiempo y permanecer tranquilo. No se trata de lo que el hombre haga, sino de las condiciones de la época que, de acuerdo con las leyes del cielo, muestran alternativas de progreso y decadencia, plenitud y vacío. Esas condiciones temporales no permiten ninguna reacción y es imposible de contrarrestarlas. No es cobardía sino sabiduría saberse adaptar y abstenerse actuar.
-
       `,
     },
     images: {
@@ -1902,7 +1802,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
        Los superiores sólo pueden asegurar su posición mediante generosas concesiones con los que están abajo.
       `,
       description: `La montaña reposa sobre la tierra. Si ella es estrecha, escarpada y desprovista de una base amplia, debe derrumbarse. Es solamente si ella sabe elevarse amplia y vasta de la tierra, y no orgullosa y abrupta, que su posición es asegurada. Los gobernantes reposan sobre la larga base del pueblo. Ellos deben también mostrar generosidad y grandeza de alma, tal como la tierra que sostiene a todos los seres. Solamente de esa manera ellos mantendrán su posición tan segura y tranquila como una montaña.
-
       `,
     },
     mutations: {
@@ -1912,7 +1811,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Desgracia.
         `,
         description: `La gente inferior avanza en secreto y comienza clandestinamente su labor destructiva para minar el orden y destruir el sitio donde reposa el hombre noble. Los fieles del gobernante que permanecen leales son destruidos por la calumnia y la intriga. La situación es desastrosa. Sin embargo, no hay nada mejor que esperar.
-
         `,
       },
       2: {
@@ -1921,14 +1819,11 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Desgracia.
         `,
         description: `El poder de la vulgaridad avanza. El peligro se acerca incluso a la propia persona. Aquí aparecen señales claras. La tranquilidad es perturbada. Mientras que uno se encuentre en tal situación peligrosa, se permanece impotente frente a ella, sin ayuda y sin el contacto amistoso provenientes de lo superior o de lo inferior. En este aislamiento es necesario tomar extremas precauciones. Uno debe adaptarse a las exigencias del momento, percibir el peligro a tiempo y saber evitarlo en el momento requerido. Si se quisiera mantener su posición mostrándose inflexible y perseverante, eso conduciría al desastre.
-
         `,
       },
       3: {
         quote: `Se dispersa con ellos. Sin reproches.`,
         description: `Uno se encuentra en el medio de una mala situación a la cual se está ligado por vínculos exteriores. Pero subsiste una relación interna con un hombre superior. Por este medio se adquiere una estabilidad interior que permite liberarse de la mala influencia de la gente del entorno. Probablemente uno se encontrará en oposición a ellos, pero se adopta la actitud correcta y no hay reproches.
-
-
         `,
       },
       4: {
@@ -1943,7 +1838,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Todo es favorable.
         `,
         description: `La naturaleza oscura este trazo se transforma aquí debido a la proximidad inmediata con el principio fuerte y luminoso que está en la cúspide. Él ya no se opone con intrigas al principio fuerte sino que se somete a su dirección. Se la ve incluso, en tanto que primera línea débil, conducir el conjunto de ellas hacia el principio fuerte, como lo haría una princesa que conduce las damas de la corte -tal como un banco de peces- a su esposo, para obtener de él sus favores. Sometiéndose libremente al principio superior, el principio inferior recibe lo que merece. Es por eso que aquí todo es favorable.
-
         `,
       },
       6: {
@@ -1952,7 +1846,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          La casa del hombre inferior se hace pedazos.
         `,
         description: `Aquí ha llegado el fin de la dispersión. Cuando el infortunio se ha agotado, los tiempos mejores retornan. La semilla del bien está todavía allí. Como el fruto maduro cae a la tierra, el bien sale de nuevo de su simiente. El hombre noble reprende su influencia y tiene la posibilidad de actuar. La opinión general lo lleva como en un carro. Mientras que el hombre vulgar es castigado por su propia maldad. Su casa vuela en mil pedazos. Allí hay una ley de la naturaleza. El mal no es solamente es un corruptor del bien, sino que como última consecuencia, finalmente se destruye a sí mismo. El mal sólo vive de la negación y no puede subsistir por sí mismo.También para el hombre vulgar, la mejor situación es la de estar bajo el control de un hombre noble.
-
         `,
       },
     },
@@ -1982,8 +1875,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `Después de una época de decadencia comienza el regreso. El poder de la luz, que había sido alejado, se halla de vuelta. Hay movimiento, pero no es algo impuesto: el trigrama superior, K’un tiene el carácter de abandono y de dar de sí mismo. Es entonces un acto natural que nace espontáneamente. Es por eso que la transformación de las cosas viejas se hace muy fácil. Lo viejo es depuesto, se introduce lo nuevo, ambos son conformes con el tiempo y no producen ningún daño. Se forman grupos de seres afines. Pero esas reuniones se hacen abiertamente, puesto que ellas corresponden a la época y por ello todo esfuerzo egoísta está excluido y en ellas no hay ninguna falta. El retorno está fundado en la naturaleza. El movimiento es circular. El camino se cierra sobre él mismo. Por eso no debe precipitarse nada artificialmente. Todo viene espontáneamente cuando haya llegado el tiempo. Tal es el sentido del cielo y de la tierra.
 
       Todos los movimientos se cumplen en seis etapas, y la séptima trae como consecuencia el retorno. Así, al séptimo mes después del solsticio de verano, donde comienza a declinar el año, viene el solsticio de invierno. De la misma manera que la salida del sol viene a la séptima hora doble que sigue al ocaso. Es por eso que el siete es el número de la joven luz que nace cuando el seis, número de la oscuridad, se acrecienta de una unidad. Con eso el movimiento se detiene.
-
-
       `,
     },
     images: {
@@ -2010,8 +1901,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         quote: `Retorno tranquilo.
          ¡Fortuna!`,
         description: `El regreso siempre requiere una decisión, y es un acto de dominio de sí mismo. Es más fácil cuando uno está en buena compañía. Cuando uno puede plegarse a hombres de bien y arreglarse con ellos, eso aporta buena fortuna.
-
-
         `,
       },
       3: {
@@ -2020,7 +1909,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Sin reproches.
         `,
         description: `Existen personas que tienen una cierta inestabilidad interior. Es necesario que ellas hagan una inversión constante de la dirección de su voluntad. Hay un peligro en ese alejamiento continuo del bien debido a deseos incontrolados, al que sucede un retorno a las buenas intenciones. De todos modos, puesto que este hábito tampoco produce una radicación en el mal, tampoco está excluida una tendencia prolongada a corregir los defectos.
-
         `,
       },
       4: {
@@ -2033,7 +1921,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         quote: `Retorno magnánimo.
         Sin remordimientos.`,
         description: `Cuando llega el tiempo de arrepentirse, uno no debe abrigarse detrás de excusas triviales, sino examinarse prolijamente a sí mismo. Si se hizo algo erróneo se debe confesar su falta, tomando una resolución magnánima. No habrá remordimientos siguiendo este camino.
-
         `,
       },
       6: {
@@ -2056,7 +1943,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       pinyin: `wú wàng`,
       translated: `La Inocencia (Lo Inesperado)`,
       description: `Arriba está Ch’ien, lo creativo; abajo Chen, el movimiento. El trigrama inferior, Chen, está bajo la influencia de la línea fuerte que ha recibido de arriba, del cielo. En consecuencia, si el movimiento sigue las leyes del cielo, el hombre es inocente y sin falsedad. Es el estado puro y natural, que no se ve perturbado por propósitos o motivos ocultos. Donde uno observa un propósito, la verdad y la inocencia de la naturaleza se pierden. La naturaleza sin las directivas del espíritu no es verdadera naturaleza, sino una naturaleza desvirtuada. A partir de la idea de lo natural, la asociación con el pensamiento va en cierta medida todavía más lejos, y así, el significado del hexagrama comprende además la noción de imprevisto y de inesperado.
-
       `,
     },
     trigram: {
@@ -2086,7 +1972,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       1: {
         quote: `Cambio inocente trae buena fortuna.`,
         description: `Los primeros impulsos originales del corazón (las corazonadas) son siempre buenos, y se puede seguirlos con confianza, y estar seguros de tener suerte y alcanzar su propósito.
-
         `,
       },
       2: {
@@ -2100,7 +1985,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         quote: `Desgracia inmerecida.
          La vaca amarrada da ganancia al vagabundo
          y pérdidas al aldeano.
-
             `,
         description: `A veces sobreviene una desgracia inmerecida causada por otros, como por ejemplo cuando pasa un vagabundo y que se lleva consigo una vaca que estaba amarrada. Lo que es ganancia para él, es pérdida para el propietario. En todas las cosas, e incluso en los asuntos inocentes, uno debe conformarse con las exigencias del momento, de otra manera, sobreviene una desgracia inesperada.
         `,
@@ -2133,8 +2017,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `El creador está aprisionado por la inmovilidad. Eso da un gran poder, completamente diferente al del N° 9 donde es solamente lo suave que contiene al creador. (1) Mientras que allá un solo trazo débil debe contener los cinco trazos fuertes, aquí hay dos: además del ministro también está el príncipe. Es por eso que este hexagrama es mucho más potente. El signo encierra un triple significado: el cielo en el medio de la montaña da la idea de “tener firme” en el sentido de “mantener juntos.” El trigrama Ken que inmoviliza Ch’ien da la idea de “tener firme” en el sentido de “retener.” En fin, como hay un trazo fuerte que rige el hexagrama, se tiene la idea de “tener firme” en el sentido de “cultivar”, de “nutrir.” Este último pensamiento vale especialmente para el regente del hexagrama, el trazo superior, que representa el sabio.
 
       1. Richard Wilhelm traduce el nombre de este hexagrama como “des grossen Zähmungskraft” cuya traducción más precisa en castellano sería “el gran poder domesticador” o “el gran poder domador”.
-
-
 `,
     },
     trigram: {
@@ -2148,8 +2030,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       Es ventajoso atravesar la gran corriente.
       `,
       description: `Para capturar y atesorar firmemente los poderes creativos se requiere un hombre fuerte y de claro entendimiento que pueda ser honrado por el soberano. El trigrama Ch’ienindica el gran poder creador, mientras que el trigrama Ken, la firmeza y la verdad. Los dos traducen la luz, la claridad y la renovación cotidiana del carácter. Sólo a través de la renovación diaria el hombre puede aumentar sus poderes. La fuerza de los hábitos ayuda a mantener el orden en los tiempos tranquilos, pero en los tiempos donde se usa el poder acumulado, todo depende de la fuerza de la personalidad. Puesto que los hombres de mérito son honrados, como lo prueba la fuerte personalidad a la que el soberano confía responsabilidades gubernamentales, es ventajoso no comer en casa, sino ganarse el pan en una ocupación pública ocupando un cargo oficial. Tal hombre está en armonía con el cielo y triunfará aunque efectúe empresas difíciles y peligrosas como cruzar la gran corriente.
-
-
       `,
     },
     images: {
@@ -2245,7 +2125,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         desviándose del camino para buscar alimentos provenientes de la colina.
          Continuar haciéndolo trae desgracia.`,
         description: `Normalmente uno busca por sí mismo proveerse de sus propios alimentos o de lo contrario, es alimentado de manera correcta por aquellos que tienen el deber o el derecho de hacerlo. Si, por una cierta debilidad interior, alguien no puede mantenerse a sí mismo, lo acosa un sentimiento de inquietud, puesto que eludiendo la obligación de ganarse la vida por medios lícitos, deja que los otros lo hagan en su lugar como un favor para mantenerle la subsistencia. Esto es indigno porque uno elude sus propias obligaciones y se aparta de su verdadera naturaleza. Si se mantiene este camino perdurablemente, vendrá la desgracia.
-
         `,
       },
       3: {
@@ -2255,7 +2134,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Nada es ventajoso.
         `,
         description: `Quien busca alimentos que no nutren cae en el círculo vicioso de desear el placer y cuando está gozando del placer busca tener deseo del placer. Una búsqueda apasionada de la satisfacción de los sentidos nunca conduce a la meta. Nunca uno debe actuar así (diez años es una medida de tiempo). De ello no resulta nada ventajoso.
-
         `,
       },
       4: {
@@ -2272,7 +2150,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          No se debe atravesar la gran corriente.
         `,
         description: `Uno debe estar consciente de sus propias deficiencias. Se debiera ocupar de alimentar a su gente pero no se tienen las fuerzas necesarias. Uno debe apartarse de su camino habitual y pedir el consejo y la ayuda de alguien elevado espiritualmente pero que permanece en la oscuridad. Cuando uno se mantiene en una disposición semejante se obtiene éxito y fortuna. Pero es importante de permanecer consciente de esa dependencia. Uno no debe ponerse al frente y querer emprender por si mismo grandes acciones como la travesía de una gran corriente.
-
         `,
       },
       6: {
@@ -2281,7 +2158,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Es ventajoso atravesar la gran corriente.
         `,
         description: `Describe un sabio de posición superior, del cual emanan todas las influencias para sustentar a los demás. Su posición le crea una grave responsabilidad. Si permanece consciente de este hecho tendrá buena fortuna y podrá emprender con confianza obras grandes y difíciles como la travesía de una gran corriente. Esa empresa trae alegría general para él y para los demás.
-
         `,
       },
     },
@@ -2376,7 +2252,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `El hexagrama se compone de la repetición del trigrama K’an. Es uno de los ocho hexagramas dobles. El trigrama K’an significa la acción de hundirse bruscamente. La línea yang está sumergida entre dos líneas yin y se encuentra encerrada por ellas como el agua en un canal estrecho. Es el hijo del medio. Lo receptivo ha adquirido la línea media yang de lo creativo : así nace K’an. Este trigrama tiene como imagen el agua en tanto que ella viene de lo alto y circula sobre la tierra en canales y ríos, siendo así la causa de la vida sobre la tierra.
 
       Aplicado a los hombres, K’an representa el corazón, el alma o la vida encerrada en el cuerpo, el principio de la luz incluido en lo tenebroso, la razón. El trigrama entraña el peligro y su repetición significa “la repetición del peligro”. Con eso se quiere significar una situación objetiva a la uno debe acostumbrarse y que no es una disposición subjetiva, ya que el peligro, cuando se manifiesta como una disposición subjetiva, significa temeridad o perfidia. Se representa al peligro como un desfiladero montañoso, es decir, como una situación que puede ser evitada o eludida con maña, como lo hace el agua, a condición de adoptar la conducta correcta.
-
       `,
     },
     trigram: {
@@ -2393,8 +2268,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       A través de la repetición del peligro, uno termina por acostumbrarse a él. El agua da el ejemplo de la conducta apropiada en esas circunstancias. Va y viene, llenando todos los espacios por donde pasa. Ella no retrocede ante ningún peligro ni ninguna caída, nada la modifica sino que ella permanece fiel a su naturaleza esencial. Es así como la sinceridad actúa en circunstancias difíciles, de modo que, en la intimidad del corazón, se penetre el significado de la situación. Y tan pronto como uno ha dominado internamente la situación, se deducen naturalmente las acciones externas que serán coronadas con el éxito. Lo que cuenta frente al peligro, es la profundidad moral con la que se cumple todo lo que efectivamente debe ser hecho, y de avanzar para no sucumbir al peligro por haberse demorado.
 
       Usado activamente, el peligro puede tener gran importancia como medida de protección. El cielo posee su altura peligrosa que lo protege contra los intentos de invasión, y la tierra tiene las aguas y las montañas que con sus peligros separan los países. Los gobernantes también emplean el peligro para protegerse contra de los ataques externos y contra toda agitación interior.
-
-
       `,
     },
     images: {
@@ -2417,7 +2290,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         quote: `El abismo es peligroso.
         Uno debe esforzarse solamente para obtener pequeñas cosas.`,
         description: `En una situación peligrosa, uno no debe tratar de escaparse de inmediato y a toda costa, sino que primero uno debe satisfacerse de no ser vencido por el peligro. Uno debe considerar con calma las circunstancias del momento y contentarse con pequeñas cosas, puesto que al principio que no se puede lograr un gran éxito. La fuente también fluye primero moderadamente, y le lleva tiempo abrirse paso libremente.
-
         `,
       },
       3: {
@@ -2441,7 +2313,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
 
         Si uno quiere aclarar a alguien en una situación difícil se debe comenzar por lo que es perfectamente claro y evidente y proceder sencillamente a partir de ese punto.
         Nota: La traducción habitual “dos escudillas de arroz” fue corregida según ciertos comentarios chinos.
-
         `,
       },
       5: {
@@ -2457,7 +2328,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
           Durante tres años no se logra encontrar el camino.
           Desgracia.`,
         description: `En peligro extremo, el hombre que pierde el buen camino y que permanece aferrado a sus pecados, no tiene ninguna posibilidad de salir del peligro. Se ve como un criminal sentado en cadenas detrás de los muros de una prisión erizada de púas.
-
         `,
       },
     },
@@ -2468,7 +2338,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       pinyin: `lí`,
       translated: `Lo Adherente, El Fuego`,
       description: `Aquí se tiene igualmente un hexagrama doble. El trigrama Li significa “sujetarse a algo”, “estar condicionado”, “reposar sobre algo”, “claridad.” Una línea oscura se sujeta a una línea luminosa por arriba y por abajo, imagen de un espacio vacío entre dos líneas fuertes, lo que las hace claras a las dos. El trigrama representa a la hija del medio. El creador a puesto en ella la línea central de lo receptivo, así nace Li, cuya imagen es el fuego. El fuego no tiene forma definida, pero se adhiere a los objetos que quema y, así es luminoso. De la misma manera que el agua desciende del cielo, el fuego sube flameante de la tierra. Mientras que K’an, el agua, significa el alma encerrada en el cuerpo, Li, el fuego, significa esplendor de la naturaleza.
-
       `,
     },
     trigram: {
@@ -2483,7 +2352,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `La oscuridad se sujeta a lo que es luminoso y así perfecciona la claridad. Un cuerpo luminoso que esparce la claridad necesita tener en su interior algo que perdure para evitar ser consumido enteramente y brillar de una manera durable. Todo lo que el mundo contiene de brillante depende de un elemento al cual se adhiere a fin de poder brillar durablemente.
 
       El Sol y la Luna están sujetos en el cielo, los cereales, la hierba y los árboles, están sujetos a la Tierra. De la misma manera, la claridad redoblada del hombre elegido se apega a lo que es correcto y así puede modelar al mundo. Cuando el hombre, que está presente en el mundo en una situación condicionada y no autónoma, reconoce esta dependencia, se somete a los poderes buenos y armónicos del universo y obtiene el éxito. La vaca es el símbolo de la extrema docilidad. Al cultivar en él esta docilidad y esta dependencia voluntaria, el hombre alcanza la claridad sin excesiva vivacidad y encuentra su lugar en el mundo.
-
       `,
     },
     images: {
@@ -2491,7 +2359,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
        El gran hombre,
         ilumina las cuatro regiones del mundo perpetuando esta claridad .`,
       description: `Cada uno de los trigramas representa al Sol en el curso del día. Ambos representan el movimiento repetido del Sol, la función de la luz con respecto al tiempo. El hombre noble continúa el trabajo de la naturaleza en el mundo de los hombres. A través de la claridad de su ser, hace que la luz se extienda cada vez más y penetre más profundamente en la naturaleza del hombre.
-
       `,
     },
     mutations: {
@@ -2545,7 +2412,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `El nombre del hexagrama significa “universal” , “general” , y en sentido figurado “influir” , “cortejar” . El trigrama superior es Tui, lo alegre; el inferior, Ken, lo inmóvil. El trigrama fuerte del inferior mueve el trigrama débil de la parte superior al ejercer sobre él una acción persistente que tiende a detenerlo, y el segundo trigrama responde felizmente y con alegría a la invitación del primero. El trigrama inferior Ken, corresponde al hijo menor, y el superior Tui, a la hija menor. Así se encuentra representada la mutua y universal atracción entre los sexos. En ese sentido, lo masculino debe tomar la iniciativa en el cortejo y ubicarse bajo lo femenino.
 
       De la misma manera que la primera parte del libro comienza con los hexagramas del cielo y de la tierra en tanto que fundamentos de todo lo que existe, la segunda parte comienza por un hexagrama representando el cortejo y el matrimonio en tanto que fundamentos de la vida social.
-
       `,
     },
     trigram: {
@@ -2558,7 +2424,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
        Tomar una doncella como esposa trae buena fortuna.
       `,
       description: `El elemento débil está arriba, el fuerte abajo. Mutuamente atraen sus fuerzas hasta unirse. Eso trae la victoria. En efecto, todo triunfo se funda sobre el efecto de la atracción mutua. La tranquilidad interior que acompaña la alegría exterior hace que la satisfacción no sea excesiva sino que permanezca dentro de límites justos. Tal es el sentido de la indicación agregada: “la perseverancia es ventajosa”, puesto allí está la diferencia entre el cortejo hecho con el fin de un matrimonio, donde el hombre fuerte se ubica con consideración bajo la mujer débil, que difiere de la seducción. En ésta atracción, que se efectúa según las afinidades electivas, constituye una ley general de la naturaleza. El cielo y la tierra se atraen mutuamente y así todos los seres vienen a la existencia. El sabio obra sobre el corazón de los hombres por medio de una atracción análoga y la paz se establece en el universo. Se puede conocer la naturaleza de todas las cosas del cielo y de la tierra según las atracciones que ellas ejercen.
-
       `,
     },
     images: {
@@ -2596,7 +2461,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          sólo lo seguirán los amigos hacia los cuales dirige pensamientos conscientes.
         `,
         description: `Aquí se alcanza el dominio del corazón. El impulso que proviene de esta fuente es el más importante de todos. Hay que tratar especialmente de que esta influencia sea buena y constante; entonces, a pesar del peligro que encierra la versatilidad de los sentimientos del corazón, no habrá motivo de reproches. Cuando actúa la fuerza apacible de la personalidad de un hombre los efectos producidos son normales. Todos los hombres que son receptivos a las vibraciones de tal espíritu serán influenciados. La influencia sobre todos los demás no debe tomar la forma de un trabajo consciente y deliberado con el fin de manipularlos. Una acción semejante de agitación sólo provoca un estado emocional limitado en el cual uno se dispersa sacudido por los sentimientos fluctuantes y es aniquilado. Además, sus efectos se limitan sólo a quienes uno dirige sus pensamientos de una manera consciente.
-
         `,
       },
       5: {
@@ -2608,7 +2472,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       6: {
         quote: ` La influencia se manifiesta en las mandíbulas, las mejillas y la lengua.`,
         description: `La manera más superficial de tratar de influir en los otros es con las meras palabras que no se apoyan en nada real. Tal excitación, producida solamente por el aparato vocal, permanece necesariamente insignificante. Es por eso que nada se agrega a la felicidad ni a la desgracia.
-
         `,
       },
     },
@@ -2621,7 +2484,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `El trigrama fuerte Chen está arriba, el trigrama débil Sun, abajo. Este hexagrama es el opuesto al anterior: allá, la influencia, aquí la unión como un estado duradero. Las imágenes son la del trueno y la del viento, que también son fenómenos que están constantemente asociados. El trigrama inferior indica suavidad interna, el trigrama superior, movimiento hacia el exterior.
 
       Aplicando el significado del hexagrama a las relaciones sociales, se está en presencia de la institución matrimonial como una unión duradera de los sexos. En la propuesta de matrimonio, el joven estaba parado debajo de la niña. Por lo contrario, en el matrimonio, que representa el encuentro del hijo mayor y la hija mayor, el hombre está afuera proveyendo dirección e impulso, mientras que la mujer permanece adentro, dulce y obediente.
-
       `,
     },
     trigram: {
@@ -2639,7 +2501,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       Es de esta manera que los cuerpos celestes se mueven por el cielo en sus órbitas y pueden, por consiguiente, brillar de una manera durable. Las estaciones del año se desarrollan siguiendo una ley fija de cambio y transformación, y pueden en consecuencia obrar durablemente.
 
       Así, el hombre que ha escuchado el llamado da un significado duradero a su manera de vivir y el mundo recibe con ello una forma. Con eso las cosas adquieren su duración, y es posible reconocer la naturaleza de todos los seres en el cielo y sobre la tierra.
-
       `,
     },
     images: {
@@ -2647,7 +2508,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       La imagen de la duración.
       El hombre noble permanece firme y no cambia de dirección.`,
       description: `Algo duradero solo puede lograrse gradualmente mediante un trabajo prolongado y una reflexión cuidadosa. Lao Tsé dice en ese sentido: “Si se quiere comprimir algo, primero se debe permitirle que se expanda adecuadamente”. Aquel que exige demasiado en un primer intento actúa de manera precipitada y porque quiere tener demasiado, finalmente no obtendrá nada.
-
       `,
     },
     mutations: {
@@ -2660,7 +2520,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       2: {
         quote: `El remordimiento desaparece.`,
         description: `La situación es anormal. La fuerza del carácter es mayor que la potencia material disponible. Tal vez uno podría temer ser arrastrado a una empresa más allá de sus fuerzas, pero como es el tiempo de la duración, uno logra dominar la energía interna, por lo que se evita cualquier exceso. Así, desaparece la causa del remordimiento.
-
         `,
       },
       3: {
@@ -2685,7 +2544,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       6: {
         quote: `La inquietud como condición duradera trae mala fortuna.`,
         description: `Hay personas que viven en un estado de inquietud permanente, sin que nada logre calmarlas. No solamente la inquietud impide toda escrupulosidad moral sino que también se convierte en un peligro, especialmente en quienes están en posición de autoridad.
-
         `,
       },
     },
@@ -2710,8 +2568,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       quote: `Retorada. Éxito.
       En lo pequeño es propicia la perseverancia.`,
       description: `Las condiciones son tales que favorecen a las fuerzas hostiles en su avance, favorecidas por la época. En este caso, la retirada es el camino correcto y así se logra el éxito. Este retiro no debe confundirse con la huida, en que se intenta salvarse a cualquier precio. Hay que tener cuidado para no dejar pasar el momento propicio mientras uno permanece en posesión de su fuerza y de su posición. Entonces seremos capaces de interpretar los signos de la época antes de que sea demasiado tarde para preparar esa retirada provisoria en lugar de entablar un combate desesperado entre la vida y la muerte. Pero no se trata simplemente de una huída desesperada abandonando el campo de batalla al adversario, sino de hacerle el avance más difícil oponiendo todavía resistencia en puntos aislados. De esta manera en la retirada uno ya prepara la contra-ofensiva. No es fácil entender las leyes de una retirada activa. El significado que contiene tal acción es importante.
-
-
       `,
     },
     images: {
@@ -2784,7 +2640,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       quote: `La potencia de lo que es grande.
       La perseverancia es ventajosa.`,
       description: `El hexagrama indica una época en que el valor interno aumenta vigorosamente y llega al poder. Pero la fuerza ya ha superado la línea media. Por lo tanto, existe el peligro de que uno confíe demasiado en su propia fuerza sin preguntarse en cada instante donde está el bien, y de que uno quiera ponerse en movimiento sin esperar el momento oportuno. Es por eso que se agrega la frase que la perseverancia es ventajosa. Porque la fuerza verdaderamente grande es precisamente la que no degenera en pura violencia, sino que permanece internamente ligada a los principios de justicia y de derecho. Si uno comprende que la grandeza y la justicia deben estar inseparablemente ligadas, uno también comprende el verdadero significado de todo lo que sucede en el cielo y en la tierra.
-
       `,
     },
     images: {
@@ -2816,7 +2671,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Un chivo arremete contra un cerco y sus cuernos quedan atrapados.
         `,
         description: `La ostentación de poder lleva a complicaciones, como cuando un chivo que arremete contra un seto hace que sus cuernos se queden atrapados. Mientras que el hombre vulgar que detiene el poder se deja embriagar por su por su triunfo, el hombre noble no actúa de esa manera, sino que permanece consciente del peligro que representa querer avanzar sin precaución y a todo precio, y sabe renunciar a tiempo a desplegar abiertamente su fuerza.
-
         `,
       },
       4: {
@@ -2864,8 +2718,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       `,
       description: `Se representa, a título de ejemplo, una época en la que un poderoso señor feudal reúne, en obediencia y paz, al resto de los príncipes alrededor del soberano ; el soberano entonces le ofrece ricos regalos y lo atrae a su entorno inmediato.
       La idea es doble. El efecto real del progreso se basa en un hombre poderoso colocado en una posición subordinada, a quien los otros lo consideran como a un semejante, y en consecuencia lo siguen voluntariamente. Este guía tiene suficiente claridad interna para no abusar de la gran influencia que ejerce y sino para usarla en beneficio del maestro (el soberano). Este último, por su parte, está libre de toda envidia, y atrae al gran hombre constantemente a su corte y le ofrece ricos regalos. Un maestro y un servidor obediente son las condiciones de un gran progreso.
-
-
       `,
     },
     images: {
@@ -2949,7 +2801,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         Entonces el hombre noble vive con la gran multitud ocultando su apariencia y permaneciendo brillante.
        `,
       description: `En los tiempos de oscuridad, es importante ser cuidadoso y reservado. No es a través de una conducta imprudente que uno debe atraerse inútilmente enemistades invencibles. Si bien los hábitos de la gente no se deben compartir, tampoco es apropiado ponerlos a la luz de la crítica. En tales circunstancias, no se debe querer saberlo todo. Las cosas deben dejarse en paz sin pero sin ser engañados por ellas.
-
       `,
     },
     mutations: {
@@ -3012,7 +2863,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `El hexagrama representa las leyes que rigen dentro de la familia (1). El trazo fuerte más alto representa al padre y el más bajo al hijo. El ubicado en quinto lugar, al esposo, y la del segundo, a la esposa. Las otras dos líneas corresponden a un hermano y su mujer. Todas las relaciones y situaciones existentes en una familia tienen su lugar en este hexagrama. Por ejemplo, los trazos fuertes del 5° y del 3° lugar corresponden a dos hermanos, mientras que los trazos débiles del 4° y del 2° lugar representan sus respectivas mujeres. La presencia de un trazo fuerte en 6° lugar donde podría esperarse un trazo débil designa de manera clara la autoridad que emana del jefe de la familia. Este trazo no entra aquí en tanto que 6° lugar, sino en tanto que trazo superior que engloba a todos los otros. La familia está regida por leyes que rigen la vida de una casa; leyes que, se aplican también al clan, al pueblo y al universo. La influencia que se ejerce desde el interior de una familia hacia el exterior está representada por la imagen del viento que atiza el fuego.
 
       1. Richard Wilhelm traduce el nombre de este hexagrama como “die Sippe”, que se traduce en castellano como la familia, la estirpe, la prole, el clan…
-
       `,
     },
     trigram: {
@@ -3050,7 +2900,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         Aplicado a la conducta social en general, este consejo se refiere a no tratar de obtener nada por la fuerza, sino limitarse tranquilamente a cumplir con los deberes existentes.
 
         2. El destino de la mujer es aprender sirviendo.
-
         `,
       },
       3: {
@@ -3104,7 +2953,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       La oposición, que generalmente aparece como una obstrucción, posee una polaridad de opuestos dentro del conjunto que los abarca, y su función puede ser buena e importante.
 
       Las oposiciones entre el cielo y la tierra, el espíritu y la naturaleza, el hombre y la mujer realizan por equilibrio la creación y el florecimiento de la vida. En el mundo de las cosas visibles, la oposición hace posible la diferenciación en especies a través de las cuales se establece el orden en el mundo.
-
 `,
     },
     images: {
@@ -3126,7 +2974,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `Incluso en tiempo de antagonismos, uno puede actuar para permanecer libre de errores, de modo que el arrepentimiento desaparezca. Cuando la oposición está emergiendo, uno no debe forzar a la unidad; ésto solo lograría el resultado opuesto, así como un caballo siempre se aleja cada vez más cuando uno corre detrás de él. Si es nuestro caballo, podemos dejarlo correr tranquilamente: vuelve por sí mismo. También es así con un hombre de los nuestros, que momentáneamente se ha alejado de nosotros como resultado de un malentendido; regresa espontáneamente si se le permite hacerlo. (*) Por otro lado, es aconsejable tener cuidado con los hombres malvados que no son de los nuestros y que se dirigen a nosotros también como resultado de un malentendido. Aquí es importante evitar los errores: no obligarlos a alejarse, porque uno solo podría despertar hostilidad, sino tolerarlos pacientemente; pronto se retirarán por ellos mismos.
 
         (*) Quien se va sin que lo echen, vuelve sin que lo llamen. (Refrán español)
-
         `,
       },
       2: {
@@ -3324,7 +3171,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         Lo mata.
         Todo es ventajoso.`,
         description: `Los tiempos de liberación requieren una resolución interna. Los hombres vulgares no deben ser eliminados por prohibiciones o medios externos. Si uno quiere deshacerse de ellos, debe primero separarse completamente de ellos internamente, porque así se dan cuenta de la seriedad que uno atestigua y se retiran.
-
         `,
       },
     },
@@ -3337,8 +3183,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `Este hexagrama muestra una mengua (1) del trigrama inferior a favor del trigrama superior, porque el tercer trazo, que era fuerte en el origen, ha pasado al lugar superior, y la línea débil que, originalmente, ocupaba esta última posición, lo ha reemplazado. El trigrama inferior ha disminuido por lo tanto en beneficio del trigrama superior. Es una disminución pura y simple: si reducimos la base de un edificio y fortalecemos las paredes superiores, el conjunto pierde su fuerza. Del mismo modo, una disminución de la prosperidad del pueblo en provecho de los gobernantes constituye una disminución pura y simple. Y todo el hexagrama tiende a mostrar cómo este desplazamiento de la prosperidad puede tener lugar sin que las fuentes de la prosperidad del pueblo y de sus capas inferiores se agoten.
 
       1. Richard Wilhelm traduce el nombre de este hexagrama como “die Minderung”, que en castellano vehicula la idea de disminución, reducción, atenuación, mengua…
-
-
       `,
     },
     trigram: {
@@ -3373,7 +3217,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          ¿En qué medida uno puede privar a los demás?
             `,
         description: `Es bueno y generoso que cuando uno ha cumplido con sus propias tareas importantes e inmediatas, ponga su fuerza al servicio de los demás y, sin mencionarlo ni hacerlo prevalecer, lleve prontamente ayuda allí donde se necesita. Pero el hombre colocado en una posición preeminente y que reciba ayuda de este modo, debe considerar hasta qué punto tiene derecho a aceptar tal ayuda sin causar un perjuicio esencial a su servidor o a su amigo. Sólo cuando hay tal delicadeza de sentimientos, uno puede darse sin vacilación y totalmente.
-
         `,
       },
       2: {
@@ -3429,7 +3272,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
 
       1. Richard Wilhelm traduce el nombre de este hexagrama como “die Mehrung”, que se traduce en castellano como el aumento o el incremento.
       2. Este hexagrama es considerado como una modificación del N° 12, Pi, “el Estancamiento.”
-
 `,
     },
     trigram: {
@@ -3452,7 +3294,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
        si hay defectos, se deshace de ellos.
       `,
       description: `Observando como el viento y el trueno se amplifican y se fortifican mutuamente, el hombre puede descubrir el camino para perfeccionarse y desarrollarse personalmente. Si uno descubre algo bueno en los demás, uno debe imitarlo y así apropiarse de todo lo bueno que haya sobre la tierra. Si se percibe algo malo en sí mismo, uno debe deshacerse de ello. Así uno se libera del mal. Este cambio ético es el incremento más importante de la personalidad.
-
       `,
     },
     mutations: {
@@ -3505,7 +3346,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `El sentido de esta situación es que los superiores deberían aumentar los beneficios a los inferiores renunciando a sí mismos. Descuidando su deber y no ayudando a nadie pierden su influencia benefactora en los demás y pronto se encuentran solos. Con esto se atraen los ataques. Una actitud que no está siempre en armonía con las exigencias de la época inevitablemente trae la desgracia consigo.
 
         Confucio dice a propósito de esta línea: “El hombre noble reposa su persona antes de moverse. Se retiene en su espíritu antes de hablar. Consolida sus relaciones antes de pedir algo. Habiendo puesto estas tres cosas en orden, está en perfecta seguridad. Pero si alguien es brusco en sus movimientos, los otros no cooperan con él. Si tiene un discurso exaltado, sus palabras no encuentran eco entre la gente. Si pide algo sin haber por anticipado fortalecido sus relaciones, la gente no le dará nada. Si nadie está con él, entonces los que quieren arruinarlo se aproximan.”
-
         `,
       },
     },
@@ -3516,7 +3356,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       pinyin: `guài`,
       translated: `La Irrupción (La Resolución)`,
       description: `El hexagrama significa, por un lado, un avance después de una larga tensión acumulada, como la brecha que hace un río crecido a través de sus presas, o como la nube que se descarga en un chubasco. Por otro lado, relativo a las relaciones humanas, es el momento en que los hombres vulgares están desapareciendo gradualmente. Su influencia disminuye y la acción resuelta que causa el cambio de condiciones produce avances repentinos. Este signo está adjudicado al 3er mes (abril-mayo)
-
       `,
     },
     trigram: {
@@ -3617,8 +3456,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `La ascensión del hombre vulgar (el crecimiento de un elemento inferior) está pintado por la imagen de una muchacha atractiva que se da fácilmente y que así toma el comando. Eso no sería posible si, por su parte, el principio fuerte y luminoso no hubiera venido, él también, a su encuentro. El hombre vulgar parece tan inofensivo y tan dócil que uno hace de él un amigo. Parece tan pequeño y tan débil que uno piensa divertirse con él sin inquietud. El hombre inferior solo asciende porque el hombre noble no lo mira como peligroso y le otorga poder. Si se le resistiera desde el principio nunca tendría éxito como para ganar influencia.
 
       Pero el tiempo que uno viene al encuentro tiene otro aspecto que merece ser examinado. Si la regla no debería ser que los débiles vengan al fuerte, esta actitud, sin embargo, en ciertos momentos asume un significado considerable. Si el cielo y la tierra se encuentran, todas las criaturas prosperan. Cuando el príncipe y su ministro se encuentran, el orden se establece en el mundo. Es indispensable que los principios destinados a relacionarse entre sí se vinculen mutuamente. Este paso solo debería estar libre de segundas intenciones, de lo contrario sería malo.
-
-
 `,
     },
     images: {
@@ -3702,7 +3539,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
 
       Cuando los hombres deben estar reunidos el poder religioso es necesario pero no suficiente. También debe estar presente una autoridad o un jefe humano como centro de la reunión. Para poder reunir a los otros, ese centro de reunión debe previamente concordarse moralmente consigo mismo. Por medio del recogimiento la fuerza moral se acrecienta y permite reunir a la gente.
       En esas grandes épocas de unificación fructifican en las grandes obras. Ese es el significado de hacer grandes sacrificios u ofrendas. En el dominio público y profano las grandes obras también se efectúan sobre la base de una reunión en torno de un acuerdo colectivo.
-
 `,
     },
     images: {
@@ -3955,7 +3791,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
 
       Las generaciones van y vienen, y todos gozan de la vida en su abundancia inagotable
       De todas maneras, una buena organización política y social requiere una doble condición. Se debe descender hasta los fundamentos de la vida misma. Toda actitud superficial en el establecimiento de las reglas de vida, dejando insatisfechas las necesidades vitales, es tan imperfecta que la ausencia de toda tentativa de reforma. Es igualmente mala la negligencia que hace que el cántaro se rompa. Si por ejemplo la defensa militar de un Estado es llevada a tal exceso que provoque la guerra y lleve así a la destrucción del Estado, eso equivale al cántaro que se rompe. El hexagrama se aplica de la misma manera a los individuos. Las diferentes disposiciones y la educación distinta entre los hombres inducen a una diversidad entre los pueblos. Pero la naturaleza humana en el fondo es siempre la misma todos los hombres. El hombre puede, en el curso de su formación, extraer de la fuente inagotable de la naturaleza divina que es la esencia del hombre. Pero allí dos peligros lo amenazan : el primero es que el hombre no la penetre, en el curso de fu formación, hasta las verdaderas raíces de la humanidad, sino que se quede prisionero de las convenciones (tal formación es tan mala como la ausencia de formación) y el segundo, que se hunda bruscamente abandonando la formación de su ser.
-
       `,
     },
     images: {
@@ -4032,7 +3867,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `Las revoluciones políticas son asuntos extremadamente graves. Solo deben ser emprendidas en caso de extrema necesidad y únicamente cuando no hay otra salida. No todos están llamados a tal acción, sino sólo aquél que goza de la confianza del pueblo y no la emprenderá hasta que la época sea propicia. En un asunto semejante, es necesario proceder de manera correcta para que pueda complacer al pueblo y aclararlo evitando los excesos. Además se debe permanecer libre de toda intención egoísta y preocuparse realmente de las necesidades del pueblo. Es solamente en esas condiciones que no hay lugar para los remordimientos.
 
       Los tiempos cambian y en consecuencia las exigencias devienen diferentes. Así como cambian las estaciones en el curso del año, también hay una primavera y un otoño en los pueblos y las naciones del universo, que exigen transformaciones sociales.
-
 `,
     },
     images: {
@@ -4103,7 +3937,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       “El pozo” (N° 48) tenía igualmente el sentido secundario de distribución de la alimentación, pero principalmente para el pueblo. El caldero, en tanto que realización de una civilización refinada, evoca los cuidados y la alimentación prodigadas por el gobierno a los hombres de valor (como lo señalan los 4 signos relativos a la alimentación: N°s 5, 27, 48, 50)
 
       Junto con “El pozo“ son los dos únicos hexagramas que representan objetos artesanales concretos. Pero de todas maneras, la idea de alimentación tiene también un aspecto abstracto. Abajo, Sun es la madera y el viento; arriba, Li, es la llama. El signo representa la llama encendida en la madera y el viento, que evocan igualmente la idea de preparación de los alimentos.
-
 `,
     },
     trigram: {
@@ -4133,7 +3966,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `Si se invierte el caldero antes de usarlo no hay en ello ningún daño, por el contrario, así se hacen caer los restos. Una concubina ocupa en principio un lugar inferior, pero si ella tiene un hijo se la honra.
 
         Estas dos comparaciones expresan la idea que en las épocas de cultura superior como la evocada en este signo, alguien que tenga buena voluntad puede tener éxito de una manera u otra. No importa lo bajo que esté la posición de la cual provenga, se tendrá éxito a partir del momento que se esté listo para purificarse. Se llega a un estado donde uno puede ocuparse de manera eficaz a sus tareas y ser debidamente reconocido por ello.
-
         `,
       },
       2: {
@@ -4152,7 +3984,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `El asa es el lugar por el cual se levanta el caldero. Cuando se cambia el asa de lugar ya no puede levantar y utilizar el caldero, y la excelente alimento que contiene, como la grasa de faisán, ya no pueden ser comida por nadie.
 
         Con esto se designa alguien que, en una época de alta civilización, se encuentra en una posición donde nadie lo reconoce ni le presta atención. Esto pone un serio obstáculo en su acción. Todas sus buenas cualidades y todos los dones de su espíritu están desperdiciados. Sin embargo, se debe solamente poner atención a poseer realmente en sí mismo los bienes espirituales de valor. Entonces vendrá seguramente el tiempo donde los obstáculos desaparezcan y donde todo irá bien. El fin de la tensión está representado aquí, como en otras partes, por la caída de la lluvia.
-
         `,
       },
       4: {
@@ -4277,7 +4108,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `La imagen del hexagrama es la montaña, el más joven de los hijos del cielo y de la tierra. El principio masculino está arriba y sigue en ello su dirección natural; el principio femenino está abajo, conforme al sentido de su movimiento. Entonces, un estado de reposo se ha establecido puesto que el movimiento a alcanzado su fin normal.
 
       Aplicado al hombre, el hexagrama trata del problema de conseguir la paz del corazón. El corazón es muy difícil de calmar. Mientras que el budismo se esfuerza por alcanzar el reposo por la cesación de todo movimiento en el estado de nirvana, el punto de vista del Libro de las Transformaciones es que el reposo constituye solamente un estado polar que siempre tiene como complemento el movimiento. Es posible que el texto contenga alusiones a las prácticas de yoga.
-
 `,
     },
     trigram: {
@@ -4292,7 +4122,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `El verdadero reposo es aquél donde el hombre se detiene cuando el movimiento se detiene y se mueve cuando ha llegado el momento de moverse. Así el reposo y el movimiento están en armonía con las exigencias del tiempo y entonces se ve nacer la luz y la vida.
 
       El hexagrama es el fin y el comienzo de todo movimiento. Se menciona la espalda porque ella es la sede de todos los centros nerviosos que transmiten el movimiento. Cuando se hace detener el movimiento de los nervios dorsales, se ve en cierta manera que el ego y su inquietud se desvanecen. Cuando el hombre ha alcanzado una semejante paz interior puede retornarse hacia el mundo exterior. Entonces deja de percibir en él la lucha y el tumulto de los seres individuales y tiene en consecuencia la calma necesaria para comprender las grandes leyes de los fenómenos universales y acordar con ellos su conducta. Quien actúa a partir de tal profundidad ya no comete faltas.
-
 `,
     },
     images: {
@@ -4328,14 +4157,12 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `Aquí se trata del reposo obtenido por la restricción. El corazón inquiero debe ser domado con energía. Pero cuando se trata de sofocar el fuego se transforma en una humareda acre que sofoca a quien la aspira.
 
         Por la misma razón no se debe usar la violencia en los ejercicios de meditación y de concentración. La calma debe surgir y extenderse naturalmente desde un estado de recogimiento interior. Si uno trata de imponer la calma mediante una rigidez artificial, la meditación tendrá efectos enojosos y graves.
-
         `,
       },
       4: {
         quote: `Inmovilidad del tronco.
         Sin reproches.`,
         description: `Como se ha dicho más arriba en “el juicio”, mantener la espalda en reposo significa olvidar el ego. Es el más alto estado de reposo. Aquí esa etapa todavía no se ha alcanzado. Sin dudas, uno se siente capaz de mantenerse con sus pensamientos e impulsos en un estado de descanso, pero todavía no se ha liberado completamente. Mantener el corazón en reposo es una función importantísima que lleva con el tiempo a la eliminación total de los deseos egoístas. Incluso si uno aun no se encuentra totalmente libre de todos los peligros de la duda y de la inquietud, la disposición interior que abre el camino a otra más elevada no es una falta.
-
         `,
       },
       5: {
@@ -4374,7 +4201,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `La lenta vacilación es lo que marca la sucesión de eventos al final de los cuales la doncella sigue al hombre a su casa. Se deben completar varias formalidades para que se concluya el matrimonio. Este desarrollo progresivo todavía puede aplicarse a otras situaciones y siempre, en particular, al campo de las relaciones correctas en el trabajo en conjunto, por ejemplo, a la forma en la que se contrata a un funcionario. Se debe tener cuidado de proceder siguiendo una progresión armoniosa. La precipitación no conduciría a nada bueno. Lo mismo es cierto cuando uno quiere influenciar a los otros. Porque allí también, la forma armoniosa de progresión es la formación de la propia personalidad. Cualquier influencia basada en la agitación es solo de corta duración.
 
       Asimismo, la evolución interior debe tomar el mismo camino si se quieren obtener resultados durables. Lo suave que se adapta al mismo tiempo que ejerce un empuje es el exterior que debe proceder de la paz interior. Es precisamente el carácter gradual del desarrollo lo que hace posible la perseverancia necesaria, puesto que solamente la perseverancia hace que el progreso lento no se pierda en la arena.
-
       `,
     },
     images: {
@@ -4396,7 +4222,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `Los diferentes trazos del hexagrama representan el vuelo progresivo del ganso salvaje. El ganso salvaje es el símbolo de la fidelidad conyugal. Se dice que después de la muerte de su compañera, esta ave no se une a otra.
 
         El trazo inicial designa la primera estación de un ave acuática cuando vuela del agua hacia el cielo. Ha alcanzado la orilla. La situación es la de un joven hombre solitario que quiere comenzar su camino en la vida. Como no hay nadie que viene ante él (para ayudarlo), sus primeros pasos son lentos y vacilantes y está rodeado de peligros. Naturalmente es el objeto de críticas frecuentes. Pero son precisamente las dificultades que le impiden una prisa excesiva y eso hace que su progreso sea coronado por el éxito.
-
         `,
       },
       2: {
@@ -4418,7 +4243,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `La alta meseta es un lugar seco e inapropiado para el ganso salvaje. Si toma esa dirección es que ha perdido el camino y se ha avanzado demasiado lejos. Esto es contrario a las leyes del desarrollo. Es lo mismo en la vida humana.
 
         Si no dejamos que las cosas evolucionen espontánea y gradualmente sino que se toma por sí mismo la iniciativa y uno se lanza precipitadamente en la lucha, se atraerá el infortunio. Se arriesga la propia vida y además se lleva a su familia a la ruina. Pero de ninguna manera tal resultado es inevitable, sino que es solamente la consecuencia de la transgresión del hombre de la ley del desarrollo natural. Si uno no busca por sí mismo el conflicto sino que se mantiene rigurosamente en su lugar defendiéndose contra los ataques injustos, todo irá bien.
-
         `,
       },
       4: {
@@ -4456,8 +4280,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       Nota: en la China la monogamia es una regla. Cada hombre tiene solamente una esposa oficial. Esta unión, que concierne menos a los dos contrayentes que a la institución familiar, es contraída siguiendo una estricta observación de las formas. Sin embargo, el hombre está autorizado a escuchar sus tiernas inclinaciones personales, y es el más gracioso deber de una buena esposa de prestarle ayuda en estas ocasiones. La relación que se establece así se ornamenta de belleza y de claridad. La joven muchacha que, elegida por el hombre, entra en una familia se somete modestamente a la dueña de casa como una hermana menor. Se trata, bien entendido, de cuestiones delicadas y espinosas, que necesitan de mucho tacto de una parte y otra. Sin embargo, si las circunstancias son favorables, una solución se aporta así a un problema que la civilización europea no pudo resolver. Es sobreentendido que en la China una mujer puede no corresponder completamente al ideal, como en consonancia, el común de las parejas europeas no corresponde con el ideal europeo de matrimonio.
 
       1. Richard Wilhelm traduce el nombre de este hexagrama como “das heiratende Mädchen” la muchacha a casar, que aquí se ha transcripto como “la doncella casadera”.
-
-
       `,
     },
     trigram: {
@@ -4493,8 +4315,7 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
 
         El sentido es que una muchacha joven que, de acuerdo con la esposa principal, hace su entrada en una familia, no fichará la igualdad de rango con la dueña de casa, sino que se eclipsará modestamente ante ella. Sin embargo, si ella comprende la manera como ella debe adaptarse al conjunto de la situación, ella recibirá un lugar del cual ella estará completamente satisfecha y se refugiará en el amor del esposo a quien ella de hijos.
 
-        El mismo significado aparece en las relaciones entre los señores y los servidores. Puede ocurrir que un príncipe tenga en su entorno a un hombre a quien él testimonia personalmente amistad y acuerda su confianza. Este hombre debe observar las apariencia y eclipsarse con tacto detrás del ministro oficial. Pero, bien que tal situación lo mantenga impedido como a un cojo, el no deja de ser capaz de cumplir una obra gracia a la excelencia de su naturaleza.
- `,
+        El mismo significado aparece en las relaciones entre los señores y los servidores. Puede ocurrir que un príncipe tenga en su entorno a un hombre a quien él testimonia personalmente amistad y acuerda su confianza. Este hombre debe observar las apariencia y eclipsarse con tacto detrás del ministro oficial. Pero, bien que tal situación lo mantenga impedido como a un cojo, el no deja de ser capaz de cumplir una obra gracia a la excelencia de su naturaleza.`,
       },
       2: {
         quote: `Un tuerto es capaz de ver.
@@ -4508,8 +4329,7 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `Una muchacha en posición humilde que no puede encontrar marido, todavía puede, en ciertas circunstancias, encontrar refugio aceptando el rol de concubina.
 
         La situación descripta es la de una persona que desea con demasiado ardor lo que es imposible de obtener de manera normal.
-        Se somete a una situación que no es compatible con la estima que se tiene a sí misma. El oráculo no aporta ni juicio ni advertencia sino que se limita a exponer la situación con el fin de cada uno pueda aprender la lección y elegir por sí mismo.
- `,
+        Se somete a una situación que no es compatible con la estima que se tiene a sí misma. El oráculo no aporta ni juicio ni advertencia sino que se limita a exponer la situación con el fin de cada uno pueda aprender la lección y elegir por sí mismo.`,
       },
       4: {
         quote: `La doncella casadera retarda el momento.
@@ -4524,8 +4344,7 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `El soberano Yi es T’ang, el que cumple. Dicta una ley prescribiendo que las princesas imperiales, ellas también, estén sometidas a sus esposos (Ver N°11, trazo 5). El emperador no espera que su hija sea pedida sino que la da en matrimonio en el momento que juzga oportuno. Es por ello que si la familia de la muchacha toma la iniciativa, como en el caso presente, el asunto debe conformarse al orden general.
 
         Vemos una joven muchacha de alto rango que hace un matrimonio modesto y que sabe adaptarse con gracia a su nueva situación. Está libre de toda vanidad que inspiran los ornamentos exteriores, olvida su rango en el matrimonio y se somete a su esposo, como la Luna que no está todavía llena y que no se ubica directamente frente al Sol.
-
- `,
+`,
       },
       6: {
         quote: `La mujer tiene un cesto pero no hay frutas en él.
@@ -4545,7 +4364,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `Chen es movimiento; Li, la llama, cuyo atributo es la claridad; Claridad adentro y movimiento afuera producen crecimiento y abundancia. El hexagrama representa una época de civilización avanzada. De todas maneras el hecho de que se trate de un de un pico máximo, ello trae la idea de que estas condiciones de abundancia excepcionales que no pueden durar de manera permanente. (1)
 
       1. Richard Wilhelm traduce el nombre de este hexagrama como “die Fülle”, que en castellano significa “la abundancia”, en el sentido de algo copioso, pleno, colmado...
-
       `,
     },
     trigram: {
@@ -4558,7 +4376,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
        No debes estar triste sino que debes ser como el sol a mediodía.
       `,
       description: `Instaurar una era de grandeza y de abundancia suprema es un destino que no está reservado a todo mortal. El ser capaz de realizar un obra de ese tipo debe ser un hombre nacido para gobernar los otros porque su voluntad está dirigida hacia lo que es grande. A menudo el tiempo de tal plenitud es corto. Por eso un sabio tendría derecho de estar triste ante la perspectiva de la decadencia que seguirá. Sin embargo, tal tristeza no le conviene. Solo un hombre interiormente libre de inquietud y de tristeza es capaz de traer una era de abundancia. Tiene que ser como el sol a mediodía que ilumine y reconforte todos los seres que están bajo el cielo.
-
       `,
     },
     images: {
@@ -4688,8 +4505,7 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `Los hombres de estado en viaje acostumbraban presentarse a los príncipes locales llevándoles de regalo un faisán. Aquí el viajero desea entrar al servicio de un príncipe. Con ese fin le tira a un faisán y lo abate con el primer tiro. Encuentra amigos que lo alaban y lo recomiendan y finalmente es recibido por el príncipe que le confiere un cargo.
 
         A menudo hay circunstancias que llevan a un hombre a buscar morada en el extranjero. Si comprende la manera cómo considerar la situación y si sabe comportarse como es debido, podrá encontrar un círculo de amigos y una esfera de acción aunque se encuentre en un país extranjero.
-
- `,
+`,
       },
       6: {
         quote: `El nido del pájaro se quema.
@@ -4713,7 +4529,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
 
       El principio oscuro, que en sí mismo es rígido e inmóvil, se disuelve por la penetración del principio luminoso, que lo
       somete suavemente. En la naturaleza, es el viento que dispersa las nubes acumuladas, dejando el cielo claro y sereno. En la vida humana es la claridad penetrante del juicio que aniquila los sombríos motivos ocultos. En la vida de una comunidad es la poderosa influencia de una gran personalidad que descubre y disipa todas las intrigas tramadas en la sombra.
-
 `,
     },
     trigram: {
@@ -4761,7 +4576,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         quote: `El remordimiento se desvanece.
          Durante la cacería se capturan tres clases de cazas silvestres.`,
         description: `Cuando las funciones de responsabilidad y la acumulación de experiencia llevan a alguien a combinar la modestia innata con la acción enérgica, se encuentra asegurado un gran éxito. Las tres clases de animales silvestres que se cazan sirven de ofrenda a los dioses, de presentes de hospitalidad para los huéspedes y de alimento para consumo cotidiano. Cuando la caza lograba satisfacer estos tres propósitos, era considerada particularmente buena.
-
         `,
       },
       5: {
@@ -4774,7 +4588,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          ¡Fortuna!
         `,
         description: `Mientras que en Ku, “el trabajo sobre lo corrupto” (N° 18), se debe crear un punto de partida completamente nuevo, aquí se trata solamente de una reforma. El comienzo no era bueno pero se ha llegado a un momento donde se puede tomar una nueva dirección. Un cambio y una mejora se imponen. Esto debe hacerse con persistencia, es decir, teniendo una actitud correcta y firme, entonces se conseguirá el éxito y el remordimiento desaparecerá. Hay que tener en cuenta que estas mejoras requieren una consideración cuidadosa. Antes de efectuar el cambio, es necesario reflexionarlo escrupulosamente. Y después, cuando la transformación se produce, todavía se debe vigilar atentamente y durante un cierto tiempo, el efecto que ese cambio produce en la realidad. Tal trabajo cuidadoso trae consigo la buena fortuna.
-
         `,
       },
       6: {
@@ -4797,7 +4610,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       La verdadera alegría proviene entonces de la firmeza y la fuerza que se encuentran al interior y que se exteriorizan bajo una forma delicada y suave. (1)
 
       1. Richard Wilhelm traduce el nombre chino del hexagrama Tui como el “das Heitere, der See”, que encierran a la vez las nociones de serenidad, alegría, gozo y placer. En castellano “lo placentero, el lago” son palabras que aquí están utilizadas según el contexto donde se encuentran.
-
       `,
     },
     trigram: {
@@ -4818,7 +4630,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
        Así procede el hombre noble reuniendo sus amigos para deliberar y para actuar.
       `,
       description: `Un lago se evapora y se seca gradualmente. Pero cuando dos lagos se hallan en comunicación entre ellos no se secan tan fácilmente puesto que ellos se enriquecen mutuamente. Lo mismo sucede en el dominio del conocimiento. El saber debe ser una fuerza vivificante y refrescante. Esto se logra solamente a través de un intercambio estimulante con amigos con quienes discutir y practicar las verdades vitales. El saber se convierte así en un asunto de viariado y dotado de una alegre sutileza, mientras que la ciencia del autodidacta siempre tiene algo unilateral y pesado.
-
       `,
     },
     mutations: {
@@ -4840,7 +4651,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         quote: `Alegría que viene.
         Desgracia.`,
         description: `La verdadera alegría debe emanar de una fuente interior. Pero si uno está interiormente vacío y si uno se pierde en el mundo exterior, las alegrías provienen de afuera. Esto es lo que mucha gente llama diversión. Los seres que como consecuencia de su inconsistencia interior necesitan diversiones tendrán siempre ocasión de distraerse. Con el vacío de su esencia íntima ellos atraen hacia sí mismos los placeres exteriores de la vida. Así se pierden cada vez más y eso tiene naturalmente malas consecuencias.
-
         `,
       },
       4: {
@@ -4953,7 +4763,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
       description: `Los límites son dolorosos, pero conducen al éxito. Al ahorrar dinero en la vida cotidiana, nos preparamos para enfrentar momentos de penuria. Al retirarse, uno evita la humillación. Los límites también son esenciales para la armonía de las relaciones del mundo. La naturaleza tiene límites específicos para el verano y el invierno, para el día y la noche, y estos son los límites que dan sentido al año. De manera similar, la economía, al establecer límites precisos en los gastos, asegura la conservación de los bienes y evita los perjuicios a la gente.
 
       Sin embargo, es necesario observar la medida hasta en la limitación. Si uno quisiera imponer límites demasiado severos a su propia naturaleza, ella sufriría por ello. Si uno quisiera llevar demasiado lejos las limitaciones impuestas a los demás, se rebelarían. Por eso, incluso en la limitación, los límites son necesarios.
-
 `,
     },
     images: {
@@ -5029,7 +4838,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
        Será provechoso cruzar la gran corriente.
        La perseverancia es conveniente.`,
       description: `Los cerdos y los peces son los animales menos espirituales de la creación, y en consecuencia los más difíciles de influir. La fuerza de la verdad interior debe alcanzar un alto grado antes de extender su acción a los seres de ese género. Tratando con personas recalcitrantes difíciles de influir como cerdos y peces el secreto del éxito reside en encontrar la manera correcta de aproximarse a ellos. En primer lugar hay que liberarse interiormente de todo prejuicio y prácticamente dejar que la psiquis de la otra persona penetre en nosotros sin restricciones. Sólo así podremos aproximarnos interiormente del interlocutor, comprenderlo y ganar poder sobre él. Cuando una puerta ha sido abierta de este modo, la fuerza de la propia personalidad puede influirlos. De esta manera no se encuentran obstáculos insuperables y se pueden emprender las cosas más peligrosas, como cruzar la gran corriente, y triunfar. Lo que importa comprender esencialmente es el fundamento de la verdad interior. No es idéntico a una mera intimidad o a una solidaridad secreta. Tal solidaridad íntima también puede existir entre los ladrones. Sin duda, incluso en este caso también representa una fuerza. Pero no lleva a la fortuna, porque no es invencible. Todas las alianzas fundadas sobre la comunidad de intereses son válidas hasta cierto punto. Donde la comunidad termina, la alianza también se detiene y la amistad más íntima a menudo se convierte en odio. Sólo cuando el fundamento reposa en la rectitud y la firmeza, el vínculo permanece lo suficientemente fuerte como para superarlo todo.
-
       `,
     },
     images: {
@@ -5224,8 +5032,7 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `Cuando una mujer viajaba en un carruaje, llevaba un visillo para protegerse de las miradas de los curiosos. Se consideraba como una violación de las buenas costumbres si se perdía el visillo y se continuaba la ruta. Aplicado a la vida pública, eso significa que alguien, queriendo realizar una tarea, no recibe por parte de las autoridades competentes, la confianza necesaria para su protección personal. Es precisamente después de la terminación, que los gobernantes pueden mostrarse demasiado arrogantes y seguros de su valor, que ya no se preocupan por prestar atención a los talentos desconocidos.
 
         Eso generalmente produce un exceso de ambición. Si uno no encuentra el respaldo de sus superiores, uno busca por sí mismo la manera y el medio para realizar la tarea y así ponerse en valor. Pero tal actitud no es conveniente ni recomendada. “No corras detrás.” No te precipites hacia el mundo exterior, espera apaciblemente y desarrolla por ti mismo tu valor personal. Los tiempos cambian. Cuando las seis etapas del signo están superadas, entonces aparece una nueva era. Lo que pertenece a alguien no puede perderse con el tiempo, sino que es naturalmente suyo y sólo hay que esperarlo.
-
- `,
+`,
       },
       3: {
         quote: `El ilustre antepasado castiga el país del diablo.
@@ -5325,7 +5132,6 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
          Fortuna.
         `,
         description: `Se gana la victoria. La fuerza de la firmeza no ha sido reducida al fracaso. Todo va bien. Se superaron todas las dudas. El éxito ha justificado la acción. La luz de una personalidad superior brilla de nuevo y hace sentir su influencia sobre los hombres que creen en ella y se reúnen a su alrededor. La nueva era ha llegado y con ella la fortuna. Igual que el sol después de la lluvia brilla con doble belleza o que el bosque después del incendio reverdece con una frescura acrecentada a partir de los sus restos carbonizados, el esplendor de la nueva era se aumenta por el contraste que forma con la miseria de la vieja época.
-
         `,
       },
       6: {
@@ -5336,7 +5142,7 @@ El entusiasmo permite enrolar auxiliares para efectuar el trabajo sin temer a la
         description: `Antes de completar la realización, en el umbral de los nuevos tiempos, el hombre se encuentra reunido en plena confianza mutua con los suyos y pasa el tiempo de espera bebiendo felizmente. Como la nueva era está en el umbral de la puerta, no hay en ello ningún reproche. Pero hay que ser cuidadoso en mantener la justa medida. Si en su exceso un hombre se deja llevar por la ebriedad, pierde por su desmesura lo que la situación tiene de favorable.
 
         Nota: El hexagrama “después de la terminación” describía la transición progresiva de un tiempo de elevación a un tiempo de estancamiento pasando por una culminación de la civilización. El hexagrama “antes de la terminación” describe igualmente la transición del caos al orden. Este hexagrama aparece al fin del libro del “Libro de los Cambios.” Con él se señala que cada final es un nuevo comienzo, dando así la esperanza a los hombres. El “Libro de los Cambios” es un libro de futuro.
-        `,
+`,
       },
     },
   },
