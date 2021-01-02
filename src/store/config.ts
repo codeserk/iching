@@ -104,7 +104,7 @@ export default {
      *
      * @param param0
      */
-    async loadConfig({ commit }: any) {
+    async loadConfig({ commit, dispatch }: any) {
       try {
         const resultsJson = await Storage.get({ key: 'config' })
         const config = JSON.parse(resultsJson.value)
@@ -116,14 +116,12 @@ export default {
         }
 
         // Get device lang
-        if (!config.language) {
+        if (!config?.language) {
           const { value: language } = await Device.getLanguageCode()
           if (AVAILABLE_LANGUAGES.includes(language)) {
-            commit('updateKey', { key: 'language', value: language })
-            i18n.global.locale = language
+            await dispatch('updateLanguage', language)
           } else {
-            commit('updateKey', { key: 'language', value: 'en' })
-            i18n.global.locale = 'en'
+            await dispatch('updateLanguage', 'en')
           }
         } else {
           i18n.global.locale = config.language
@@ -146,7 +144,6 @@ export default {
     },
 
     async updateLanguage({ dispatch }: any, language: string) {
-      console.log('language', language)
       i18n.global.locale = language
 
       await dispatch('updateKey', { key: 'language', value: language })
