@@ -221,7 +221,14 @@ export default {
     ...mapActions(['updateKey', 'updateLanguage']),
 
     openLink(link) {
+      this.track(`open-link`, { link })
       Browser.open({ url: link })
+    },
+  },
+
+  watch: {
+    section() {
+      this.track(`settings-section:${this.section}`)
     },
   },
 }

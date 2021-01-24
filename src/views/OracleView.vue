@@ -404,14 +404,17 @@ export default {
           })
 
           this.phase = 2
+          this.track('hexagram:result', { number: this.hexagram.number })
         }, 1000)
       }
     },
 
     onRightIconClicked() {
       if (this.phase === 2) {
+        this.track('share')
         this.share()
       } else {
+        this.track('show-help')
         this.showHelp = true
       }
     },

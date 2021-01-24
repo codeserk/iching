@@ -6,6 +6,7 @@ import { i18n } from './locales'
 import { store } from './store'
 
 import { IonicVue, isPlatform } from '@ionic/vue'
+import Plausible from 'plausible-tracker'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css'
@@ -34,8 +35,19 @@ const app = createApp(App)
   .use(i18n)
   .use(store)
 
+const plausible = Plausible({
+  domain: 'i-ching.codeserk.es',
+  apiHost: 'https://analytics.codeserk.es',
+})
+plausible.trackPageview()
+plausible.enableAutoPageviews()
+
 app.mixin({
   computed: {
+    analytics() {
+      return plausible
+    },
+
     isAndroid() {
       return isPlatform('android')
     },
@@ -53,6 +65,12 @@ app.mixin({
      */
     isDarkMode(): boolean {
       return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    },
+  },
+
+  methods: {
+    track(name: string, options: any) {
+      return plausible.trackEvent(name, { props: options })
     },
   },
 })
