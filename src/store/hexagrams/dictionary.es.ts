@@ -911,15 +911,14 @@ const dictionary: HexagramDictionary = {
        Así, el hombre noble se retira en su valor interior para escapar de las dificultades.
        No permite ser recompensado con ingresos`,
       description: `Cuando reina la desconfianza mutua en la vida pública, como consecuencia de la influencia ejercida por hombres vulgares, una actividad fructífera es imposible porque las bases son falsas. Es por eso que el hombre noble sabe lo que tiene que hacer en tales circunstancias. No se deja seducir por las brillantes propuestas que lo invitan a participar en los asuntos públicos: sería peligroso para él, porque no puede aceptar la mezquindad de los demás. Es por eso que oculta su mérito y se retira en secreto.
-s      `,
+      `,
     },
     mutations: {
       1: {
         quote: `Si arrancamos una banda de césped,
         la hierba viene con ella.
         Cada uno de acuerdo a su clase.
-        La perseverancia trae fortuna y éxito
-        .`,
+        La perseverancia trae fortuna y éxito.`,
         description: `El texto es similar al 1° trazo del hexagrama anterior (N° 11, “La Paz”), pero en sentido opuesto. Allí el hombre valioso instaba a los otros a unirse con él en la carrera de la vida pública oficial. Aquí uno induce al otro a retirarse de toda vida pública. Es por eso que aquí no se dice “emprender trae buena fortuna” sino que “la perseverancia trae buena fortuna y éxito.” Si no podemos ni influir ni actuar públicamente, sólo un retiro oportuno puede librarnos de la humillación y del fracaso. Uno tiene éxito en un sentido más amplío preservando la personalidad al resguardo de sus valores.
         `,
       },

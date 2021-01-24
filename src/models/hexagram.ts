@@ -20,6 +20,13 @@ export const COINS_VALUE_TO_HEXAGRAM_LINE_VALUE: Record<number, HexagramLineValu
   9: HexagramLineValue.MutableYang,
 }
 
+export const HEXAGRAM_LINE_VALUE_TO_COINS_VALUE: Record<HexagramLineValue, number> = {
+  [HexagramLineValue.MutableYin]: 6,
+  [HexagramLineValue.Yang]: 7,
+  [HexagramLineValue.Yin]: 8,
+  [HexagramLineValue.MutableYang]: 9,
+}
+
 export const HEXAGRAM_LINE_CODE_TO_VALUE: Record<HexagramLineCode, HexagramLineValue> = {
   [HexagramLineCode.Yin]: HexagramLineValue.Yin,
   [HexagramLineCode.Yang]: HexagramLineValue.Yang,
@@ -115,6 +122,10 @@ export class Hexagram {
     return this.lines.map(line => new HexagramLine(line.secondary)) as SixHexagramLines
   }
 
+  get uri(): string {
+    return this.lines.map(line => HEXAGRAM_LINE_VALUE_TO_COINS_VALUE[line.value]).join('')
+  }
+
   get code(): string {
     return this.primaryLines
       .map(line => (line.value === HexagramLineValue.Yin ? HexagramLineCode.Yin : HexagramLineCode.Yang))
@@ -172,6 +183,15 @@ export class Hexagram {
       .trim()
       .split('')
       .map((code: string) => new HexagramLine(HEXAGRAM_LINE_CODE_TO_VALUE[code as HexagramLineCode]))
+
+    return new Hexagram(lines as SixHexagramLines)
+  }
+
+  static fromUri(uri: string): Hexagram {
+    const lines = uri
+      .trim()
+      .split('')
+      .map((value: string) => new HexagramLine(COINS_VALUE_TO_HEXAGRAM_LINE_VALUE[parseInt(value, 10)]))
 
     return new Hexagram(lines as SixHexagramLines)
   }

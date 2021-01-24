@@ -5,7 +5,7 @@ import router from './router'
 import { i18n } from './locales'
 import { store } from './store'
 
-import { IonicVue } from '@ionic/vue'
+import { IonicVue, isPlatform } from '@ionic/vue'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css'
@@ -36,6 +36,18 @@ const app = createApp(App)
 
 app.mixin({
   computed: {
+    isAndroid() {
+      return isPlatform('android')
+    },
+
+    isApp() {
+      return this.isAndroid
+    },
+
+    isBrowser() {
+      return !this.isApp
+    },
+
     /**
      * Whether the dark mode is enabled.
      */
@@ -136,6 +148,8 @@ import {
   diceOutline,
   globeOutline,
   helpCircleOutline,
+  shareSocialOutline,
+  logoAndroid,
 } from 'ionicons/icons'
 
 addIcons({
@@ -152,4 +166,6 @@ addIcons({
   'dice-outline': diceOutline,
   'globe-outline': globeOutline,
   'help-circle-outline': helpCircleOutline,
+  'share-social-outline': shareSocialOutline,
+  'logo-android': logoAndroid,
 })

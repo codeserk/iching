@@ -1,5 +1,8 @@
 <template>
-  <div class="hexagram-figure" :class="[size, { 'with-images': withImages, 'with-reveal-delay': withRevealDelay }]">
+  <div
+    class="hexagram-figure"
+    :class="[size, { 'with-images': withImages, 'with-reveal-delay': withRevealDelay, 'light-theme': lightTheme }]"
+  >
     <div
       v-for="(line, index) in allLines"
       :key="line"
@@ -59,6 +62,11 @@ export default {
     },
 
     withRevealDelay: {
+      type: Boolean,
+      default: false,
+    },
+
+    lightTheme: {
       type: Boolean,
       default: false,
     },
@@ -301,6 +309,13 @@ export default {
       }
       .line.line-6 {
         animation-delay: 1000ms;
+      }
+    }
+
+    &.light-theme {
+      .circle {
+        background: white !important;
+        filter: none !important;
       }
     }
 

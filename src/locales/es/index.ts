@@ -2,6 +2,16 @@ export default {
   skip: 'OMITIR',
   start: 'Empezar',
 
+  error: {
+    share:
+      'Ha ocurrido un error mientras se intentaba compartir el hexagram. Asegurate de aceptar los permisos de la aplicación.',
+  },
+
+  share: {
+    title: 'Compartir respuesta del Oráculo',
+    text: 'Le he hecho la siguiente pregunta al Oráculo I-Ching\n\n"{question}"\n\nY esta es la respuesta: {link}',
+  },
+
   sections: {
     journal: {
       tab: 'Consultas',
@@ -157,7 +167,8 @@ export default {
     },
 
     toss: {
-      title: 'Lanza las monedas',
+      title: 'Lanza las monedas ({step}/6)',
+      button: 'Lanzar',
     },
   },
 
@@ -199,6 +210,10 @@ export default {
     about: {
       thanks: 'Gracias por usar mi app :)',
 
+      android: {
+        download: 'Bájate la App para Android',
+        rate: 'Puntúa la app si te gusta :)',
+      },
       website: 'Página web',
       privacyPolicy: 'Política de privacidad',
       coffee: '¡Cómprame un café!',

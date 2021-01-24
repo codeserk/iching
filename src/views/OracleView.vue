@@ -10,8 +10,8 @@
           </ion-button>
         </ion-buttons>
         <ion-buttons slot="end">
-          <ion-button @click="showHelp = true">
-            <ion-icon slot="start" name="help-circle-outline"></ion-icon>
+          <ion-button @click="onRightIconClicked">
+            <ion-icon slot="start" :name="phase === 2 ? 'share-social-outline' : 'help-circle-outline'"></ion-icon>
           </ion-button>
         </ion-buttons>
       </ion-toolbar>
@@ -51,6 +51,10 @@
         <ion-slide class="slide-coins ion-padding">
           <div class="container">
             <div class="toss-coins" @click="tossAll">
+              <ion-text class="text-heading">
+                <h1>{{ $t('oracle.toss.title', { step: numLines }) }}</h1>
+              </ion-text>
+
               <div class="coins">
                 <div
                   class="coin coin-1"
@@ -78,7 +82,7 @@
                 />
               </div>
               <ion-button class="button-toss" fill="solid" :class="{ 'has-tossed': hasTossed || !needsMoreLines }">
-                <span v-t="'oracle.toss.title'" />
+                <span v-t="'oracle.toss.button'" />
                 <ion-icon slot="end" name="dice-outline" />
               </ion-button>
             </div>
@@ -110,6 +114,31 @@
         </ion-slide>
       </ion-slides>
     </ion-content>
+
+    <div id="share-container">
+      <div class="share" width="600" height="600" v-if="hexagram">
+        <div class="question">
+          <h1 v-text="question" />
+        </div>
+
+        <hexagram-figure id="main-figure" class="hexagram-figure" :lines="lines" with-images light-theme />
+
+        <div class="title">
+          <h2 v-text="detailsTitle" />
+        </div>
+
+        <div class="title">
+          <h4>
+            <strong v-t="`trigrams.${details.trigram.above}.name`" />,
+            <span v-t="`trigrams.${details.trigram.above}.image`" />
+          </h4>
+          <h4>
+            <strong v-t="`trigrams.${details.trigram.below}.name`" />,
+            <span v-t="`trigrams.${details.trigram.below}.image`" />
+          </h4>
+        </div>
+      </div>
+    </div>
   </ion-page>
 </template>
 
@@ -119,11 +148,17 @@ import { Hexagram, HexagramLine } from '../models/hexagram'
 import { getRandomNumber } from '../util/random'
 import { wait } from '../util/time'
 import { mapActions, mapGetters } from 'vuex'
-import { alertController } from '@ionic/vue'
+import { alertController, toastController } from '@ionic/vue'
+import html2canvas from 'html2canvas'
+import { Plugins, FilesystemDirectory, FilesystemEncoding } from '@capacitor/core'
+import { writeFile } from 'capacitor-blob-writer'
+import { b64toBlob } from '@/util/binary'
 
 import HexagramFigure from '../components/hexagram-figure.vue'
 import HexagramDetails from '../components/hexagram-details.vue'
 import HelpModal from '@/views/HelpModal'
+
+const { Share, Browser } = Plugins
 
 export default {
   components: {
@@ -213,7 +248,7 @@ export default {
   }),
 
   computed: {
-    ...mapGetters(['config', 'configKey']),
+    ...mapGetters(['config', 'configKey', 'getHexagramDetails', 'hexagramTitle']),
 
     /**
      * Page title (to show in the top toolbar). Depends on the current phase
@@ -272,6 +307,32 @@ export default {
     needsMoreCoins() {
       return this.numCoins < 3
     },
+
+    /**
+     * Hexagram details.
+     *
+     * @returns {HexagramDetails|undefined}
+     */
+    details() {
+      if (!this.hexagram || !this.hexagram.number) {
+        return
+      }
+
+      return this.getHexagramDetails(this.hexagram.number)
+    },
+
+    /**
+     * Gets the hexagram title
+     *
+     * @returns {String|undefined}
+     */
+    detailsTitle() {
+      if (!this.hexagram || !this.hexagram.number) {
+        return
+      }
+
+      return this.hexagramTitle(this.hexagram.number)
+    },
   },
 
   methods: {
@@ -312,13 +373,13 @@ export default {
       this.hasTossed = true
       this.coins = []
 
-      await wait(getRandomNumber(1, 2) * 500)
+      await wait(getRandomNumber(1, 2) * 350)
       this.$nextTick(() => this.tossCoin(0))
 
-      await wait(getRandomNumber(0, 1) * 1000)
+      await wait(getRandomNumber(0, 1) * 350)
       this.$nextTick(() => this.tossCoin(1))
 
-      await wait(getRandomNumber(0, 1) * 1000)
+      await wait(getRandomNumber(0, 1) * 350)
       this.$nextTick(() => this.tossCoin(2))
 
       this.hasTossed = false
@@ -344,6 +405,63 @@ export default {
 
           this.phase = 2
         }, 1000)
+      }
+    },
+
+    onRightIconClicked() {
+      if (this.phase === 2) {
+        this.share()
+      } else {
+        this.showHelp = true
+      }
+    },
+
+    async share() {
+      if (this.isApp) {
+        return this.generateImage()
+      }
+
+      Browser.open({
+        url: `https://i-ching.codeserk.es/result/${this.hexagram.uri}?q=${encodeURIComponent(this.question)}`,
+      })
+    },
+
+    async generateImage() {
+      try {
+        const element = document.getElementById('html2canvas')
+        element.innerHTML = ''
+        const targetElement = document.getElementById('share-container').firstChild.cloneNode(true)
+        element.appendChild(targetElement)
+
+        const canvas = await html2canvas(element.firstChild)
+        const dataUrl = canvas.toDataURL()
+        const data = dataUrl.split(',')[1]
+        const blob = b64toBlob(data, 'UTF-8')
+        const title = `i-ching-${new Date().getMilliseconds()}`
+
+        const result = await writeFile({
+          path: `${title}.png`,
+          data: blob,
+          directory: FilesystemDirectory.Cache,
+          encoding: FilesystemEncoding.UTF8,
+        })
+
+        await Share.share({
+          title: this.$t('share.title'),
+          text: this.$t('share.text', {
+            question: this.question,
+            link: `https://i-ching.codeserk.es/result/${this.hexagram.uri}?q=${encodeURIComponent(this.question)}`,
+          }),
+          url: result.uri,
+          dialogTitle: this.$t('share.title'),
+        })
+      } catch (error) {
+        const toast = await toastController.create({
+          message: this.$t('error.share'),
+          duration: 5000,
+          color: 'danger',
+        })
+        return toast.present()
       }
     },
 
@@ -484,10 +602,9 @@ export default {
       flex: 1;
       flex-direction: column;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-evenly;
       width: 100%;
       max-height: 300px;
-      margin-top: 1em;
 
       .button-toss {
         transition: opacity 0.4s ease-in-out;
@@ -500,14 +617,13 @@ export default {
       .coins {
         display: flex;
         flex: 1;
-        flex-direction: column;
-        height: 100%;
+        flex-direction: row;
+        align-items: center;
 
         .coin {
           flex: 1;
-          width: 100px;
-          height: 100px;
-          margin: 0 1em;
+          width: 80px;
+          height: 80px;
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;
@@ -542,5 +658,56 @@ export default {
 
 .page-oracle .slide-result .toolbar {
   margin-top: 1em;
+}
+
+#share-container {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: -10000;
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+}
+
+.share {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  background: white;
+  color: black;
+  text-align: center;
+
+  .hexagram-figure {
+    width: 300px;
+    height: 250px;
+
+    .circle {
+      filter: none !important;
+    }
+  }
+
+  .question {
+    h1 {
+      margin-top: 0;
+      margin-bottom: 1em;
+      font-weight: bold;
+    }
+  }
+
+  .title {
+    color: black;
+    text-align: center;
+
+    h2 {
+      margin-top: 1em;
+      margin-bottom: 0;
+    }
+  }
 }
 </style>

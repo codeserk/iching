@@ -2,6 +2,15 @@ export default {
   skip: 'SKIP',
   start: 'Start',
 
+  error: {
+    share: 'An error ocurred while trying to share the hexagram. Ensure you have the right app permissions.',
+  },
+
+  share: {
+    title: 'Share the result from the Oracle',
+    text: 'I had the following question for the I-Ching Oracle:\n\n"{question}"\n\nAnd this is the result: {link}',
+  },
+
   sections: {
     journal: {
       tab: 'Journal',
@@ -158,7 +167,8 @@ export default {
     },
 
     toss: {
-      title: 'Toss the coins',
+      title: 'Toss the coins {step}/6',
+      button: 'Toss',
     },
   },
 
@@ -200,6 +210,10 @@ export default {
     about: {
       thanks: 'Thanks for using my app :)',
 
+      android: {
+        download: 'Get the app for Android',
+        rate: 'Rate the app if you like it :)',
+      },
       website: 'Website',
       privacyPolicy: 'Privacy Policy',
       coffee: 'Buy me a coffee!',

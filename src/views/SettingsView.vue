@@ -182,6 +182,14 @@
             <ion-icon slot="start" name="document-outline" />
             <ion-label v-t="'settings.about.privacyPolicy'" />
           </ion-item>
+          <ion-item
+            button
+            @click="openLink('https://play.google.com/store/apps/details?id=es.codeserk.iching')"
+            color="primary"
+          >
+            <ion-icon slot="start" name="logo-android" />
+            <ion-label v-t="isBrowser ? 'settings.about.android.download' : 'settings.about.android.rate'" />
+          </ion-item>
           <ion-item button @click="openLink('https://www.buymeacoffee.com/codeserk')" color="tertiary">
             <ion-icon slot="start" name="cafe-outline" />
             <ion-label v-t="'settings.about.coffee'" />

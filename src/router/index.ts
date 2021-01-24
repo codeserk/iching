@@ -41,6 +41,10 @@ const routes: Array<RouteRecordRaw> = [
     component: HexagramView,
   },
   {
+    path: '/result/:uri',
+    component: HexagramView,
+  },
+  {
     path: '/introduction',
     component: IntroductionView,
   },
