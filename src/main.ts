@@ -37,6 +37,7 @@ const app = createApp(App)
 
 const plausible = Plausible({
   domain: 'i-ching.codeserk.es',
+  trackLocalhost: true,
   apiHost: 'https://analytics.codeserk.es',
 })
 plausible.trackPageview()
