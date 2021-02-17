@@ -4,3 +4,6 @@ project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/
 
 include ':capacitor-blob-writer'
 project(':capacitor-blob-writer').projectDir = new File('../node_modules/capacitor-blob-writer/android')
+
+include ':capacitor-rate-app'
+project(':capacitor-rate-app').projectDir = new File('../node_modules/capacitor-rate-app/android')

@@ -248,7 +248,7 @@ export default {
   }),
 
   computed: {
-    ...mapGetters(['config', 'configKey', 'getHexagramDetails', 'hexagramTitle']),
+    ...mapGetters(['config', 'configKey', 'results', 'getHexagramDetails', 'hexagramTitle']),
 
     /**
      * Page title (to show in the top toolbar). Depends on the current phase
@@ -336,7 +336,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['addResult', 'removeResult']),
+    ...mapActions(['addResult', 'removeResult', 'updateKey']),
 
     /**
      * Saves the question in the store and moves to the next phase.
@@ -405,7 +405,23 @@ export default {
 
           this.phase = 2
           this.track('hexagram:result', { number: this.hexagram.number })
+
+          this.showRateApp()
         }, 1000)
+      }
+    },
+
+    /**
+     * Shows rate app popup
+     */
+    showRateApp() {
+      if (!this.configKey('rate.asked') && this.results.length > 1) {
+        try {
+          Plugins.CapacitorRateApp.requestReview().catch(console.error)
+          this.updateKey({ key: 'rate.asked', value: true })
+        } catch (error) {
+          console.error(error)
+        }
       }
     },
 

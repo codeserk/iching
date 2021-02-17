@@ -14,6 +14,7 @@ export default {
     configKeys: {
       // Introduction
       'introduction.seen': false,
+      'rate.asked': false,
 
       // Language
       'language;': 'en',
