@@ -236,6 +236,11 @@ export default {
       5: 'Fifth Line',
       6: 'Top Line',
     },
+
+    notes: {
+      title: 'Notes',
+      placeholder: 'You can add personal notes, or your interpretation of the resulting hexagram.',
+    },
   },
 
   delete: {

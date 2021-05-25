@@ -110,6 +110,8 @@
               :mutated-lines="hexagram.mutatedLines"
               :lines="hexagram.lines"
             />
+
+            <result-notes :result-id="resultId" />
           </div>
         </ion-slide>
       </ion-slides>
@@ -156,6 +158,7 @@ import { b64toBlob } from '@/util/binary'
 
 import HexagramFigure from '../components/hexagram-figure.vue'
 import HexagramDetails from '../components/hexagram-details.vue'
+import ResultNotes from '../components/result-notes.vue'
 import HelpModal from '@/views/HelpModal'
 
 const { Share, Browser } = Plugins
@@ -165,6 +168,7 @@ export default {
     HexagramDetails,
     HexagramFigure,
     HelpModal,
+    ResultNotes,
   },
 
   data: () => ({
@@ -249,6 +253,18 @@ export default {
 
   computed: {
     ...mapGetters(['config', 'configKey', 'results', 'getHexagramDetails', 'hexagramTitle']),
+
+    /**
+     * Id of the result, in case the result has been created
+     * @returns {string | undefined}
+     */
+    resultId() {
+      if (!this.result) {
+        return
+      }
+
+      return this.result.id
+    },
 
     /**
      * Page title (to show in the top toolbar). Depends on the current phase

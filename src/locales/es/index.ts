@@ -236,6 +236,11 @@ export default {
       5: 'Quinta Línea',
       6: 'Sexta Línea',
     },
+
+    notes: {
+      title: 'Notas',
+      placeholder: 'Puedes añadir notas personales, o la interpretación que le das al resultado.',
+    },
   },
 
   delete: {

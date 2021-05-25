@@ -10,6 +10,9 @@ export interface OracleResult {
   /** Obtained hexagram. */
   readonly hexagram: Hexagram
 
+  /** Result personal notes */
+  readonly notes: string
+
   /** Date when it was created. */
   readonly createdAt: Date
 }

@@ -34,6 +34,8 @@
             :lines="hexagram.lines"
             :mutated-lines="hexagram.mutatedLines"
           />
+
+          <result-notes :result-id="id" />
         </template>
       </div>
     </ion-content>
@@ -45,10 +47,12 @@ import { alertController } from '@ionic/vue'
 import { mapActions, mapGetters } from 'vuex'
 
 import HexagramDetails from '../../components/hexagram-details.vue'
+import ResultNotes from '../../components/result-notes.vue'
 
 export default {
   components: {
     HexagramDetails,
+    ResultNotes,
   },
 
   data: () => ({

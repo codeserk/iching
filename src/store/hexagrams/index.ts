@@ -50,15 +50,16 @@ export default {
   },
 
   mutations: {
-    addResult(state: State, { id, question, hexagram, createdAt }: any) {
+    addResult(state: State, { id, question, hexagram, notes, createdAt }: any) {
       const date = createdAt ? new Date(createdAt) : new Date()
       if (!id) {
         id = date.getTime().toString()
       }
-      const newResult = {
+      const newResult: OracleResult = {
         id,
         question,
         hexagram,
+        notes,
         createdAt: date,
       }
 
@@ -84,6 +85,7 @@ export default {
               id: result.id,
               question: result.question,
               hexagram: Hexagram.fromValues(result.values),
+              notes: result.notes,
               createdAt: result.createdAt,
             })
           }
@@ -95,11 +97,21 @@ export default {
 
     async addResult({ getters, commit, dispatch }: any, { question, hexagram, createdAt }: any) {
       const id = createdAt.getTime().toString()
-      commit('addResult', { id, question, hexagram, createdAt })
+      commit('addResult', { id, question, hexagram, notes: '', createdAt })
 
       await dispatch('save')
 
       return getters.resultById(id)
+    },
+
+    async updateResultNotes({ getters, commit, dispatch }: any, { id, notes }: { id: string; notes: string }) {
+      const result = getters.resultById(id)
+      if (!result) {
+        return
+      }
+      commit('addResult', { ...result, notes })
+
+      await dispatch('save')
     },
 
     async removeResult({ commit, dispatch }: any, id: string): Promise<void> {
@@ -113,6 +125,7 @@ export default {
         id: result.id,
         question: result.question,
         values: result.hexagram.lines.map((line: HexagramLine): HexagramLineValue => line.value),
+        notes: result.notes,
         createdAt: result.createdAt.toISOString(),
       }))
 
