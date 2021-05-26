@@ -11,7 +11,7 @@
     <ion-textarea
       :placeholder="$t('hexagram.notes.placeholder')"
       :value="localNotes"
-      :rows="20"
+      :rows="5"
       @input="ev => updateNotes(ev.target.value)"
     />
   </div>
