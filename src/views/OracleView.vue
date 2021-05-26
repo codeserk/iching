@@ -111,6 +111,7 @@
               :lines="hexagram.lines"
             />
 
+            <result-tags :result-id="resultId" />
             <result-notes :result-id="resultId" />
           </div>
         </ion-slide>
@@ -158,6 +159,7 @@ import { b64toBlob } from '@/util/binary'
 
 import HexagramFigure from '../components/hexagram-figure.vue'
 import HexagramDetails from '../components/hexagram-details.vue'
+import ResultTags from '../components/result-tags.vue'
 import ResultNotes from '../components/result-notes.vue'
 import HelpModal from '@/views/HelpModal'
 
@@ -168,6 +170,7 @@ export default {
     HexagramDetails,
     HexagramFigure,
     HelpModal,
+    ResultTags,
     ResultNotes,
   },
 

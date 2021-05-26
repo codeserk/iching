@@ -7,8 +7,19 @@
       <ion-toolbar class="android-only">
         <ion-searchbar animated @ion-change="search = $event.detail.value"></ion-searchbar>
       </ion-toolbar>
+
+      <ion-toolbar>
+        <ion-segment v-model="section">
+          <ion-segment-button value="all">
+            <ion-label v-t="'journal.tabs.all'" />
+          </ion-segment-button>
+          <ion-segment-button value="tags">
+            <ion-label v-t="'journal.tabs.tags'" />
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
     </ion-header>
-    <ion-content class="content" :fullscreen="true">
+    <ion-content class="content" fullscreen>
       <ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">
@@ -20,7 +31,13 @@
         </ion-toolbar>
       </ion-header>
 
-      <journal-items-list class="condensed-only" :search="search" />
+      <journal-items-list v-show="section === 'all'" class="condensed-only" :search="search" />
+      <journal-tags-list
+        v-show="section === 'tags'"
+        class="condensed-only"
+        :search="search"
+        :active-id="$route.params.id"
+      />
 
       <div class="journal-text container full-only">
         <ion-icon class="icon-journal" name="book-outline" size="large" />
@@ -36,13 +53,21 @@
 
 <script>
 import JournalItemsList from '../components/journal-items-list'
+import JournalTagsList from '../components/journal-tags-list'
 
 export default {
   components: {
     JournalItemsList,
+    JournalTagsList,
   },
 
   data: () => ({
+    /**
+     * Section selected
+     * @type {'all' | 'tags'}
+     */
+    section: 'all',
+
     /**
      * Current search.
      *

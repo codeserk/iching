@@ -7,6 +7,8 @@ const { Device } = Plugins
 
 export interface State {
   configKeys: Record<string, any>
+
+  tags: string[]
 }
 
 export default {
@@ -38,6 +40,8 @@ export default {
       // Journal
       'journal.confirm-deletion': true,
     },
+
+    tags: [],
   }),
 
   getters: {
@@ -85,6 +89,8 @@ export default {
         confirmDeletion: getters.configKey('journal.confirm-deletion'),
       },
     }),
+
+    tags: (state: State) => state.tags,
   },
 
   mutations: {
@@ -96,6 +102,10 @@ export default {
      */
     updateKey(state: State, { key, value }: any) {
       state.configKeys[key] = value
+    },
+
+    setTags(state: State, tags: string[]) {
+      state.tags = tags
     },
   },
 
@@ -127,9 +137,47 @@ export default {
         } else {
           i18n.global.locale = config.language
         }
+
+        await dispatch('loadTags')
       } catch (error) {
         console.error(error)
       }
+    },
+
+    async loadTags({ commit }: any) {
+      const resultsJson = await Storage.get({ key: 'tags' })
+      const tags = JSON.parse(resultsJson.value)
+
+      if (tags) {
+        commit('setTags', tags)
+      }
+    },
+
+    async addTag({ getters, commit, dispatch }: any, tag: string) {
+      const newTags = [...getters.tags, tag]
+
+      commit('setTags', newTags)
+
+      await dispatch('saveTags')
+    },
+
+    async removeTag({ getters, commit, dispatch }: any, index: number) {
+      const newTags = [...getters.tags]
+      if (index < 0 || index >= newTags.length) {
+        return
+      }
+
+      newTags.splice(index, 1)
+
+      commit('setTags', newTags)
+
+      await dispatch('saveTags')
+    },
+
+    async setTags({ commit, dispatch }: any, newTags: string[]) {
+      commit('setTags', newTags)
+
+      await dispatch('saveTags')
     },
 
     /**
@@ -153,10 +201,19 @@ export default {
     /**
      * Saves the configuration.
      *
-     * @param param0
+     * @param store
      */
     async saveConfig({ state }: any) {
       await Storage.set({ key: 'config', value: JSON.stringify(state.configKeys) })
+    },
+
+    /**
+     * Saves the tags.
+     *
+     * @param store
+     */
+    async saveTags({ state }: any) {
+      await Storage.set({ key: 'tags', value: JSON.stringify(state.tags) })
     },
   },
 }

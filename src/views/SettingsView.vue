@@ -15,7 +15,7 @@
         </ion-segment>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="content" :fullscreen="true">
+    <ion-content ref="content" class="content" fullscreen>
       <ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large" v-t="'settings.title'" />
@@ -164,6 +164,26 @@
             slot="start"
           ></ion-checkbox>
         </ion-item>
+
+        <ion-list-header v-t="'settings.tags.title'" />
+
+        <ion-reorder-group id="tags" :disabled="false" @ion-item-reorder="({ detail }) => onReordered(detail)">
+          <ion-item v-for="(tag, index) in tags" :key="tag">
+            <ion-reorder slot="start" />
+
+            <ion-input :value="tag" readonly />
+            <ion-button shape="round" fill="block" autocapitalize="on" @click="removeTag(index)">
+              <ion-icon name="trash-outline" color="danger" slot="icon-only" />
+            </ion-button>
+          </ion-item>
+        </ion-reorder-group>
+
+        <ion-item>
+          <ion-input :placeholder="$t('settings.tags.new')" v-model="newTag" @keyup.enter="addTagHandle" />
+          <ion-button shape="round" fill="block" autocapitalize="on" @click="addTagHandle" :disabled="!isValidNewTag">
+            <ion-icon name="add-outline" slot="icon-only" />
+          </ion-button>
+        </ion-item>
       </ion-list>
 
       <div v-show="section === 'about'" class="about-me">
@@ -211,18 +231,47 @@ const { Browser } = Plugins
 export default {
   data: () => ({
     section: 'config',
+
+    newTag: '',
   }),
 
   computed: {
-    ...mapGetters(['configKey']),
+    ...mapGetters(['configKey', 'tags']),
+
+    isValidNewTag() {
+      return this.newTag.length > 0 && !this.tags.includes(this.newTag)
+    },
   },
 
   methods: {
-    ...mapActions(['updateKey', 'updateLanguage']),
+    ...mapActions(['updateKey', 'updateLanguage', 'addTag', 'removeTag', 'setTags']),
 
     openLink(link) {
       this.track(`open-link`, { link })
       Browser.open({ url: link })
+    },
+
+    addTagHandle() {
+      if (!this.isValidNewTag) {
+        return
+      }
+
+      this.addTag(this.newTag)
+      setTimeout(() => {
+        document.querySelector('ion-content.content').scrollToBottom(400)
+      }, 100)
+
+      this.newTag = ''
+    },
+
+    onReordered(detail) {
+      const { from, to } = detail
+      const tags = [...this.tags]
+      tags.splice(to, 0, tags.splice(from, 1)[0])
+
+      this.setTags(tags)
+
+      detail.complete(true)
     },
   },
 

@@ -158,6 +158,15 @@ export default {
     },
   },
 
+  journal: {
+    tabs: {
+      all: 'All',
+      tags: 'Tags',
+    },
+
+    selectTag: 'Select a tag',
+  },
+
   oracle: {
     title: 'Ask the Oracle',
 
@@ -207,6 +216,11 @@ export default {
       confirmDeletion: 'Confirm deletion',
     },
 
+    tags: {
+      title: 'Tags',
+      new: 'Add tag',
+    },
+
     about: {
       thanks: 'Thanks for using my app :)',
 
@@ -237,6 +251,14 @@ export default {
       6: 'Top Line',
     },
 
+    tags: {
+      title: 'Tags',
+      label: 'Select tags',
+      placeholder: 'Add tags to classify results.',
+      noTags: 'You don\'t have any tag yet, go to "manage tags" section to create some',
+      manage: 'Manage tags',
+    },
+
     notes: {
       title: 'Notes',
       placeholder: 'You can add personal notes, or your interpretation of the resulting hexagram.',
@@ -250,6 +272,7 @@ export default {
     accept: 'Yes',
   },
 
+  showMore: 'Show more',
   close: 'Close',
   cancel: 'Cancel',
   ok: 'OK',

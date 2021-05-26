@@ -5,7 +5,18 @@ import router from './router'
 import { i18n } from './locales'
 import { store } from './store'
 
-import { IonicVue, isPlatform } from '@ionic/vue'
+import {
+  IonBadge,
+  IonicVue,
+  IonImg,
+  IonReorder,
+  IonReorderGroup,
+  IonSelect,
+  IonSelectOption,
+  IonSpinner,
+  IonTextarea,
+  isPlatform,
+} from '@ionic/vue'
 import Plausible from 'plausible-tracker'
 
 /* Core CSS required for Ionic components to work properly */
@@ -150,6 +161,14 @@ app
   .component('IonItemOptions', IonItemOptions)
   .component('IonItemOption', IonItemOption)
   .component('IonModal', IonModal)
+  .component('IonTextarea', IonTextarea)
+  .component('IonSpinner', IonSpinner)
+  .component('IonSelect', IonSelect)
+  .component('IonSelectOption', IonSelectOption)
+  .component('IonReorder', IonReorder)
+  .component('IonReorderGroup', IonReorderGroup)
+  .component('IonBadge', IonBadge)
+  .component('IonImg', IonImg)
 
 // Icons
 import { addIcons } from 'ionicons'
@@ -169,6 +188,8 @@ import {
   helpCircleOutline,
   shareSocialOutline,
   logoAndroid,
+  addOutline,
+  arrowBackOutline,
 } from 'ionicons/icons'
 
 addIcons({
@@ -187,4 +208,6 @@ addIcons({
   'help-circle-outline': helpCircleOutline,
   'share-social-outline': shareSocialOutline,
   'logo-android': logoAndroid,
+  'add-outline': addOutline,
+  'arrow-back-outline': arrowBackOutline,
 })

@@ -25,9 +25,7 @@
       </ion-item-sliding>
     </ion-list>
 
-    <ion-button v-if="shouldShowShowAllButton" @click="showAll = true" expand="block" fill="clear"
-      >Show more...</ion-button
-    >
+    <ion-button v-if="shouldShowShowAllButton" @click="showAll = true" expand="block" fill="clear" v-t="'showMore'" />
   </div>
 </template>
 
@@ -36,6 +34,7 @@ import { mapGetters, mapActions } from 'vuex'
 
 import { alertController } from '@ionic/vue'
 import HexagramFigure from '../components/hexagram-figure.vue'
+import { filterResults } from '../util/results'
 
 export default {
   components: {
@@ -59,6 +58,11 @@ export default {
       default: '',
     },
 
+    tag: {
+      type: String,
+      default: '',
+    },
+
     /**
      * Id of the active result.
      */
@@ -77,25 +81,20 @@ export default {
      * @returns {Boolean}
      */
     shouldShowShowAllButton() {
-      return this.results.length > 10 && !this.showAll
+      return this.filteredResultsWithoutSlice.length > 10 && !this.showAll
     },
 
     /**
      * Filtered results.
      *
-     * @returns {HexagramResult[]}
+     * @returns {OracleResult[]}
      */
     filteredResults() {
-      if (this.search) {
-        const search = this.search.toLowerCase()
-        return this.results.filter(result => result.question.toLowerCase().includes(search))
-      }
+      return filterResults(this.results, this.search, this.tag, this.showAll)
+    },
 
-      if (!this.showAll) {
-        return this.results.slice(0, 10)
-      }
-
-      return this.results
+    filteredResultsWithoutSlice() {
+      return filterResults(this.results, this.search, this.tag, true)
     },
   },
 

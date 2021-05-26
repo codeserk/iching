@@ -158,6 +158,15 @@ export default {
     },
   },
 
+  journal: {
+    tabs: {
+      all: 'Todas',
+      tags: 'Por etiqueta',
+    },
+
+    selectTag: 'Elige una etiqueta',
+  },
+
   oracle: {
     title: 'Pregunta al Oráculo',
 
@@ -207,6 +216,10 @@ export default {
       confirmDeletion: 'Preguntar antes de borrar una consulta',
     },
 
+    tags: {
+      title: 'Etiquetas',
+      new: 'Añade una etiqueta',
+    },
     about: {
       thanks: 'Gracias por usar mi app :)',
 
@@ -237,6 +250,14 @@ export default {
       6: 'Sexta Línea',
     },
 
+    tags: {
+      title: 'Etiquetas',
+      label: 'Elige las etiquetas',
+      placeholder: 'Añade etiquetas para clasificar los resultados.',
+      noTags: 'Aún no tienes etiquetas, accede a "gestionar etiquetas" para crear algunas.',
+      manage: 'Gestionar etiquetas',
+    },
+
     notes: {
       title: 'Notas',
       placeholder: 'Puedes añadir notas personales, o la interpretación que le das al resultado.',
@@ -250,6 +271,7 @@ export default {
     accept: 'Sí',
   },
 
+  showMore: 'Mostrar más',
   close: 'Cerrar',
   cancel: 'Cancelar',
   ok: 'Aceptar',
