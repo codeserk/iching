@@ -4,7 +4,8 @@
   </ion-app>
 </template>
 
-<script lang="ts">
+<script>
+import { Storage } from '@capacitor/core'
 import { IonApp, IonRouterOutlet } from '@ionic/vue'
 import { defineComponent } from 'vue'
 import { mapActions } from 'vuex'
@@ -27,6 +28,12 @@ export default defineComponent({
 
   async mounted() {
     await Promise.all([this.loadConfig(), this.init()])
+
+    // Get dark mode settings
+    const darkMode = await Storage.get({ key: 'darkMode' })
+    if (darkMode.value !== null) {
+      this.setDarkMode(darkMode && darkMode.value === 'true')
+    }
 
     this.ready = true
   },

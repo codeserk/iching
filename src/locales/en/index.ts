@@ -197,6 +197,7 @@ export default {
         en: 'English',
         es: 'Spanish',
       },
+      darkMode: 'Dark mode',
 
       quote: 'Quote',
       description: 'Description',

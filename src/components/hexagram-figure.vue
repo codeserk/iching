@@ -292,6 +292,15 @@ export default {
           filter: invert(100%);
         }
       }
+
+      body.dark & {
+        filter: invert(100%);
+
+        .circle,
+        .line-number {
+          filter: invert(100%);
+        }
+      }
     }
 
     &.with-reveal-delay {

@@ -197,6 +197,7 @@ export default {
         en: 'Inglés',
         es: 'Castellano',
       },
+      darkMode: 'Modo oscuro',
 
       quote: 'Cita',
       description: 'Descripción',

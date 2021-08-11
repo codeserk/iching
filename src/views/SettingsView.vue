@@ -39,6 +39,15 @@
           </ion-select>
         </ion-item>
 
+        <ion-item lines="full">
+          <ion-label v-t="'settings.config.darkMode'" />
+          <ion-toggle
+            :checked="hasDarkModeClass"
+            slot="end"
+            @ionChange="ev => setDarkMode(ev.detail.checked)"
+          ></ion-toggle>
+        </ion-item>
+
         <ion-item-group>
           <ion-item-divider>
             <ion-label v-t="'settings.config.hexagramHeader'" />

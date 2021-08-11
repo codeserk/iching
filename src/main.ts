@@ -18,6 +18,7 @@ import {
   isPlatform,
 } from '@ionic/vue'
 import Plausible from 'plausible-tracker'
+import { Storage } from '@capacitor/core'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css'
@@ -72,17 +73,30 @@ app.mixin({
       return !this.isApp
     },
 
+    hasDarkModeClass(): boolean {
+      return document.body.classList.contains('dark')
+    },
+
     /**
      * Whether the dark mode is enabled.
      */
     isDarkMode(): boolean {
-      return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      return (
+        document.body.classList.contains('dark') ||
+        (!!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      )
     },
   },
 
   methods: {
     track(name: string, options: any) {
       return plausible.trackEvent(name, { props: options })
+    },
+
+    setDarkMode(enabled: boolean) {
+      Storage.set({ key: 'darkMode', value: enabled.toString() })
+
+      document.body.classList.toggle('dark', enabled)
     },
   },
 })

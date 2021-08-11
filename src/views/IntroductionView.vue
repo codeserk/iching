@@ -220,6 +220,10 @@ export default {
       @media (prefers-color-scheme: dark) {
         filter: invert(100%);
       }
+
+      body.dark & {
+        filter: invert(100%);
+      }
     }
   }
 
@@ -270,6 +274,10 @@ export default {
       background-repeat: no-repeat;
 
       @media (prefers-color-scheme: dark) {
+        filter: invert(100%);
+      }
+
+      body.dark & {
         filter: invert(100%);
       }
     }
