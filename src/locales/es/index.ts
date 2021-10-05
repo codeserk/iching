@@ -198,6 +198,9 @@ export default {
         es: 'Castellano',
       },
       darkMode: 'Modo oscuro',
+      wrapTitle: 'Mostrar pregunta completa',
+      wrapTitleDescription:
+        'Activa esta opción para mostrar el título de las preguntas completo en la lista de consultas.',
 
       quote: 'Cita',
       description: 'Descripción',
@@ -250,6 +253,8 @@ export default {
       5: 'Quinta Línea',
       6: 'Sexta Línea',
     },
+
+    title: 'Pregunta',
 
     tags: {
       title: 'Etiquetas',

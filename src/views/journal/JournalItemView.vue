@@ -35,6 +35,11 @@
             :mutated-lines="hexagram.mutatedLines"
           />
 
+          <div class="ResultTitle">
+            <h2 v-t="'hexagram.title'"></h2>
+            <p v-text="title" />
+          </div>
+
           <result-tags :result-id="id" />
           <result-notes :result-id="id" />
         </template>
@@ -162,3 +167,13 @@ export default {
   },
 }
 </script>
+
+<style scoped lang="scss">
+.ResultTitle {
+  margin-bottom: 2em;
+}
+
+ion-header {
+  z-index: 2000;
+}
+</style>

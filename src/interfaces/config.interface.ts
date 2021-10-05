@@ -11,6 +11,7 @@ export interface Config {
   }
 
   readonly language: Language
+  readonly wrapTitle: boolean
 
   readonly display: {
     readonly name: {
@@ -48,6 +49,7 @@ export const DEFAULT_CONFIG: Config = {
   },
 
   language: Language.English,
+  wrapTitle: false,
 
   display: {
     name: {

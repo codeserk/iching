@@ -48,6 +48,18 @@
           ></ion-toggle>
         </ion-item>
 
+        <ion-item lines="none">
+          <ion-label v-t="'settings.config.wrapTitle'" />
+          <ion-toggle
+            :checked="configKey('wrapTitle')"
+            slot="end"
+            @ionChange="updateKey({ key: 'wrapTitle', value: !configKey('wrapTitle') })"
+          ></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-text class="small">{{ $t('settings.config.wrapTitleDescription') }}</ion-text>
+        </ion-item>
+
         <ion-item-group>
           <ion-item-divider>
             <ion-label v-t="'settings.config.hexagramHeader'" />
@@ -325,5 +337,10 @@ ion-item-divider {
   .text-free {
     padding: 0 1em;
   }
+}
+
+ion-text.small {
+  color: #888;
+  font-size: 0.75em;
 }
 </style>

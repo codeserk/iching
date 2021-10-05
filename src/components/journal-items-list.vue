@@ -7,7 +7,7 @@
           @click="$router.push(`/journal/${result.id}`)"
           :color="result.id === activeId ? 'primary' : undefined"
         >
-          <ion-label v-text="result.question" />
+          <ion-label class="title-label" :class="{ wrap: config.wrapTitle }" v-text="result.question" />
           <div slot="start">
             <hexagram-figure
               slot="start"
@@ -132,3 +132,10 @@ export default {
   },
 }
 </script>
+
+<style scoped lang="scss">
+.title-label.wrap {
+  text-overflow: inherit;
+  white-space: normal;
+}
+</style>

@@ -19,7 +19,8 @@ export default {
       'rate.asked': false,
 
       // Language
-      'language;': 'en',
+      language: 'en',
+      wrapTitle: false,
 
       // Display
       'display.name.chinese': true,
@@ -59,6 +60,7 @@ export default {
       },
 
       language: getters.configKey('language'),
+      wrapTitle: getters.configKey('wrapTitle'),
 
       display: {
         name: {
@@ -122,6 +124,7 @@ export default {
 
         if (config) {
           for (const key in config) {
+            console.log(key, config[key])
             commit('updateKey', { key, value: config[key] })
           }
         }

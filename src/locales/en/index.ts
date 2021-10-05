@@ -198,6 +198,9 @@ export default {
         es: 'Spanish',
       },
       darkMode: 'Dark mode',
+      wrapTitle: 'Wrap question titles',
+      wrapTitleDescription:
+        'Check this option to show the title of the questions fully in the list of previous questions.',
 
       quote: 'Quote',
       description: 'Description',
@@ -251,6 +254,8 @@ export default {
       5: 'Fifth Line',
       6: 'Top Line',
     },
+
+    title: 'Question',
 
     tags: {
       title: 'Tags',
