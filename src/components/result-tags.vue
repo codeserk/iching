@@ -26,7 +26,7 @@
     </ion-item>
 
     <ion-item color="translucent" lines="none">
-      <ion-button slot="end" fill="clear" @click="$router.push(`/settings#tags`)">{{
+      <ion-button slot="end" fill="clear" @click="$router.push(`/app/settings#tags`)">{{
         $t('hexagram.tags.manage')
       }}</ion-button>
     </ion-item>

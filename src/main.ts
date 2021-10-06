@@ -120,6 +120,7 @@ import {
   IonTitle,
   IonHeader,
   IonToolbar,
+  IonToggle,
   IonButtons,
   IonText,
   IonInput,
@@ -157,6 +158,7 @@ app
   .component('IonToolbar', IonToolbar)
   .component('IonButtons', IonButtons)
   .component('IonText', IonText)
+  .component('IonToggle', IonToggle)
   .component('IonInput', IonInput)
   .component('IonSegment', IonSegment)
   .component('IonSegmentButton', IonSegmentButton)

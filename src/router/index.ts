@@ -13,15 +13,18 @@ import IntroductionView from '@/views/IntroductionView.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    redirect: '/app',
+  },
+  {
+    path: '/app',
     component: RouterView,
-    redirect: '/oracle',
     children: [
       {
-        path: '/oracle',
+        path: '/app/oracle',
         component: OracleView,
       },
       {
-        path: '/journal',
+        path: '/app/journal',
         component: JournalView,
         children: [
           {
@@ -31,7 +34,7 @@ const routes: Array<RouteRecordRaw> = [
         ],
       },
       {
-        path: '/settings',
+        path: '/app/settings',
         component: SettingsView,
       },
     ],

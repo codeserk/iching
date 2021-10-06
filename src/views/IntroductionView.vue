@@ -179,7 +179,7 @@ export default {
     async finish() {
       await this.updateKey({ key: 'introduction.seen', value: true })
 
-      this.$router.replace('/oracle')
+      this.$router.replace({ path: '/app', force: true })
     },
   },
 
@@ -318,7 +318,7 @@ export default {
   position: fixed;
   top: 6px;
   left: 6px;
-  z-index: 1;
+  z-index: 10;
 }
 
 .dots {

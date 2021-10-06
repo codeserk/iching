@@ -4,7 +4,7 @@
       <ion-item-sliding v-for="result in filteredResults" :key="result.id">
         <ion-item
           button
-          @click="$router.push(`/journal/${result.id}`)"
+          @click="$router.push(`/app/journal/${result.id}`)"
           :color="result.id === activeId ? 'primary' : undefined"
         >
           <ion-label class="title-label" :class="{ wrap: config.wrapTitle }" v-text="result.question" />

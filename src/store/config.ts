@@ -124,7 +124,6 @@ export default {
 
         if (config) {
           for (const key in config) {
-            console.log(key, config[key])
             commit('updateKey', { key, value: config[key] })
           }
         }

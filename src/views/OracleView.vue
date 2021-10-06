@@ -111,6 +111,11 @@
               :lines="hexagram.lines"
             />
 
+            <div class="ResultTitle">
+              <h2 v-t="'hexagram.title'"></h2>
+              <p v-text="title" />
+            </div>
+
             <result-tags :result-id="resultId" />
             <result-notes :result-id="resultId" />
           </div>
@@ -552,15 +557,6 @@ export default {
     },
   },
 
-  /**
-   * Handles mounted life-cycle event.
-   */
-  mounted() {
-    if (!this.configKey('introduction.seen')) {
-      this.$router.push('/introduction')
-    }
-  },
-
   watch: {
     /**
      * Changes the active slide (ionic component) when the phase changes.
@@ -751,5 +747,10 @@ export default {
       margin-bottom: 0;
     }
   }
+}
+
+.ResultTitle {
+  margin-bottom: 2em;
+  text-align: left;
 }
 </style>

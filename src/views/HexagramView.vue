@@ -5,7 +5,7 @@
         <ion-title v-text="title" />
 
         <ion-buttons slot="start">
-          <ion-button @click="$router.push(`/oracle`)">
+          <ion-button @click="$router.push(`/app/oracle`)">
             <ion-icon slot="start" name="home-outline"></ion-icon>
           </ion-button>
         </ion-buttons>
