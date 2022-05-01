@@ -1,6 +1,6 @@
-import { Storage } from '@capacitor/core'
+import { FilesystemDirectory, Plugins, Storage } from '@capacitor/core'
+import { writeFile } from 'capacitor-blob-writer'
 import { AVAILABLE_LANGUAGES, Config } from '../interfaces/config.interface'
-import { Plugins } from '@capacitor/core'
 import { i18n } from '../locales'
 
 const { Device } = Plugins
@@ -126,6 +126,13 @@ export default {
         } else {
           i18n.global.locale = config.language
         }
+
+        // Save backup
+        await writeFile({
+          path: 'config.backup.json',
+          data: new Blob([resultsJson.value], { type: 'application/json' }),
+          directory: FilesystemDirectory.Data,
+        })
       } catch (error) {
         console.error(error)
       }
@@ -155,7 +162,15 @@ export default {
      * @param param0
      */
     async saveConfig({ state }: any) {
-      await Storage.set({ key: 'config', value: JSON.stringify(state.configKeys) })
+      const json = JSON.stringify(state.configKeys)
+      await Storage.set({ key: 'config', value: json })
+
+      // Save backup
+      await writeFile({
+        path: 'config.backup.json',
+        data: new Blob([json], { type: 'application/json' }),
+        directory: FilesystemDirectory.Data,
+      })
     },
   },
 }
