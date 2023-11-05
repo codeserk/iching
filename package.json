@@ -5,6 +5,7 @@
   "description": "An Ionic project",
   "scripts": {
     "serve": "vue-cli-service serve",
+    "ionic:serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "prod:android": "ionic capacitor build android --prod --release",
     "test:unit": "vue-cli-service test:unit",

@@ -1,10 +1,11 @@
 import { HexagramDetails } from '../../interfaces/hexagram-details.interface'
-import { Storage } from '@capacitor/core'
+import { FilesystemDirectory, Storage } from '@capacitor/core'
 
 import englishDictionary from './dictionary.en'
 import spanishDictionary from './dictionary.es'
 import { OracleResult } from '../../interfaces/oracle-result.interface'
 import { Hexagram, HexagramLine, HexagramLineValue } from '../../models/hexagram'
+import { writeFile } from 'capacitor-blob-writer'
 
 interface State {
   results: Record<string, OracleResult>
@@ -92,6 +93,13 @@ export default {
             })
           }
         }
+
+        // Save backup
+        await writeFile({
+          path: 'results.backup.json',
+          data: new Blob([resultsJson.value], { type: 'application/json' }),
+          directory: FilesystemDirectory.Data,
+        })
       } catch (error) {
         console.error(error)
       }
@@ -142,7 +150,15 @@ export default {
         createdAt: result.createdAt.toISOString(),
       }))
 
-      await Storage.set({ key: 'oracle_results', value: JSON.stringify(results) })
+      const json = JSON.stringify(results)
+      await Storage.set({ key: 'oracle_results', value: json })
+
+      // Save backup
+      await writeFile({
+        path: 'results.backup.json',
+        data: new Blob([json], { type: 'application/json' }),
+        directory: FilesystemDirectory.Data,
+      })
     },
   },
 }

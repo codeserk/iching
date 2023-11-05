@@ -1,7 +1,8 @@
-import { Storage } from '@capacitor/core'
+import { FilesystemDirectory, Storage } from '@capacitor/core'
 import { AVAILABLE_LANGUAGES, Config } from '../interfaces/config.interface'
 import { Plugins } from '@capacitor/core'
 import { i18n } from '../locales'
+import { writeFile } from 'capacitor-blob-writer'
 
 const { Device } = Plugins
 
@@ -141,6 +142,13 @@ export default {
         }
 
         await dispatch('loadTags')
+
+        // Save backup
+        await writeFile({
+          path: 'config.backup.json',
+          data: new Blob([resultsJson.value], { type: 'application/json' }),
+          directory: FilesystemDirectory.Data,
+        })
       } catch (error) {
         console.error(error)
       }
@@ -152,6 +160,13 @@ export default {
 
       if (tags) {
         commit('setTags', tags)
+
+        // Save backup
+        await writeFile({
+          path: 'tags.backup.json',
+          data: new Blob([resultsJson.value], { type: 'application/json' }),
+          directory: FilesystemDirectory.Data,
+        })
       }
     },
 
@@ -206,7 +221,15 @@ export default {
      * @param store
      */
     async saveConfig({ state }: any) {
-      await Storage.set({ key: 'config', value: JSON.stringify(state.configKeys) })
+      const json = JSON.stringify(state.configKeys)
+      await Storage.set({ key: 'config', value: json })
+
+      // Save backup
+      await writeFile({
+        path: 'config.backup.json',
+        data: new Blob([json], { type: 'application/json' }),
+        directory: FilesystemDirectory.Data,
+      })
     },
 
     /**
@@ -215,7 +238,15 @@ export default {
      * @param store
      */
     async saveTags({ state }: any) {
-      await Storage.set({ key: 'tags', value: JSON.stringify(state.tags) })
+      const json = JSON.stringify(state.tags)
+      await Storage.set({ key: 'tags', value: json })
+
+      // Save backup
+      await writeFile({
+        path: 'tags.backup.json',
+        data: new Blob([json], { type: 'application/json' }),
+        directory: FilesystemDirectory.Data,
+      })
     },
   },
 }
